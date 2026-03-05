@@ -10,6 +10,7 @@ import { PwaInstallPrompt } from "@/components/layout/pwa-install";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://kasif.erkanerdem.net"),
   title: "Balıkesir Dijital Kaşif - Akıllı Turizm Platformu",
   description:
     "Balıkesir'in turistik, tarihi ve kültürel değerlerini dijital ortamda keşfedin. Harita tabanlı akıllı turizm rehberi.",
