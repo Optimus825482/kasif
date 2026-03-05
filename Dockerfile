@@ -16,6 +16,11 @@ COPY . .
 # Generate Prisma client
 RUN npx prisma generate
 
+# Compile seed.ts to seed.js for runtime use
+RUN npx tsx --compile prisma/seed.ts 2>/dev/null || \
+    ./node_modules/.bin/esbuild prisma/seed.ts --bundle --platform=node --outfile=prisma/seed.js --external:pg --external:bcryptjs --external:@prisma/client --external:@prisma/adapter-pg 2>/dev/null || \
+    npx tsc prisma/seed.ts --outDir prisma --esModuleInterop --resolveJsonModule --skipLibCheck 2>/dev/null || true
+
 # Build Next.js
 RUN npm run build
 
@@ -37,7 +42,18 @@ COPY --from=builder /app/public ./public
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 
+# Copy prisma files for runtime migration & seed
+COPY --from=builder /app/prisma ./prisma
+COPY --from=builder /app/node_modules/.prisma ./node_modules/.prisma
+COPY --from=builder /app/node_modules/prisma ./node_modules/prisma
+COPY --from=builder /app/node_modules/@prisma ./node_modules/@prisma
+COPY --from=builder /app/generated ./generated
+
+# Copy entrypoint
+COPY --from=builder /app/docker-entrypoint.sh ./docker-entrypoint.sh
+RUN chmod +x ./docker-entrypoint.sh
+
 USER nextjs
 EXPOSE 3000
 
-CMD ["node", "server.js"]
+ENTRYPOINT ["./docker-entrypoint.sh"]
