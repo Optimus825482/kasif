@@ -14,10 +14,11 @@ pool.query('SELECT COUNT(*) FROM \"Location\"')
 ")
 
 if [ "$LOCATION_COUNT" = "0" ]; then
-  echo "==> Database empty, seeding..."
-  node prisma/seed.js
+  echo "==> Database empty, running seed..."
+  node prisma/seed.mjs
+  echo "==> Seed completed"
 else
-  echo "==> Database already has data ($LOCATION_COUNT locations), skipping seed"
+  echo "==> Database has $LOCATION_COUNT locations, skipping seed"
 fi
 
 echo "==> Starting application..."
