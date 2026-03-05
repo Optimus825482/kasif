@@ -1,0 +1,73 @@
+{
+  "app": {
+    "title": "Balıkesir Dijital Kaşif",
+    "subtitle": "Akıllı Turizm Platformu",
+    "description": "Balıkesir'in turistik, tarihi ve kültürel değerlerini keşfedin"
+  },
+  "nav": {
+    "home": "Ana Sayfa",
+    "map": "Harita",
+    "explore": "Keşfet",
+    "about": "Hakkında",
+    "admin": "Yönetim"
+  },
+  "map": {
+    "title": "Turizm Haritası",
+    "myLocation": "Konumum",
+    "nearbyPlaces": "Yakınımdaki Yerler",
+    "allPlaces": "Tüm Noktalar",
+    "filterByCategory": "Kategoriye Göre Filtrele",
+    "searchPlaceholder": "Yer ara...",
+    "directions": "Nasıl Gidilir",
+    "noResults": "Sonuç bulunamadı",
+    "loading": "Harita yükleniyor...",
+    "locationPermission": "Konum izni gerekli",
+    "locationDenied": "Konum izni reddedildi. Varsayılan konum kullanılıyor."
+  },
+  "detail": {
+    "visitHours": "Ziyaret Saatleri",
+    "fee": "Giriş Ücreti",
+    "free": "Ücretsiz",
+    "address": "Adres",
+    "phone": "Telefon",
+    "website": "Web Sitesi",
+    "accessibility": "Erişilebilirlik",
+    "publicTransport": "Toplu Taşıma ile Ulaşım",
+    "gallery": "Fotoğraf Galerisi",
+    "getDirections": "Nasıl Gidilir",
+    "share": "Paylaş",
+    "back": "Geri",
+    "distance": "Uzaklık",
+    "nearby": "Yakındaki Diğer Yerler"
+  },
+  "categories": {
+    "historical": "Tarihi Yapılar",
+    "museum": "Müzeler",
+    "nature": "Doğal Alanlar",
+    "beach": "Plajlar",
+    "cultural": "Kültürel Mekanlar",
+    "gastronomy": "Gastronomi",
+    "all": "Tümü"
+  },
+  "common": {
+    "loading": "Yükleniyor...",
+    "error": "Bir hata oluştu",
+    "retry": "Tekrar Dene",
+    "close": "Kapat",
+    "save": "Kaydet",
+    "cancel": "İptal",
+    "delete": "Sil",
+    "edit": "Düzenle",
+    "search": "Ara",
+    "language": "Dil",
+    "km": "km",
+    "m": "m"
+  },
+  "consent": {
+    "title": "Gizlilik ve Çerez Politikası",
+    "message": "Deneyiminizi iyileştirmek için konum bilginizi ve anonim kullanım verilerini topluyoruz.",
+    "accept": "Kabul Et",
+    "decline": "Reddet",
+    "learnMore": "Daha Fazla Bilgi"
+  }
+}

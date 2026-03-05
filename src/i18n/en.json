@@ -1,0 +1,73 @@
+{
+  "app": {
+    "title": "Balıkesir Digital Explorer",
+    "subtitle": "Smart Tourism Platform",
+    "description": "Discover the touristic, historical and cultural treasures of Balıkesir"
+  },
+  "nav": {
+    "home": "Home",
+    "map": "Map",
+    "explore": "Explore",
+    "about": "About",
+    "admin": "Admin"
+  },
+  "map": {
+    "title": "Tourism Map",
+    "myLocation": "My Location",
+    "nearbyPlaces": "Nearby Places",
+    "allPlaces": "All Places",
+    "filterByCategory": "Filter by Category",
+    "searchPlaceholder": "Search places...",
+    "directions": "How to Get There",
+    "noResults": "No results found",
+    "loading": "Loading map...",
+    "locationPermission": "Location permission required",
+    "locationDenied": "Location permission denied. Using default location."
+  },
+  "detail": {
+    "visitHours": "Visit Hours",
+    "fee": "Entrance Fee",
+    "free": "Free",
+    "address": "Address",
+    "phone": "Phone",
+    "website": "Website",
+    "accessibility": "Accessibility",
+    "publicTransport": "Public Transport",
+    "gallery": "Photo Gallery",
+    "getDirections": "How to Get There",
+    "share": "Share",
+    "back": "Back",
+    "distance": "Distance",
+    "nearby": "Other Nearby Places"
+  },
+  "categories": {
+    "historical": "Historical Sites",
+    "museum": "Museums",
+    "nature": "Natural Areas",
+    "beach": "Beaches",
+    "cultural": "Cultural Venues",
+    "gastronomy": "Gastronomy",
+    "all": "All"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Retry",
+    "close": "Close",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "search": "Search",
+    "language": "Language",
+    "km": "km",
+    "m": "m"
+  },
+  "consent": {
+    "title": "Privacy & Cookie Policy",
+    "message": "We collect your location and anonymous usage data to improve your experience.",
+    "accept": "Accept",
+    "decline": "Decline",
+    "learnMore": "Learn More"
+  }
+}

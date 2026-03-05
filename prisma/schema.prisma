@@ -1,0 +1,99 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Category {
+  id        String     @id @default(cuid())
+  name      String
+  nameEn    String
+  icon      String     // lucide icon name
+  color     String     // hex color
+  slug      String     @unique
+  sortOrder Int        @default(0)
+  isActive  Boolean    @default(true)
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+  locations Location[]
+}
+
+model Location {
+  id              String   @id @default(cuid())
+  name            String
+  nameEn          String
+  description     String   @db.Text
+  descriptionEn   String   @db.Text
+  shortDesc       String   @default("")
+  shortDescEn     String   @default("")
+  latitude        Float
+  longitude       Float
+  categoryId      String
+  category        Category @relation(fields: [categoryId], references: [id])
+  images          String[] // array of image URLs
+  visitHours      String?
+  fee             String?
+  feeEn           String?
+  address         String?
+  addressEn       String?
+  phone           String?
+  website         String?
+  accessibility   String?  // wheelchair, child-friendly, parking etc.
+  publicTransport   String?  @db.Text
+  publicTransportEn String?  @db.Text
+  isActive        Boolean  @default(true)
+  isFeatured      Boolean  @default(false)
+  deletedAt       DateTime?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  events          AnalyticsEvent[]
+
+  @@index([categoryId])
+  @@index([latitude, longitude])
+  @@index([isActive, deletedAt])
+}
+
+model Admin {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String
+  name      String
+  role      String   @default("ADMIN") // SYSTEM_ADMIN, ADMIN, EDITOR
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  auditLogs AuditLog[]
+}
+
+model AnalyticsEvent {
+  id         String   @id @default(cuid())
+  eventType  String   // map_view, marker_click, detail_view, route_click, search
+  locationId String?
+  location   Location? @relation(fields: [locationId], references: [id])
+  sessionId  String
+  metadata   Json?
+  createdAt  DateTime @default(now())
+
+  @@index([eventType])
+  @@index([locationId])
+  @@index([createdAt])
+  @@index([sessionId])
+}
+
+model AuditLog {
+  id        String   @id @default(cuid())
+  adminId   String
+  admin     Admin    @relation(fields: [adminId], references: [id])
+  action    String   // CREATE, UPDATE, DELETE
+  entity    String
+  entityId  String
+  oldValue  Json?
+  newValue  Json?
+  createdAt DateTime @default(now())
+
+  @@index([adminId])
+  @@index([entity, entityId])
+}
