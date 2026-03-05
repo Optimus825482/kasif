@@ -39,11 +39,28 @@ export const metadata: Metadata = {
     url: "https://kasif.erkanerdem.net",
     siteName: "Balıkesir Dijital Kaşif",
     locale: "tr_TR",
+    images: [
+      {
+        url: "https://kasif.erkanerdem.net/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Balıkesir Dijital Kaşif - Akıllı Turizm Platformu",
+        type: "image/png",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Balıkesir Dijital Kaşif",
     description: "Balıkesir'in turistik değerlerini keşfedin",
+    images: [
+      {
+        url: "https://kasif.erkanerdem.net/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Balıkesir Dijital Kaşif - Akıllı Turizm Platformu",
+      },
+    ],
   },
 };
 
