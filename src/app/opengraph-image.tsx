@@ -10,112 +10,174 @@ export default function OgImage() {
     <div
       style={{
         background:
-          "linear-gradient(135deg, #0d9488 0%, #065f46 50%, #064e3b 100%)",
+          "linear-gradient(135deg, #0f766e 0%, #065f46 40%, #064e3b 100%)",
         width: "100%",
         height: "100%",
         display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
+        flexDirection: "row",
         fontFamily: "sans-serif",
         position: "relative",
+        overflow: "hidden",
       }}
     >
-      {/* Decorative circles */}
+      {/* Decorative large circles */}
       <div
         style={{
           position: "absolute",
-          top: -80,
-          right: -80,
-          width: 300,
-          height: 300,
-          borderRadius: "50%",
-          background: "rgba(255,255,255,0.08)",
-          display: "flex",
-        }}
-      />
-      <div
-        style={{
-          position: "absolute",
-          bottom: -60,
-          left: -60,
-          width: 250,
-          height: 250,
+          top: -120,
+          right: -120,
+          width: 400,
+          height: 400,
           borderRadius: "50%",
           background: "rgba(255,255,255,0.06)",
           display: "flex",
         }}
       />
-
-      {/* Compass icon */}
-      <div
-        style={{
-          fontSize: 80,
-          marginBottom: 20,
-          display: "flex",
-        }}
-      >
-        🧭
-      </div>
-
-      {/* Title */}
-      <div
-        style={{
-          fontSize: 64,
-          fontWeight: 800,
-          color: "white",
-          textAlign: "center",
-          lineHeight: 1.1,
-          display: "flex",
-        }}
-      >
-        Balıkesir Dijital Kaşif
-      </div>
-
-      {/* Subtitle */}
-      <div
-        style={{
-          fontSize: 28,
-          color: "rgba(255,255,255,0.85)",
-          marginTop: 16,
-          textAlign: "center",
-          display: "flex",
-        }}
-      >
-        Akıllı Turizm Platformu
-      </div>
-
-      {/* Tagline */}
-      <div
-        style={{
-          fontSize: 20,
-          color: "rgba(255,255,255,0.6)",
-          marginTop: 32,
-          display: "flex",
-          gap: 16,
-          alignItems: "center",
-        }}
-      >
-        <span>🏛️ Tarihi Yerler</span>
-        <span>•</span>
-        <span>🏖️ Plajlar</span>
-        <span>•</span>
-        <span>🍽️ Gastronomi</span>
-        <span>•</span>
-        <span>♨️ Termal</span>
-      </div>
-
-      {/* Domain */}
       <div
         style={{
           position: "absolute",
-          bottom: 30,
-          fontSize: 18,
-          color: "rgba(255,255,255,0.5)",
+          bottom: -100,
+          left: 300,
+          width: 350,
+          height: 350,
+          borderRadius: "50%",
+          background: "rgba(255,255,255,0.04)",
           display: "flex",
         }}
+      />
+      <div
+        style={{
+          position: "absolute",
+          top: 200,
+          right: 100,
+          width: 200,
+          height: 200,
+          borderRadius: "50%",
+          background: "rgba(255,255,255,0.03)",
+          display: "flex",
+        }}
+      />
+
+      {/* Left side - Icon area */}
+      <div
+        style={{
+          width: "35%",
+          height: "100%",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          background: "rgba(0,0,0,0.15)",
+        }}
       >
-        kasif.erkanerdem.net
+        <div
+          style={{
+            fontSize: 120,
+            display: "flex",
+            marginBottom: 16,
+          }}
+        >
+          🧭
+        </div>
+        <div
+          style={{
+            display: "flex",
+            gap: 12,
+            fontSize: 36,
+          }}
+        >
+          <span>🏛️</span>
+          <span>🏖️</span>
+          <span>🍽️</span>
+          <span>♨️</span>
+        </div>
+      </div>
+
+      {/* Right side - Text area */}
+      <div
+        style={{
+          width: "65%",
+          height: "100%",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          padding: "40px 60px 40px 50px",
+        }}
+      >
+        {/* Badge */}
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            marginBottom: 20,
+          }}
+        >
+          <div
+            style={{
+              background: "rgba(255,255,255,0.15)",
+              borderRadius: 20,
+              padding: "6px 18px",
+              fontSize: 18,
+              color: "rgba(255,255,255,0.9)",
+              display: "flex",
+              letterSpacing: 1,
+            }}
+          >
+            BALIKESİR
+          </div>
+        </div>
+
+        {/* Title */}
+        <div
+          style={{
+            fontSize: 72,
+            fontWeight: 800,
+            color: "white",
+            lineHeight: 1.05,
+            display: "flex",
+            flexDirection: "column",
+          }}
+        >
+          <span>Dijital</span>
+          <span>Kaşif</span>
+        </div>
+
+        {/* Subtitle */}
+        <div
+          style={{
+            fontSize: 26,
+            color: "rgba(255,255,255,0.75)",
+            marginTop: 20,
+            display: "flex",
+          }}
+        >
+          Akıllı Turizm Platformu
+        </div>
+
+        {/* Tagline */}
+        <div
+          style={{
+            fontSize: 18,
+            color: "rgba(255,255,255,0.5)",
+            marginTop: 12,
+            display: "flex",
+          }}
+        >
+          Tarihi Yerler • Plajlar • Gastronomi • Termal
+        </div>
+
+        {/* Domain */}
+        <div
+          style={{
+            fontSize: 20,
+            color: "rgba(255,255,255,0.4)",
+            marginTop: 30,
+            display: "flex",
+            letterSpacing: 0.5,
+          }}
+        >
+          kasif.erkanerdem.net
+        </div>
       </div>
     </div>,
     { ...size },
