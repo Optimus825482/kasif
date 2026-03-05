@@ -1,11 +1,16 @@
 import { ImageResponse } from "next/og";
+import { readFile } from "node:fs/promises";
+import { join } from "node:path";
 
-export const runtime = "edge";
+export const runtime = "nodejs";
 export const alt = "Balıkesir Dijital Kaşif - Akıllı Turizm Platformu";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-export default function OgImage() {
+export default async function OgImage() {
+  const logoData = await readFile(join(process.cwd(), "public", "logo.png"));
+  const logoBase64 = `data:image/png;base64,${logoData.toString("base64")}`;
+
   return new ImageResponse(
     <div
       style={{
@@ -20,7 +25,7 @@ export default function OgImage() {
         overflow: "hidden",
       }}
     >
-      {/* Decorative large circles */}
+      {/* Decorative circles */}
       <div
         style={{
           position: "absolute",
@@ -45,20 +50,8 @@ export default function OgImage() {
           display: "flex",
         }}
       />
-      <div
-        style={{
-          position: "absolute",
-          top: 200,
-          right: 100,
-          width: 200,
-          height: 200,
-          borderRadius: "50%",
-          background: "rgba(255,255,255,0.03)",
-          display: "flex",
-        }}
-      />
 
-      {/* Left side - Icon area */}
+      {/* Left side - Logo area */}
       <div
         style={{
           width: "35%",
@@ -70,15 +63,16 @@ export default function OgImage() {
           background: "rgba(0,0,0,0.15)",
         }}
       >
-        <div
+        {/* App Logo */}
+        <img
+          src={logoBase64}
+          width={180}
+          height={180}
           style={{
-            fontSize: 120,
-            display: "flex",
-            marginBottom: 16,
+            borderRadius: 30,
+            marginBottom: 20,
           }}
-        >
-          🧭
-        </div>
+        />
         <div
           style={{
             display: "flex",
