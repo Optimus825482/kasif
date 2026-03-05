@@ -36,7 +36,7 @@ echo "==> PostgreSQL ready."
 
 # --- Run migrations ---
 echo "==> Running database migrations..."
-npx prisma migrate deploy --schema=./prisma/schema.prisma
+npx prisma migrate deploy
 
 # --- Seed if empty ---
 CATEGORY_COUNT=$(node -e "
