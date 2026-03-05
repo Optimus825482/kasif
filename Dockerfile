@@ -12,56 +12,53 @@ FROM base AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
-
-# Generate Prisma client
 RUN npx prisma generate
-
-# Bundle seed.ts into a single JS file for runtime
-RUN npx esbuild prisma/seed.ts \
-    --bundle \
-    --platform=node \
-    --target=node20 \
-    --outfile=prisma/seed.mjs \
-    --format=esm \
-    --external:pg-native \
-    --banner:js="import{createRequire}from'module';const require=createRequire(import.meta.url);"
-
-# Build Next.js
 RUN npm run build
 
-# --- Runner ---
+# --- Runner (Node.js + PostgreSQL in one container) ---
 FROM base AS runner
 WORKDIR /app
+
+# Install PostgreSQL
+RUN apk add --no-cache postgresql postgresql-client libc6-compat su-exec
+
+# Setup PostgreSQL data directory
+RUN mkdir -p /var/lib/postgresql/data /run/postgresql /var/log/postgresql && \
+    chown -R postgres:postgres /var/lib/postgresql /run/postgresql /var/log/postgresql
 
 ENV NODE_ENV=production
 ENV PORT=3000
 ENV HOSTNAME="0.0.0.0"
+ENV DATABASE_URL="postgresql://kasif:kasif2026@127.0.0.1:5432/smartcity"
+ENV JWT_SECRET="kasif-jwt-secret-change-in-production"
+ENV NEXT_PUBLIC_APP_URL="https://kasif.erkanerdem.net"
+ENV NEXT_PUBLIC_MAP_CENTER_LAT="39.6484"
+ENV NEXT_PUBLIC_MAP_CENTER_LNG="27.8826"
+ENV NEXT_PUBLIC_MAP_ZOOM="10"
 
-RUN addgroup --system --gid 1001 nodejs
-RUN adduser --system --uid 1001 nextjs
+# Copy full node_modules for prisma CLI + seed runtime
+COPY --from=deps /app/node_modules ./node_modules
+COPY --from=builder /app/package.json ./package.json
+
+# Copy Prisma files for migration & seed
+COPY --from=builder /app/prisma ./prisma
+COPY --from=builder /app/generated ./generated
 
 # Copy public assets
 COPY --from=builder /app/public ./public
 
 # Copy standalone output
-COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
-COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
-
-# Copy prisma migration files and bundled seed
-COPY --from=builder /app/prisma/migrations ./prisma/migrations
-COPY --from=builder /app/prisma/schema.prisma ./prisma/schema.prisma
-COPY --from=builder /app/prisma/seed.mjs ./prisma/seed.mjs
-
-# Copy prisma engine binaries for migrate deploy
-COPY --from=builder /app/node_modules/prisma ./node_modules/prisma
-COPY --from=builder /app/node_modules/@prisma ./node_modules/@prisma
-COPY --from=builder /app/generated ./generated
+COPY --from=builder /app/.next/standalone ./
+COPY --from=builder /app/.next/static ./.next/static
 
 # Copy entrypoint
 COPY --from=builder /app/docker-entrypoint.sh ./docker-entrypoint.sh
 RUN chmod +x ./docker-entrypoint.sh
 
-USER nextjs
 EXPOSE 3000
 
+# Volume for persistent PostgreSQL data
+VOLUME ["/var/lib/postgresql/data"]
+
+# Run as root (needed to start PostgreSQL, then Next.js runs)
 ENTRYPOINT ["./docker-entrypoint.sh"]
