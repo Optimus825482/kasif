@@ -15,26 +15,15 @@ COPY . .
 RUN npx prisma generate
 RUN npm run build
 
-# --- Runner (Node.js + PostgreSQL in one container) ---
+# --- Runner (Next.js only — DB is a separate service) ---
 FROM base AS runner
 WORKDIR /app
 
-# Install PostgreSQL
-RUN apk add --no-cache postgresql postgresql-client libc6-compat su-exec
-
-# Setup PostgreSQL data directory
-RUN mkdir -p /var/lib/postgresql/data /run/postgresql /var/log/postgresql && \
-    chown -R postgres:postgres /var/lib/postgresql /run/postgresql /var/log/postgresql
+RUN apk add --no-cache libc6-compat postgresql-client
 
 ENV NODE_ENV=production
 ENV PORT=3011
 ENV HOSTNAME="0.0.0.0"
-ENV DATABASE_URL="postgresql://kasif:kasif2026@127.0.0.1:5432/smartcity"
-ENV JWT_SECRET="kasif-jwt-secret-change-in-production"
-ENV NEXT_PUBLIC_APP_URL="https://kasif.erkanerdem.net"
-ENV NEXT_PUBLIC_MAP_CENTER_LAT="39.6484"
-ENV NEXT_PUBLIC_MAP_CENTER_LNG="27.8826"
-ENV NEXT_PUBLIC_MAP_ZOOM="10"
 
 # Copy full node_modules for prisma CLI + seed runtime
 COPY --from=deps /app/node_modules ./node_modules
@@ -58,8 +47,4 @@ RUN chmod +x ./docker-entrypoint.sh
 
 EXPOSE 3011
 
-# Volume for persistent PostgreSQL data
-VOLUME ["/var/lib/postgresql/data"]
-
-# Run as root (needed to start PostgreSQL, then Next.js runs)
 ENTRYPOINT ["./docker-entrypoint.sh"]
