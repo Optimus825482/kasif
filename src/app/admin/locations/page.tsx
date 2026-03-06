@@ -61,6 +61,25 @@ interface AdminLocation {
   isFeatured: boolean;
 }
 
+function ListThumb({
+  src,
+  fallback,
+}: {
+  src: string;
+  fallback: React.ReactNode;
+}) {
+  const [error, setError] = useState(false);
+  if (error) return <>{fallback}</>;
+  return (
+    <img
+      src={src}
+      alt=""
+      className="h-10 w-10 rounded-lg object-cover border"
+      onError={() => setError(true)}
+    />
+  );
+}
+
 export default function AdminLocationsPage() {
   const router = useRouter();
   const [locations, setLocations] = useState<AdminLocation[]>([]);
@@ -259,10 +278,13 @@ export default function AdminLocationsPage() {
                       <TableCell>
                         <div className="flex items-center gap-3">
                           {loc.images?.[0] ? (
-                            <img
+                            <ListThumb
                               src={loc.images[0]}
-                              alt=""
-                              className="h-10 w-10 rounded-lg object-cover border"
+                              fallback={
+                                <div className="h-10 w-10 rounded-lg bg-muted flex items-center justify-center">
+                                  <MapPin className="h-4 w-4 text-muted-foreground" />
+                                </div>
+                              }
                             />
                           ) : (
                             <div className="h-10 w-10 rounded-lg bg-muted flex items-center justify-center">

@@ -60,6 +60,7 @@ export default function LocationDetailPage() {
   const [notFound, setNotFound] = useState(false);
   const [showDirections, setShowDirections] = useState(false);
   const [userPos, setUserPos] = useState<[number, number] | null>(null);
+  const [heroImageError, setHeroImageError] = useState(false);
 
   const loadLocation = useCallback(() => {
     if (!params.id) return;
@@ -94,6 +95,10 @@ export default function LocationDetailPage() {
   useEffect(() => {
     loadLocation();
   }, [loadLocation]);
+
+  useEffect(() => {
+    setHeroImageError(false);
+  }, [location?.id]);
 
   useEffect(() => {
     if ("geolocation" in navigator) {
@@ -170,7 +175,9 @@ export default function LocationDetailPage() {
   const gradient =
     CATEGORY_GRADIENTS[location.category.slug] || "from-teal-600 to-teal-800";
   const hasRealImage =
-    location.images?.length > 0 && !location.images[0].startsWith("/images/");
+    location.images?.length > 0 &&
+    !location.images[0].startsWith("/images/") &&
+    !heroImageError;
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -194,6 +201,7 @@ export default function LocationDetailPage() {
                 src={location.images[0]}
                 alt={name}
                 className="absolute inset-0 w-full h-full object-cover"
+                onError={() => setHeroImageError(true)}
               />
             ) : (
               <div className="flex flex-col items-center gap-2 opacity-30">

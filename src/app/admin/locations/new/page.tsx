@@ -26,6 +26,7 @@ import {
   Upload,
   X,
   ImagePlus,
+  ImageIcon,
   MapPin,
   Globe,
   Clock,
@@ -57,9 +58,21 @@ const emptyForm = {
 };
 
 function ImageThumb({ src, onRemove }: { src: string; onRemove: () => void }) {
+  const [error, setError] = useState(false);
   return (
     <div className="group relative h-24 w-24 rounded-lg overflow-hidden border bg-muted">
-      <img src={src} alt="" className="h-full w-full object-cover" />
+      {error ? (
+        <div className="h-full w-full flex items-center justify-center text-muted-foreground">
+          <ImageIcon className="h-8 w-8" />
+        </div>
+      ) : (
+        <img
+          src={src}
+          alt=""
+          className="h-full w-full object-cover"
+          onError={() => setError(true)}
+        />
+      )}
       <button
         type="button"
         onClick={onRemove}

@@ -35,9 +35,13 @@ services:
       NEXT_PUBLIC_MAP_CENTER_LNG: ${NEXT_PUBLIC_MAP_CENTER_LNG:-27.8826}
       NEXT_PUBLIC_MAP_ZOOM: ${NEXT_PUBLIC_MAP_ZOOM:-10}
       NODE_ENV: production
+    volumes:
+      # Yüklenen görseller deploy sonrası kaybolmasın
+      - uploads_data:/app/public/uploads
     depends_on:
       db:
         condition: service_healthy
 
 volumes:
   pgdata:
+  uploads_data:
