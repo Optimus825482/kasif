@@ -9,9 +9,20 @@ export async function POST(req: NextRequest) {
     if (!eventType || !sessionId)
       return errorResponse("eventType ve sessionId gerekli", 422);
 
+    // Validate locationId exists before inserting (prevent FK violation)
+    let validLocationId = locationId || null;
+    if (validLocationId) {
+      const { prisma } = await import("@/lib/prisma");
+      const exists = await prisma.location.findUnique({
+        where: { id: validLocationId },
+        select: { id: true },
+      });
+      if (!exists) validLocationId = null;
+    }
+
     await AnalyticsService.trackEvent({
       eventType,
-      locationId,
+      locationId: validLocationId,
       sessionId,
       metadata,
     });
