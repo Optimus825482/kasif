@@ -108,21 +108,27 @@ export default function AdminDashboard() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  const loadStats = useCallback(() => {
+  const loadStats = useCallback(async () => {
     setError(null);
     setLoading(true);
-    const token = localStorage.getItem("admin_token");
-    fetch("/api/admin/stats", { headers: { Authorization: "Bearer " + token } })
-      .then((r) => r.json())
-      .then((res) => {
-        if (res.success) setStats(res.data);
-        else setError(res.error ?? "Veriler yüklenemedi");
+    try {
+      const { adminFetch } = await import("@/lib/admin-fetch");
+      const r = await adminFetch("/api/admin/stats");
+      if (!r.ok) {
         setLoading(false);
-      })
-      .catch(() => {
-        setError("Bağlantı hatası.");
-        setLoading(false);
-      });
+        if (r.status === 401 || r.status === 429) return;
+        const res = await r.json().catch(() => ({}));
+        setError(res.error ?? "Veriler yüklenemedi");
+        return;
+      }
+      const res = await r.json();
+      if (res.success) setStats(res.data);
+      else setError(res.error ?? "Veriler yüklenemedi");
+    } catch {
+      setError("Bağlantı hatası.");
+    } finally {
+      setLoading(false);
+    }
   }, []);
 
   useEffect(() => {

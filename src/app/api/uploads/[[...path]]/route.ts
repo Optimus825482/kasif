@@ -27,7 +27,11 @@ export async function GET(
             : "application/octet-stream";
 
   try {
-    const filePath = path.join(UPLOADS_DIR, filename);
+    const filePath = path.resolve(UPLOADS_DIR, filename);
+    const uploadsResolved = path.resolve(UPLOADS_DIR);
+    if (!filePath.startsWith(uploadsResolved)) {
+      return new Response(null, { status: 400 });
+    }
     const buffer = await readFile(filePath);
     return new Response(buffer, {
       headers: {

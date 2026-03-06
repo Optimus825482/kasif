@@ -153,19 +153,11 @@ export default function HomePage() {
       });
   }, [notificationPermission, nearbyCountWithinRadius, notificationRadiusKm]);
 
-  const handleMarkerSelect = useCallback(
-    (location: Location) => {
-      if (selectedLocation?.id === location.id) {
-        // Second click on same marker → zoom to it
-        setFlyToLocation(location);
-        setFlyKey((k) => k + 1);
-      } else {
-        // First click → show info card only
-        setSelectedLocation(location);
-      }
-    },
-    [selectedLocation],
-  );
+  const handleMarkerSelect = useCallback((location: Location) => {
+    setSelectedLocation(location);
+    setFlyToLocation(location);
+    setFlyKey((k) => k + 1);
+  }, []);
 
   const handleExternalSelect = useCallback((location: Location) => {
     setSelectedLocation(location);

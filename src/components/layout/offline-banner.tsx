@@ -2,8 +2,10 @@
 
 import { useState, useEffect } from "react";
 import { WifiOff } from "lucide-react";
+import { useLocale } from "@/context/locale-context";
 
 export function OfflineBanner() {
+  const { t } = useLocale();
   const [isOffline, setIsOffline] = useState(false);
 
   useEffect(() => {
@@ -28,7 +30,7 @@ export function OfflineBanner() {
       aria-live="polite"
     >
       <WifiOff className="h-4 w-4 shrink-0" aria-hidden />
-      Çevrimdışısınız. Bazı veriler güncel olmayabilir.
+      {t("offline.message")}
     </div>
   );
 }

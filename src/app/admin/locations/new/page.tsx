@@ -93,9 +93,6 @@ export default function NewLocationPage() {
   const [uploading, setUploading] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-  const token =
-    typeof window !== "undefined" ? localStorage.getItem("admin_token") : null;
-
   useEffect(() => {
     fetch("/api/categories")
       .then((r) => r.json())
@@ -115,11 +112,12 @@ export default function NewLocationPage() {
       const fd = new FormData();
       fd.append("file", file);
       try {
-        const res = await fetch("/api/admin/upload", {
+        const { adminFetch } = await import("@/lib/admin-fetch");
+        const res = await adminFetch("/api/admin/upload", {
           method: "POST",
-          headers: { Authorization: `Bearer ${token}` },
           body: fd,
         });
+        if (res.status === 401 || res.status === 429) return;
         const data = await res.json();
         if (data.success) {
           setForm((prev) => ({
@@ -162,18 +160,17 @@ export default function NewLocationPage() {
     }
     setSaving(true);
     try {
-      const res = await fetch("/api/admin/locations", {
+      const { adminFetch } = await import("@/lib/admin-fetch");
+      const res = await adminFetch("/api/admin/locations", {
         method: "POST",
-        headers: {
-          Authorization: `Bearer ${token}`,
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           ...form,
           latitude: Number(form.latitude),
           longitude: Number(form.longitude),
         }),
       });
+      if (res.status === 401 || res.status === 429) return;
       const data = await res.json();
       if (data.success) {
         toast.success("Lokasyon oluşturuldu");

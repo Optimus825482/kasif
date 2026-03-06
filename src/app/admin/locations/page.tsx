@@ -32,6 +32,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { Skeleton } from "@/components/ui/skeleton";
+import { ErrorRetry } from "@/components/ui/error-retry";
 import { toast } from "sonner";
 import {
   Search,
@@ -92,34 +93,40 @@ export default function AdminLocationsPage() {
   const [totalPages, setTotalPages] = useState(1);
   const [total, setTotal] = useState(0);
   const [filterCategory, setFilterCategory] = useState("all");
+  const [error, setError] = useState<string | null>(null);
   const LIMIT = 15;
 
-  const token =
-    typeof window !== "undefined" ? localStorage.getItem("admin_token") : null;
-  const headers = {
-    Authorization: `Bearer ${token}`,
-    "Content-Type": "application/json",
-  };
-
   const fetchLocations = useCallback(async () => {
+    setError(null);
     setLoading(true);
-    const params = new URLSearchParams({
-      search,
-      page: String(page),
-      limit: String(LIMIT),
-    });
-    if (filterCategory !== "all") params.set("categoryId", filterCategory);
-    const res = await fetch(`/api/admin/locations?${params}`, {
-      headers: { Authorization: `Bearer ${token}` },
-    });
-    const data = await res.json();
-    if (data.success) {
-      setLocations(data.data.items);
-      setTotalPages(data.data.pageCount);
-      setTotal(data.data.total);
+    try {
+      const { adminFetch } = await import("@/lib/admin-fetch");
+      const params = new URLSearchParams({
+        search,
+        page: String(page),
+        limit: String(LIMIT),
+      });
+      if (filterCategory !== "all") params.set("categoryId", filterCategory);
+      const res = await adminFetch(`/api/admin/locations?${params}`);
+      if (!res.ok) {
+        if (res.status === 401 || res.status === 429) return;
+        setError("Lokasyon listesi yüklenemedi.");
+        return;
+      }
+      const data = await res.json();
+      if (data.success) {
+        setLocations(data.data.items);
+        setTotalPages(data.data.pageCount);
+        setTotal(data.data.total);
+      } else {
+        setError(data.error ?? "Lokasyon listesi yüklenemedi.");
+      }
+    } catch {
+      setError("Bağlantı hatası.");
+    } finally {
+      setLoading(false);
     }
-    setLoading(false);
-  }, [search, page, filterCategory, token]);
+  }, [search, page, filterCategory]);
 
   useEffect(() => {
     fetchLocations();
@@ -140,10 +147,11 @@ export default function AdminLocationsPage() {
   const handleDelete = async () => {
     if (!deleteId) return;
     try {
-      const res = await fetch(`/api/admin/locations/${deleteId}`, {
+      const { adminFetch } = await import("@/lib/admin-fetch");
+      const res = await adminFetch(`/api/admin/locations/${deleteId}`, {
         method: "DELETE",
-        headers,
       });
+      if (res.status === 401 || res.status === 429) return;
       const data = await res.json();
       if (data.success) {
         toast.success("Lokasyon silindi");
@@ -157,11 +165,13 @@ export default function AdminLocationsPage() {
 
   const toggleActive = async (loc: AdminLocation) => {
     try {
-      const res = await fetch(`/api/admin/locations/${loc.id}`, {
+      const { adminFetch } = await import("@/lib/admin-fetch");
+      const res = await adminFetch(`/api/admin/locations/${loc.id}`, {
         method: "PUT",
-        headers,
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ isActive: !loc.isActive }),
       });
+      if (res.status === 401 || res.status === 429) return;
       const data = await res.json();
       if (data.success) {
         toast.success(
@@ -224,6 +234,10 @@ export default function AdminLocationsPage() {
           {[1, 2, 3, 4, 5].map((i) => (
             <Skeleton key={i} className="h-14 rounded-lg" />
           ))}
+        </div>
+      ) : error ? (
+        <div className="flex justify-center py-12">
+          <ErrorRetry message={error} onRetry={fetchLocations} />
         </div>
       ) : total === 0 ? (
         <Card>

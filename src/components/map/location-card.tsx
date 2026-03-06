@@ -65,7 +65,7 @@ export function LocationCard({
       <button
         onClick={handleClose}
         className="absolute top-3 right-3 w-7 h-7 rounded-full bg-black/5 hover:bg-black/10 flex items-center justify-center transition-all z-10"
-        aria-label="Kapat"
+        aria-label={t("common.close")}
       >
         <X className="h-4 w-4 text-gray-500" />
       </button>
@@ -113,7 +113,7 @@ export function LocationCard({
             asChild
           >
             <Link href={`/locations/${location.id}`}>
-              {locale === "tr" ? "Detayları Gör" : "View Details"}
+              {t("explore.viewDetails")}
               <ChevronRight className="h-4 w-4 ml-1" />
             </Link>
           </Button>
@@ -122,9 +122,10 @@ export function LocationCard({
             variant="outline"
             className="text-[13px] h-9 rounded-lg"
             onClick={() => onDirections(location)}
+            aria-label={t("detail.getDirections")}
           >
             <Navigation className="h-4 w-4 mr-1" />
-            {locale === "tr" ? "Nasıl Gidilir" : "How to Get There"}
+            {t("detail.getDirections")}
           </Button>
         </div>
       </div>

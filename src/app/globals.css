@@ -172,10 +172,10 @@
   }
 }
 
-/* ── Location Card ── */
+/* ── Location Card: üstte, işaretçiyi kapatmaz; hem mobil hem masaüstü ── */
 .location-card {
   position: absolute;
-  bottom: 16px;
+  top: 7rem; /* arama çubuğunun altında */
   left: 16px;
   z-index: 1000;
   width: 360px;
@@ -187,12 +187,12 @@
     0 4px 12px rgba(0, 0, 0, 0.08);
   overflow: hidden;
   transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-  transform-origin: bottom left;
+  transform-origin: top left;
 }
 
 .location-card-hidden {
   opacity: 0;
-  transform: translateY(24px) scale(0.92);
+  transform: translateY(-16px) scale(0.96);
   pointer-events: none;
 }
 
@@ -214,15 +214,15 @@
   transform: translateY(-3px);
 }
 
-/* Mobile: card full width at bottom */
+/* Mobile: kart üstte, tam genişlik; işaretçi görünür kalır */
 @media (max-width: 640px) {
   .location-card {
-    bottom: 76px;
+    top: 5.5rem;
     left: 12px;
     right: 12px;
     width: auto;
     max-width: none;
-    transform-origin: bottom center;
+    transform-origin: top center;
   }
 }
 

@@ -32,6 +32,9 @@ export async function GET(req: NextRequest) {
     if (!res.ok) return new Response(null, { status: res.status });
 
     const contentType = res.headers.get("Content-Type") || "image/jpeg";
+    if (!contentType.startsWith("image/")) {
+      return new Response(null, { status: 502 });
+    }
     const buffer = await res.arrayBuffer();
     return new Response(buffer, {
       headers: {

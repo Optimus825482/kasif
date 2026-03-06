@@ -91,28 +91,30 @@ export default function AdminImagesPage() {
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
   const abortRef = useRef<AbortController | null>(null);
 
-  const token =
-    typeof window !== "undefined" ? localStorage.getItem("admin_token") : null;
-  const headers = {
-    Authorization: `Bearer ${token}`,
-    "Content-Type": "application/json",
-  };
-
   // ─── Fetch locations without images ───
   const fetchWithoutImages = useCallback(async () => {
     setLoading(true);
-    const res = await fetch(
-      "/api/admin/locations?withoutImages=true&limit=500",
-      { headers: { Authorization: `Bearer ${token}` } },
-    );
-    const data = await res.json();
-    if (data.success) {
-      setLocations(data.data.items ?? []);
-    } else {
-      toast.error(data.error ?? "Liste alınamadı");
+    try {
+      const { adminFetch } = await import("@/lib/admin-fetch");
+      const res = await adminFetch(
+        "/api/admin/locations?withoutImages=true&limit=500",
+      );
+      if (!res.ok) {
+        if (res.status === 401 || res.status === 429) return;
+        const data = await res.json().catch(() => ({}));
+        toast.error(data.error ?? "Liste alınamadı");
+        return;
+      }
+      const data = await res.json();
+      if (data.success) {
+        setLocations(data.data.items ?? []);
+      } else {
+        toast.error(data.error ?? "Liste alınamadı");
+      }
+    } finally {
+      setLoading(false);
     }
-    setLoading(false);
-  }, [token]);
+  }, []);
 
   useEffect(() => {
     fetchWithoutImages();
@@ -130,10 +132,11 @@ export default function AdminImagesPage() {
     if (!searchQuery.trim()) return;
     setSearching(true);
     try {
-      const res = await fetch(
+      const { adminFetch } = await import("@/lib/admin-fetch");
+      const res = await adminFetch(
         `/api/admin/wikimedia/search?q=${encodeURIComponent(searchQuery.trim())}&limit=20`,
-        { headers: { Authorization: `Bearer ${token}` } },
       );
+      if (res.status === 401 || res.status === 429) return;
       const data = await res.json();
       if (data.success && Array.isArray(data.data?.images)) {
         setSearchResults(data.data.images);
@@ -148,25 +151,30 @@ export default function AdminImagesPage() {
     } finally {
       setSearching(false);
     }
-  }, [searchQuery, token]);
+  }, [searchQuery]);
 
   useEffect(() => {
-    if (!dialogOpen || !selectedLocation || !token) return;
+    if (!dialogOpen || !selectedLocation) return;
     const initialQuery = `${selectedLocation.name} Balıkesir`;
     setSearchQuery(initialQuery);
     setSearching(true);
-    fetch(
-      `/api/admin/wikimedia/search?q=${encodeURIComponent(initialQuery)}&limit=20`,
-      { headers: { Authorization: `Bearer ${token}` } },
-    )
-      .then((r) => r.json())
-      .then((data) => {
+    (async () => {
+      try {
+        const { adminFetch } = await import("@/lib/admin-fetch");
+        const r = await adminFetch(
+          `/api/admin/wikimedia/search?q=${encodeURIComponent(initialQuery)}&limit=20`,
+        );
+        if (r.status === 401 || r.status === 429) return;
+        const data = await r.json();
         if (data.success && Array.isArray(data.data?.images)) {
           setSearchResults(data.data.images);
         }
-      })
-      .catch(() => toast.error("Wikimedia araması başarısız."))
-      .finally(() => setSearching(false));
+      } catch {
+        toast.error("Wikimedia araması başarısız.");
+      } finally {
+        setSearching(false);
+      }
+    })();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dialogOpen, selectedLocation?.id]);
 
@@ -178,11 +186,13 @@ export default function AdminImagesPage() {
   ) => {
     setApplying(imageUrl);
     try {
-      const res = await fetch(`/api/admin/locations/${locationId}`, {
+      const { adminFetch } = await import("@/lib/admin-fetch");
+      const res = await adminFetch(`/api/admin/locations/${locationId}`, {
         method: "PUT",
-        headers,
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ images: [imageUrl] }),
       });
+      if (res.status === 401 || res.status === 429) return;
       const data = await res.json();
       if (data.success) {
         if (fromScan) {
@@ -232,13 +242,15 @@ export default function AdminImagesPage() {
     toast.info(`${pending.length} görsel uygulanıyor...`);
     let success = 0;
 
+    const { adminFetch } = await import("@/lib/admin-fetch");
     for (const result of pending) {
       try {
-        const res = await fetch(`/api/admin/locations/${result.locationId}`, {
+        const res = await adminFetch(`/api/admin/locations/${result.locationId}`, {
           method: "PUT",
-          headers,
+          headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ images: [result.imageUrl] }),
         });
+        if (res.status === 401 || res.status === 429) return;
         const data = await res.json();
         if (data.success) {
           success++;
@@ -261,7 +273,6 @@ export default function AdminImagesPage() {
 
   // ─── Auto-scan with SSE ───
   const startAutoScan = () => {
-    if (!token) return;
     setScanState("scanning");
     setScanResults([]);
     setScanProgress({ processed: 0, total: 0 });
@@ -271,19 +282,22 @@ export default function AdminImagesPage() {
     const abort = new AbortController();
     abortRef.current = abort;
 
-    const evtSource = new EventSource(
-      `/api/admin/images/auto-scan?token=${token}`,
-    );
-
-    // SSE doesn't support custom headers, so we use fetch with stream reader
-    fetch("/api/admin/images/auto-scan", {
-      headers: { Authorization: `Bearer ${token}` },
-      signal: abort.signal,
-    })
-      .then(async (response) => {
+    (async () => {
+      try {
+        const { adminFetch } = await import("@/lib/admin-fetch");
+        const response = await adminFetch("/api/admin/images/auto-scan", {
+          signal: abort.signal,
+        });
+        if (!response.ok) {
+          if (response.status === 401 || response.status === 429) return;
+          setScanState("idle");
+          return;
+        }
         const reader = response.body?.getReader();
-        if (!reader) return;
-
+        if (!reader) {
+          setScanState("idle");
+          return;
+        }
         const decoder = new TextDecoder();
         let buffer = "";
 
@@ -309,17 +323,14 @@ export default function AdminImagesPage() {
             }
           }
         }
-
         setScanState("complete");
-      })
-      .catch((err) => {
-        if (err.name !== "AbortError") {
-          toast.error("Tarama hatası: " + err.message);
+      } catch (err) {
+        if ((err as Error).name !== "AbortError") {
+          setScanState("idle");
+          toast.error("Tarama hatası: " + (err as Error).message);
         }
-        setScanState("complete");
-      });
-
-    evtSource.close();
+      }
+    })();
   };
 
   const handleSSEEvent = (

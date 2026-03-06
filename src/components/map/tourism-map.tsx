@@ -57,18 +57,20 @@ const userIcon = L.divIcon({
   iconAnchor: [12, 12],
 });
 
-// flyKey ensures re-trigger even when same location is clicked again
+// flyKey ensures re-trigger even when same location is clicked again. zoom: marker için yakın (17), kullanıcı konumu için 14.
 function FlyToLocation({
   position,
   flyKey,
+  zoom = 14,
 }: {
   position: [number, number] | null;
   flyKey: number;
+  zoom?: number;
 }) {
   const map = useMap();
   useEffect(() => {
-    if (position) map.flyTo(position, 14, { duration: 1.2 });
-  }, [position, flyKey, map]);
+    if (position) map.flyTo(position, zoom, { duration: 1.2 });
+  }, [position, flyKey, zoom, map]);
   return null;
 }
 
@@ -291,11 +293,12 @@ export default function TourismMap({
         zoomControl={false}
       >
         <TileLayer key={mapStyle} attribution={tileAttribution} url={tileUrl} />
-        <FlyToLocation position={flyTarget} flyKey={flyKey} />
+        <FlyToLocation position={flyTarget} flyKey={flyKey} zoom={17} />
         {userPosition && (
           <FlyToLocation
             position={userPosition}
             flyKey={flyToUserKey}
+            zoom={14}
           />
         )}
         <FitRouteBounds routeInfo={routeInfo} />

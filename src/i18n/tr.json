@@ -29,6 +29,7 @@
     "locationBlockedHint": "İzin birkaç kez reddedildiyse tarayıcı engellemiş olabilir. Sıfırlamak için: adres çubuğundaki kilit/simge > Site ayarları > Konum > İzin ver veya Sıfırla.",
     "routeCalculating": "Rota hesaplanıyor…",
     "routeError": "Rota şu an hesaplanamıyor.",
+    "clearRoute": "Rotayı Temizle",
     "openInGoogleMaps": "Google Haritalar'da Aç",
     "openInAppleMaps": "Apple Haritalar'da Aç"
   },
@@ -74,7 +75,9 @@
   "common": {
     "loading": "Yükleniyor...",
     "error": "Bir hata oluştu",
-    "retry": "Tekrar Dene",
+    "retry": "Yeniden Dene",
+    "sessionExpired": "Oturumunuz sona erdi. Tekrar giriş yapın.",
+    "rateLimitRetry": "Çok fazla istek. {{seconds}} saniye sonra tekrar deneyin.",
     "close": "Kapat",
     "save": "Kaydet",
     "cancel": "İptal",

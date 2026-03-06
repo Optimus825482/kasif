@@ -42,20 +42,17 @@ export default function AdminCoordinatesPage() {
   const [updatingId, setUpdatingId] = useState<string | null>(null);
   const inputRefs = useRef<Record<string, HTMLInputElement | null>>({});
 
-  const token =
-    typeof window !== "undefined" ? localStorage.getItem("admin_token") : null;
-  const headers: HeadersInit = {
-    Authorization: `Bearer ${token}`,
-    "Content-Type": "application/json",
-  };
-
   const fetchAll = useCallback(async () => {
     setLoading(true);
     try {
-      const res = await fetch(
-        "/api/admin/locations?page=1&limit=500",
-        { headers: { Authorization: `Bearer ${token}` } }
-      );
+      const { adminFetch } = await import("@/lib/admin-fetch");
+      const res = await adminFetch("/api/admin/locations?page=1&limit=500");
+      if (!res.ok) {
+        if (res.status === 401 || res.status === 429) return;
+        const data = await res.json().catch(() => ({}));
+        toast.error(data.error ?? "Lokasyonlar yüklenemedi");
+        return;
+      }
       const data = await res.json();
       if (data.success && data.data?.items) {
         const list = data.data.items as CoordLocation[];
@@ -69,7 +66,7 @@ export default function AdminCoordinatesPage() {
     } finally {
       setLoading(false);
     }
-  }, [token]);
+  }, []);
 
   useEffect(() => {
     fetchAll();
@@ -82,11 +79,13 @@ export default function AdminCoordinatesPage() {
   ) => {
     setUpdatingId(id);
     try {
-      const res = await fetch(`/api/admin/locations/${id}`, {
+      const { adminFetch } = await import("@/lib/admin-fetch");
+      const res = await adminFetch(`/api/admin/locations/${id}`, {
         method: "PUT",
-        headers,
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ latitude: lat, longitude: lon }),
       });
+      if (res.status === 401 || res.status === 429) return;
       const data = await res.json();
       if (data.success) {
         setLocations((prev) =>

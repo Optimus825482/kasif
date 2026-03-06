@@ -8,6 +8,7 @@ const store = new Map<string, { count: number; resetAt: number }>();
 const WINDOW_MS = 60 * 1000; // 1 minute
 const MAX_LOGIN_ATTEMPTS = 5;
 const MAX_ADMIN_REQUESTS = 100;
+const MAX_EVENTS_PER_MINUTE = 120;
 
 function getKey(prefix: string, id: string): string {
   return `${prefix}:${id}`;
@@ -45,6 +46,16 @@ export function checkAdminApiRateLimit(ip: string): { allowed: boolean; retryAft
   const key = getKey("admin-api", ip);
   const { count, resetAt } = getOrCreate(key, MAX_ADMIN_REQUESTS);
   if (count > MAX_ADMIN_REQUESTS) {
+    return { allowed: false, retryAfterMs: resetAt - Date.now() };
+  }
+  return { allowed: true };
+}
+
+/** Events API: IP bazlı dakikalık limit (spam/DoS önleme). */
+export function checkEventsRateLimit(ip: string): { allowed: boolean; retryAfterMs?: number } {
+  const key = getKey("events", ip);
+  const { count, resetAt } = getOrCreate(key, MAX_EVENTS_PER_MINUTE);
+  if (count > MAX_EVENTS_PER_MINUTE) {
     return { allowed: false, retryAfterMs: resetAt - Date.now() };
   }
   return { allowed: true };

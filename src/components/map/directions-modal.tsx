@@ -238,14 +238,12 @@ export default function DirectionsModal({
           });
         }
       } catch {
-        setError(
-          locale === "tr" ? "Rota hesaplanamadı" : "Could not calculate route",
-        );
+        setError(t("map.routeError"));
       } finally {
         setLoading(null);
       }
     },
-    [userPosition, location, cache, locale, onRouteReady],
+    [userPosition, location, cache, locale, onRouteReady, t],
   );
 
   // Auto-fetch walking & driving on mount (sequential to avoid race condition)
@@ -343,13 +341,13 @@ export default function DirectionsModal({
                 onClick={handleClearRoute}
                 className="rounded-lg px-2.5 py-1 text-xs font-medium text-red-600 hover:bg-red-50 transition-colors"
               >
-                {locale === "tr" ? "Rotayı Temizle" : "Clear Route"}
+                {t("map.clearRoute")}
               </button>
             )}
             <button
               onClick={onClose}
               className="rounded-full p-1 hover:bg-gray-100 transition-colors"
-              aria-label={locale === "tr" ? "Kapat" : "Close"}
+              aria-label={t("common.close")}
             >
               <X className="h-5 w-5 text-gray-500" />
             </button>

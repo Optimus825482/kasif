@@ -16,31 +16,36 @@ export default function AdminSettingsPage() {
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const loadSettings = useCallback(() => {
+  const loadSettings = useCallback(async () => {
     setError(null);
     setLoading(true);
-    const token = localStorage.getItem("admin_token");
-    fetch("/api/admin/settings", { headers: { Authorization: "Bearer " + token } })
-      .then((r) => r.json())
-      .then((res) => {
-        if (res.success && res.data?.notificationRadiusKm != null) {
-          const km = Number(res.data.notificationRadiusKm);
-          setNotificationRadiusKm(km);
-          setSavedRadius(km);
-        }
+    try {
+      const { adminFetch } = await import("@/lib/admin-fetch");
+      const r = await adminFetch("/api/admin/settings");
+      if (!r.ok) {
         setLoading(false);
-      })
-      .catch(() => {
+        if (r.status === 401 || r.status === 429) return;
         setError("Ayarlar yüklenemedi.");
-        setLoading(false);
-      });
+        return;
+      }
+      const res = await r.json();
+      if (res.success && res.data?.notificationRadiusKm != null) {
+        const km = Number(res.data.notificationRadiusKm);
+        setNotificationRadiusKm(km);
+        setSavedRadius(km);
+      }
+    } catch {
+      setError("Ayarlar yüklenemedi.");
+    } finally {
+      setLoading(false);
+    }
   }, []);
 
   useEffect(() => {
     loadSettings();
   }, [loadSettings]);
 
-  const handleSave = () => {
+  const handleSave = async () => {
     const km = Math.round(Number(notificationRadiusKm));
     if (km < 1 || km > 500) {
       setError("Mesafe 1–500 km arasında olmalıdır.");
@@ -48,29 +53,31 @@ export default function AdminSettingsPage() {
     }
     setError(null);
     setSaving(true);
-    const token = localStorage.getItem("admin_token");
-    fetch("/api/admin/settings", {
-      method: "PATCH",
-      headers: {
-        Authorization: "Bearer " + token,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ notificationRadiusKm: km }),
-    })
-      .then((r) => r.json())
-      .then((res) => {
-        if (res.success) {
-          setSavedRadius(res.data.notificationRadiusKm);
-          setNotificationRadiusKm(res.data.notificationRadiusKm);
-        } else {
-          setError(res.error ?? "Kaydetme başarısız.");
-        }
-        setSaving(false);
-      })
-      .catch(() => {
-        setError("Bağlantı hatası.");
-        setSaving(false);
+    try {
+      const { adminFetch } = await import("@/lib/admin-fetch");
+      const r = await adminFetch("/api/admin/settings", {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ notificationRadiusKm: km }),
       });
+      if (!r.ok) {
+        if (r.status === 401 || r.status === 429) return;
+        const res = await r.json().catch(() => ({}));
+        setError(res.error ?? "Kaydetme başarısız.");
+        return;
+      }
+      const res = await r.json();
+      if (res.success) {
+        setSavedRadius(res.data.notificationRadiusKm);
+        setNotificationRadiusKm(res.data.notificationRadiusKm);
+      } else {
+        setError(res.error ?? "Kaydetme başarısız.");
+      }
+    } catch {
+      setError("Bağlantı hatası.");
+    } finally {
+      setSaving(false);
+    }
   };
 
   if (loading) {

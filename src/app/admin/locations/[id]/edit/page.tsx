@@ -94,9 +94,6 @@ export default function EditLocationPage() {
   const [uploading, setUploading] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-  const token =
-    typeof window !== "undefined" ? localStorage.getItem("admin_token") : null;
-
   useEffect(() => {
     fetch("/api/categories")
       .then((r) => r.json())
@@ -106,12 +103,20 @@ export default function EditLocationPage() {
   }, []);
 
   useEffect(() => {
-    if (!id || !token) return;
-    fetch(`/api/admin/locations/${id}`, {
-      headers: { Authorization: `Bearer ${token}` },
-    })
-      .then((r) => r.json())
-      .then((res) => {
+    if (!id) return;
+    let cancelled = false;
+    (async () => {
+      try {
+        const { adminFetch } = await import("@/lib/admin-fetch");
+        const r = await adminFetch(`/api/admin/locations/${id}`);
+        if (cancelled) return;
+        if (!r.ok) {
+          if (r.status === 401 || r.status === 429) return;
+          toast.error("Lokasyon bulunamadı");
+          router.push("/admin/locations");
+          return;
+        }
+        const res = await r.json();
         if (res.success) {
           const loc = res.data;
           setForm({
@@ -140,13 +145,17 @@ export default function EditLocationPage() {
           toast.error("Lokasyon bulunamadı");
           router.push("/admin/locations");
         }
-      })
-      .catch(() => {
-        toast.error("Lokasyon yüklenemedi");
-        router.push("/admin/locations");
-      })
-      .finally(() => setLoading(false));
-  }, [id, token, router]);
+      } catch {
+        if (!cancelled) {
+          toast.error("Lokasyon yüklenemedi");
+          router.push("/admin/locations");
+        }
+      } finally {
+        if (!cancelled) setLoading(false);
+      }
+    })();
+    return () => { cancelled = true; };
+  }, [id, router]);
 
   const updateForm = (key: string, value: string | boolean | string[]) =>
     setForm((prev) => ({ ...prev, [key]: value }));
@@ -159,11 +168,12 @@ export default function EditLocationPage() {
       const fd = new FormData();
       fd.append("file", file);
       try {
-        const res = await fetch("/api/admin/upload", {
+        const { adminFetch } = await import("@/lib/admin-fetch");
+        const res = await adminFetch("/api/admin/upload", {
           method: "POST",
-          headers: { Authorization: `Bearer ${token}` },
           body: fd,
         });
+        if (res.status === 401 || res.status === 429) return;
         const data = await res.json();
         if (data.success) {
           setForm((prev) => ({
@@ -206,18 +216,17 @@ export default function EditLocationPage() {
     }
     setSaving(true);
     try {
-      const res = await fetch(`/api/admin/locations/${id}`, {
+      const { adminFetch } = await import("@/lib/admin-fetch");
+      const res = await adminFetch(`/api/admin/locations/${id}`, {
         method: "PUT",
-        headers: {
-          Authorization: `Bearer ${token}`,
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           ...form,
           latitude: Number(form.latitude),
           longitude: Number(form.longitude),
         }),
       });
+      if (res.status === 401 || res.status === 429) return;
       const data = await res.json();
       if (data.success) {
         toast.success("Lokasyon güncellendi");
