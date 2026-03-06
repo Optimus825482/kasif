@@ -22,6 +22,7 @@ import {
   Info,
   ChevronDown,
   ChevronUp,
+  ExternalLink,
 } from "lucide-react";
 
 export interface RouteInfo {
@@ -108,7 +109,7 @@ export default function DirectionsModal({
   onClose,
   onRouteReady,
 }: DirectionsModalProps) {
-  const { locale } = useLocale();
+  const { locale, t } = useLocale();
   const [selectedMode, setSelectedMode] = useState<TransportMode | null>(null);
   const [loading, setLoading] = useState<TransportMode | null>(null);
   const [cache, setCache] = useState<RouteCache>({});
@@ -371,6 +372,13 @@ export default function DirectionsModal({
               </p>
             </div>
 
+            {loading && (
+              <p className="px-4 text-xs text-gray-500 flex items-center gap-1.5">
+                <Loader2 className="h-3.5 w-3.5 animate-spin" />
+                {t("map.routeCalculating")}
+              </p>
+            )}
+
             {/* Mode buttons */}
             <div className="grid grid-cols-3 gap-2 px-4 py-3">
               {(["walking", "driving", "transit"] as TransportMode[]).map(
@@ -399,7 +407,7 @@ export default function DirectionsModal({
                       }
                     >
                       {isLoading ? (
-                        <Loader2 className="h-5 w-5 animate-spin text-gray-400" />
+                        <Loader2 className="h-5 w-5 animate-spin text-gray-400" aria-hidden />
                       ) : (
                         <Icon
                           className="h-5 w-5"
@@ -542,8 +550,46 @@ export default function DirectionsModal({
             )}
 
             {error && (
-              <div className="px-4 pb-3 text-center text-xs text-red-500">
-                {error}
+              <div className="px-4 pb-3 flex flex-col items-center gap-2">
+                <p className="text-xs text-red-600">{t("map.routeError")}</p>
+                {selectedMode && (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setError(null);
+                      fetchRoute(selectedMode);
+                    }}
+                    className="text-xs font-medium text-teal-600 hover:underline"
+                  >
+                    {t("common.retry")}
+                  </button>
+                )}
+              </div>
+            )}
+
+            {/* External map links */}
+            {userPosition && (
+              <div className="px-4 pb-4 pt-2 border-t flex flex-wrap gap-2">
+                <a
+                  href={`https://www.google.com/maps/dir/?api=1&origin=${userPosition[0]},${userPosition[1]}&destination=${location.latitude},${location.longitude}&travelmode=driving`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 rounded-lg border px-3 py-2 text-xs font-medium text-gray-700 hover:bg-gray-50"
+                  aria-label={t("map.openInGoogleMaps")}
+                >
+                  <span>{t("map.openInGoogleMaps")}</span>
+                  <ExternalLink className="h-3 w-3" />
+                </a>
+                <a
+                  href={`https://maps.apple.com/?daddr=${location.latitude},${location.longitude}&saddr=${userPosition[0]},${userPosition[1]}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 rounded-lg border px-3 py-2 text-xs font-medium text-gray-700 hover:bg-gray-50"
+                  aria-label={t("map.openInAppleMaps")}
+                >
+                  <span>{t("map.openInAppleMaps")}</span>
+                  <ExternalLink className="h-3 w-3" />
+                </a>
               </div>
             )}
           </>

@@ -9,11 +9,20 @@ import { Search, X } from "lucide-react";
 interface SearchBarProps {
   locations: Location[];
   onSelect: (location: Location) => void;
+  searchQuery?: string;
+  onSearchQueryChange?: (q: string) => void;
 }
 
-export function SearchBar({ locations, onSelect }: SearchBarProps) {
+export function SearchBar({
+  locations,
+  onSelect,
+  searchQuery: controlledQuery,
+  onSearchQueryChange,
+}: SearchBarProps) {
   const { locale, t } = useLocale();
-  const [query, setQuery] = useState("");
+  const [internalQuery, setInternalQuery] = useState("");
+  const query = controlledQuery ?? internalQuery;
+  const setQuery = onSearchQueryChange ?? setInternalQuery;
   const [focused, setFocused] = useState(false);
 
   const results = useMemo(() => {

@@ -42,6 +42,7 @@ import {
   Star,
   Eye,
   EyeOff,
+  ExternalLink,
   ChevronLeft,
   ChevronRight,
 } from "lucide-react";
@@ -204,6 +205,19 @@ export default function AdminLocationsPage() {
             <Skeleton key={i} className="h-14 rounded-lg" />
           ))}
         </div>
+      ) : total === 0 ? (
+        <Card>
+          <CardContent className="flex flex-col items-center justify-center py-16 text-center">
+            <MapPin className="h-14 w-14 text-muted-foreground/40 mx-auto mb-4" />
+            <p className="text-muted-foreground mb-2">Henüz lokasyon eklenmemiş.</p>
+            <Button
+              className="bg-teal-600 hover:bg-teal-700"
+              onClick={() => router.push("/admin/locations/new")}
+            >
+              <Plus className="h-4 w-4 mr-1.5" /> Yeni Lokasyon Ekle
+            </Button>
+          </CardContent>
+        </Card>
       ) : (
         <Card>
           <CardContent className="p-0">
@@ -230,8 +244,7 @@ export default function AdminLocationsPage() {
                       colSpan={7}
                       className="text-center text-muted-foreground py-12"
                     >
-                      <MapPin className="h-8 w-8 mx-auto mb-2 opacity-30" />
-                      Lokasyon bulunamadı
+                      Filtreye uyan lokasyon yok
                     </TableCell>
                   </TableRow>
                 ) : (
@@ -303,6 +316,22 @@ export default function AdminLocationsPage() {
                       </TableCell>
                       <TableCell>
                         <div className="flex gap-1">
+                          <Button
+                            variant="ghost"
+                            size="icon"
+                            className="h-8 w-8"
+                            asChild
+                          >
+                            <a
+                              href={`/locations/${loc.id}`}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              title="Önizle"
+                              aria-label="Siteyi önizle"
+                            >
+                              <ExternalLink className="h-3.5 w-3.5" />
+                            </a>
+                          </Button>
                           <Button
                             variant="ghost"
                             size="icon"

@@ -116,6 +116,9 @@ interface TourismMapProps {
   onSelectLocation: (location: Location) => void;
   activeCategory: string | null;
   routeInfo?: RouteInfo | null;
+  userPosition?: [number, number] | null;
+  geoError?: boolean;
+  onRetryGeo?: () => void;
 }
 
 export default function TourismMap({
@@ -126,11 +129,18 @@ export default function TourismMap({
   onSelectLocation,
   activeCategory,
   routeInfo,
+  userPosition: userPositionProp,
+  geoError: geoErrorProp,
+  onRetryGeo,
 }: TourismMapProps) {
   const { trackEvent } = useAnalytics();
-  const [userPosition, setUserPosition] = useState<[number, number] | null>(
-    null,
-  );
+  const [userPositionInternal, setUserPositionInternal] = useState<
+    [number, number] | null
+  >(null);
+  const userPosition = userPositionProp ?? userPositionInternal;
+  const [geoErrorInternal, setGeoErrorInternal] = useState(false);
+  const geoError = geoErrorProp ?? geoErrorInternal;
+  const [flyToUserKey, setFlyToUserKey] = useState(0);
   const defaultZoom = Number(process.env.NEXT_PUBLIC_MAP_ZOOM) || 10;
   const [zoomLevel, setZoomLevel] = useState(defaultZoom);
   const [mapStyle, setMapStyle] = useState<"standard" | "satellite">(
@@ -142,20 +152,23 @@ export default function TourismMap({
     Number(process.env.NEXT_PUBLIC_MAP_CENTER_LNG) || 27.8826,
   ];
 
-  // Delay geolocation request to avoid browser violation
+  // Geolocation when not provided by parent
   useEffect(() => {
+    if (userPositionProp !== undefined) return;
     const timer = setTimeout(() => {
       if ("geolocation" in navigator) {
         navigator.geolocation.getCurrentPosition(
-          (pos) => setUserPosition([pos.coords.latitude, pos.coords.longitude]),
-          () => {},
+          (pos) =>
+            setUserPositionInternal([pos.coords.latitude, pos.coords.longitude]),
+          () => setGeoErrorInternal(true),
           { enableHighAccuracy: true, timeout: 10000 },
         );
       }
     }, 2000);
     return () => clearTimeout(timer);
-  }, []);
+  }, [userPositionProp]);
 
+  // Parent may pass pre-filtered locations (by search + category)
   const filteredLocations = useMemo(
     () =>
       activeCategory
@@ -199,6 +212,7 @@ export default function TourismMap({
           setMapStyle((s) => (s === "standard" ? "satellite" : "standard"))
         }
         className="absolute top-3 right-3 z-[1000] flex items-center gap-1.5 px-3 py-2 rounded-lg bg-white/90 backdrop-blur-md shadow-lg border border-gray-200/60 text-xs font-medium text-gray-700 hover:bg-white transition-all active:scale-95"
+        aria-label="Harita stilini değiştir"
       >
         {mapStyle === "standard" ? (
           <>
@@ -243,6 +257,30 @@ export default function TourismMap({
         )}
       </button>
 
+      {(geoError || userPosition) && (
+        <div className="absolute top-14 right-3 z-[1000] flex flex-col gap-2">
+          {geoError && onRetryGeo && (
+            <div className="rounded-lg bg-amber-500/10 border border-amber-500/30 px-3 py-2 text-xs text-amber-800 dark:text-amber-200 flex items-center gap-2">
+              <span>Konum açılmadı.</span>
+              <button type="button" onClick={onRetryGeo} className="underline font-medium">
+                Tekrar dene
+              </button>
+            </div>
+          )}
+          {userPosition && (
+            <button
+              type="button"
+              onClick={() => setFlyToUserKey((k) => k + 1)}
+              className="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-white/90 backdrop-blur-md shadow-lg border border-gray-200/60 text-xs font-medium text-gray-700 hover:bg-white transition-all"
+              aria-label="Konumuma git"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              Konumuma git
+            </button>
+          )}
+        </div>
+      )}
+
       <MapContainer
         center={center}
         zoom={defaultZoom}
@@ -251,6 +289,12 @@ export default function TourismMap({
       >
         <TileLayer key={mapStyle} attribution={tileAttribution} url={tileUrl} />
         <FlyToLocation position={flyTarget} flyKey={flyKey} />
+        {userPosition && (
+          <FlyToLocation
+            position={userPosition}
+            flyKey={flyToUserKey}
+          />
+        )}
         <FitRouteBounds routeInfo={routeInfo} />
         <ZoomTracker onZoomChange={setZoomLevel} />
 

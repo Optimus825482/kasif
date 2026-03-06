@@ -14,17 +14,36 @@
   "map": {
     "title": "Turizm Haritası",
     "myLocation": "Konumum",
+    "goToMyLocation": "Konumuma Git",
     "nearbyPlaces": "Yakınımdaki Yerler",
     "allPlaces": "Tüm Noktalar",
     "filterByCategory": "Kategoriye Göre Filtrele",
     "searchPlaceholder": "Yer ara...",
+    "searchResults": "{{count}} sonuç",
     "directions": "Nasıl Gidilir",
     "noResults": "Sonuç bulunamadı",
     "loading": "Harita yükleniyor...",
     "locationPermission": "Konum izni gerekli",
-    "locationDenied": "Konum izni reddedildi. Varsayılan konum kullanılıyor."
+    "locationDenied": "Konum açılmadı; haritayı elle hareket ettirebilirsiniz.",
+    "routeCalculating": "Rota hesaplanıyor…",
+    "routeError": "Rota şu an hesaplanamıyor.",
+    "openInGoogleMaps": "Google Haritalar'da Aç",
+    "openInAppleMaps": "Apple Haritalar'da Aç"
+  },
+  "explore": {
+    "viewDetails": "Detayları Gör"
+  },
+  "admin": {
+    "locationsEmpty": "Henüz lokasyon eklenmemiş.",
+    "addFirst": "Yeni Lokasyon Ekle",
+    "preview": "Önizle"
+  },
+  "offline": {
+    "message": "Çevrimdışısınız. Bazı veriler güncel olmayabilir."
   },
   "detail": {
+    "notFound": "Bu lokasyon bulunamadı veya kaldırılmış.",
+    "similarPlaces": "Benzer Yerler",
     "visitHours": "Ziyaret Saatleri",
     "fee": "Giriş Ücreti",
     "free": "Ücretsiz",

@@ -1,18 +1,27 @@
 import { NextRequest } from "next/server";
+import { revalidateTag } from "next/cache";
 import { prisma } from "@/lib/prisma";
 import { verifyToken } from "@/lib/auth";
 import { successResponse, errorResponse } from "@/lib/api-response";
+import { locationCreateSchema } from "@/lib/validations";
+import { LocationService } from "@/services/location.service";
+import { checkAdminApiRateLimit, getClientIp } from "@/lib/rate-limit";
 
 export async function GET(req: NextRequest) {
   const admin = verifyToken(req);
-  if (!admin) return errorResponse("Yetkisiz erişim", 401);
+  if (!admin) return errorResponse("Yetkisiz erişim", 401, "UNAUTHORIZED");
+
+  const ip = getClientIp(req);
+  const rate = checkAdminApiRateLimit(ip);
+  if (!rate.allowed) {
+    return errorResponse("İstek limiti aşıldı", 429, "RATE_LIMIT_EXCEEDED");
+  }
 
   try {
     const { searchParams } = new URL(req.url);
     const page = Number(searchParams.get("page")) || 1;
     const limit = Number(searchParams.get("limit")) || 20;
     const search = searchParams.get("search") || "";
-
     const categoryId = searchParams.get("categoryId") || "";
 
     const where = {
@@ -48,74 +57,31 @@ export async function GET(req: NextRequest) {
       limit,
       pageCount: Math.ceil(total / limit),
     });
-  } catch {
-    return errorResponse("Sunucu hatası", 500);
+  } catch (err) {
+    console.error("[admin/locations GET]", err);
+    return errorResponse("Sunucu hatası", 500, "INTERNAL_ERROR");
   }
 }
 
 export async function POST(req: NextRequest) {
   const admin = verifyToken(req);
-  if (!admin) return errorResponse("Yetkisiz erişim", 401);
+  if (!admin) return errorResponse("Yetkisiz erişim", 401, "UNAUTHORIZED");
+
+  const ip = getClientIp(req);
+  const rate = checkAdminApiRateLimit(ip);
+  if (!rate.allowed) {
+    return errorResponse("İstek limiti aşıldı", 429, "RATE_LIMIT_EXCEEDED");
+  }
 
   try {
     const body = await req.json();
-    const {
-      name,
-      nameEn,
-      description,
-      descriptionEn,
-      shortDesc,
-      shortDescEn,
-      latitude,
-      longitude,
-      categoryId,
-      images,
-      visitHours,
-      fee,
-      feeEn,
-      address,
-      addressEn,
-      phone,
-      website,
-      accessibility,
-      isFeatured,
-    } = body;
-
-    if (
-      !name ||
-      !nameEn ||
-      !description ||
-      !descriptionEn ||
-      !latitude ||
-      !longitude ||
-      !categoryId
-    ) {
-      return errorResponse("Zorunlu alanlar eksik", 422);
+    const parsed = locationCreateSchema.safeParse(body);
+    if (!parsed.success) {
+      const msg = parsed.error.issues[0]?.message ?? "Zorunlu alanlar eksik";
+      return errorResponse(msg, 422, "VALIDATION_ERROR");
     }
 
-    const location = await prisma.location.create({
-      data: {
-        name,
-        nameEn,
-        description,
-        descriptionEn,
-        shortDesc: shortDesc || "",
-        shortDescEn: shortDescEn || "",
-        latitude: Number(latitude),
-        longitude: Number(longitude),
-        categoryId,
-        images: images || [],
-        visitHours,
-        fee,
-        feeEn,
-        address,
-        addressEn,
-        phone,
-        website,
-        accessibility,
-        isFeatured: isFeatured || false,
-      },
-    });
+    const location = await LocationService.create(parsed.data);
 
     await prisma.auditLog.create({
       data: {
@@ -127,8 +93,10 @@ export async function POST(req: NextRequest) {
       },
     });
 
+    revalidateTag("locations", "max");
     return successResponse(location, 201);
-  } catch {
-    return errorResponse("Lokasyon oluşturulamadı", 500);
+  } catch (err) {
+    console.error("[admin/locations POST]", err);
+    return errorResponse("Lokasyon oluşturulamadı", 500, "INTERNAL_ERROR");
   }
 }

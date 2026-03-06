@@ -4,6 +4,7 @@ import "./globals.css";
 import { Toaster } from "@/components/ui/sonner";
 import { Providers } from "./providers";
 import { BottomNav } from "@/components/layout/bottom-nav";
+import { OfflineBanner } from "@/components/layout/offline-banner";
 import { SplashScreen } from "@/components/layout/splash-screen";
 import { PwaInstallPrompt } from "@/components/layout/pwa-install";
 
@@ -82,6 +83,7 @@ export default function RootLayout({
       <head />
       <body className={`${inter.className} antialiased`}>
         <Providers>
+          <OfflineBanner />
           <SplashScreen />
           {children}
           <BottomNav />

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState, useCallback } from "react";
+import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
 import dynamic from "next/dynamic";
 import type { Location } from "@/types";
@@ -13,6 +14,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Skeleton } from "@/components/ui/skeleton";
+import { ErrorRetry } from "@/components/ui/error-retry";
 import {
   ArrowLeft,
   Clock,
@@ -25,6 +27,7 @@ import {
   Accessibility,
   ExternalLink,
   Bus,
+  ChevronRight,
 } from "lucide-react";
 
 const DirectionsModal = dynamic(
@@ -50,23 +53,50 @@ export default function LocationDetailPage() {
   const { locale, t } = useLocale();
   const { trackEvent } = useAnalytics();
   const [location, setLocation] = useState<Location | null>(null);
+  const [similar, setSimilar] = useState<Location[]>([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [notFound, setNotFound] = useState(false);
   const [showDirections, setShowDirections] = useState(false);
   const [userPos, setUserPos] = useState<[number, number] | null>(null);
 
-  useEffect(() => {
-    if (params.id) {
-      fetch(`/api/locations/${params.id}`)
-        .then((r) => r.json())
-        .then((res) => {
-          if (res.success) {
-            setLocation(res.data);
-            trackEvent("detail_view", res.data.id);
+  const loadLocation = useCallback(() => {
+    if (!params.id) return;
+    setError(null);
+    setNotFound(false);
+    setLoading(true);
+    fetch(`/api/locations/${params.id}`)
+      .then((r) => r.json())
+      .then((res) => {
+        if (res.success) {
+          const loc = res.data as Location;
+          setLocation(loc);
+          trackEvent("detail_view", loc.id);
+          setNotFound(false);
+          if (loc.categoryId) {
+            fetch(`/api/locations?categoryId=${loc.categoryId}&limit=7`)
+              .then((r2) => r2.json())
+              .then((r2res) => {
+                if (r2res.success && r2res.data?.items) {
+                  const others = (r2res.data.items as Location[]).filter(
+                    (l) => l.id !== params.id
+                  );
+                  setSimilar(others.slice(0, 6));
+                }
+              });
           }
-          setLoading(false);
-        });
-    }
+        } else {
+          setNotFound(true);
+          setLocation(null);
+        }
+      })
+      .catch(() => setError("Bağlantı hatası."))
+      .finally(() => setLoading(false));
   }, [params.id, trackEvent]);
+
+  useEffect(() => {
+    loadLocation();
+  }, [loadLocation]);
 
   useEffect(() => {
     if ("geolocation" in navigator) {
@@ -100,16 +130,39 @@ export default function LocationDetailPage() {
     );
   }
 
-  if (!location) {
+  if (error) {
     return (
       <div className="flex flex-col min-h-screen">
         <Header />
-        <div className="flex-1 flex items-center justify-center">
-          <p className="text-muted-foreground">{t("map.noResults")}</p>
-        </div>
+        <main className="flex-1 flex items-center justify-center p-4">
+          <ErrorRetry message={error} onRetry={loadLocation} />
+        </main>
       </div>
     );
   }
+
+  if (notFound || (!loading && !location)) {
+    return (
+      <div className="flex flex-col min-h-screen">
+        <Header />
+        <main className="flex-1 flex flex-col items-center justify-center p-4 gap-4">
+          <p className="text-muted-foreground text-center">
+            {t("detail.notFound")}
+          </p>
+          <div className="flex gap-2">
+            <Button variant="outline" asChild>
+              <Link href="/explore">{t("nav.explore")}</Link>
+            </Button>
+            <Button asChild>
+              <Link href="/">{t("nav.map")}</Link>
+            </Button>
+          </div>
+        </main>
+      </div>
+    );
+  }
+
+  if (!location) return null;
 
   const name = locale === "en" ? location.nameEn : location.name;
   const desc = locale === "en" ? location.descriptionEn : location.description;
@@ -309,6 +362,43 @@ export default function LocationDetailPage() {
               )}
             </CardContent>
           </Card>
+
+          {similar.length > 0 && (
+            <div className="mb-4">
+              <h2 className="text-sm font-semibold mb-2">
+                {t("detail.similarPlaces")}
+              </h2>
+              <div className="grid gap-2 sm:grid-cols-2">
+                {similar.map((loc) => {
+                  const locName =
+                    locale === "en" ? loc.nameEn : loc.name;
+                  return (
+                    <Link key={loc.id} href={`/locations/${loc.id}`}>
+                      <Card className="hover:shadow-md transition-shadow">
+                        <CardContent className="p-3 flex items-center gap-2">
+                          <Badge
+                            style={{
+                              backgroundColor: loc.category.color,
+                              color: "white",
+                            }}
+                            className="text-xs"
+                          >
+                            {locale === "en"
+                              ? loc.category.nameEn
+                              : loc.category.name}
+                          </Badge>
+                          <span className="text-sm font-medium truncate">
+                            {locName}
+                          </span>
+                          <ChevronRight className="h-4 w-4 shrink-0 ml-auto text-muted-foreground" />
+                        </CardContent>
+                      </Card>
+                    </Link>
+                  );
+                })}
+              </div>
+            </div>
+          )}
         </div>
       </main>
       {showDirections && (

@@ -1,40 +1,72 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import Link from "next/link";
 import type { Location, Category } from "@/types";
 import { useLocale } from "@/context/locale-context";
+import { useDebounce } from "@/hooks/use-debounce";
+import { useAnalytics } from "@/hooks/use-analytics";
 import { Header } from "@/components/layout/header";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
+import { ErrorRetry } from "@/components/ui/error-retry";
 import { Search, MapPin, Star, ChevronRight } from "lucide-react";
 
 export default function ExplorePage() {
   const { locale, t } = useLocale();
+  const { trackEvent } = useAnalytics();
   const [locations, setLocations] = useState<Location[]>([]);
   const [categories, setCategories] = useState<Category[]>([]);
   const [search, setSearch] = useState("");
+  const debouncedSearch = useDebounce(search, 400);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
-  useEffect(() => {
+  const loadData = useCallback(() => {
+    setError(null);
+    setLoading(true);
     Promise.all([
       fetch("/api/locations/all").then((r) => r.json()),
       fetch("/api/categories").then((r) => r.json()),
-    ]).then(([locRes, catRes]) => {
-      if (locRes.success) setLocations(locRes.data);
-      if (catRes.success) setCategories(catRes.data);
-      setLoading(false);
-    });
+    ])
+      .then(([locRes, catRes]) => {
+        if (locRes.success) setLocations(locRes.data ?? []);
+        else setError(locRes.error ?? "Veriler yüklenemedi");
+        if (catRes.success) setCategories(catRes.data ?? []);
+        setLoading(false);
+      })
+      .catch(() => {
+        setError("Bağlantı hatası.");
+        setLoading(false);
+      });
   }, []);
+
+  useEffect(() => {
+    loadData();
+  }, [loadData]);
+
+  useEffect(() => {
+    if (debouncedSearch && trackEvent) {
+      const filtered = locations.filter((loc) => {
+        const name = locale === "en" ? loc.nameEn : loc.name;
+        return name.toLowerCase().includes(debouncedSearch.toLowerCase());
+      });
+      trackEvent("search", undefined, {
+        query: debouncedSearch,
+        resultCount: filtered.length,
+      });
+    }
+  }, [debouncedSearch, locale, locations, trackEvent]);
 
   const filtered = locations.filter((loc) => {
     const name = locale === "en" ? loc.nameEn : loc.name;
     const matchSearch =
-      !search || name.toLowerCase().includes(search.toLowerCase());
+      !debouncedSearch ||
+      name.toLowerCase().includes(debouncedSearch.toLowerCase());
     const matchCat = !activeCategory || loc.category.slug === activeCategory;
     return matchSearch && matchCat;
   });
@@ -93,7 +125,9 @@ export default function ExplorePage() {
           </div>
         </div>
 
-        {loading ? (
+        {error ? (
+          <ErrorRetry message={error} onRetry={loadData} />
+        ) : loading ? (
           <div className="grid gap-3 sm:grid-cols-2">
             {Array.from({ length: 6 }).map((_, i) => (
               <Skeleton key={i} className="h-32 rounded-xl" />
@@ -135,9 +169,7 @@ export default function ExplorePage() {
                         {desc}
                       </p>
                       <div className="flex items-center text-xs text-teal-600">
-                        {t("detail.back") === "Geri"
-                          ? "Detayları Gör"
-                          : "View Details"}
+                        {t("explore.viewDetails")}
                         <ChevronRight className="h-3 w-3 ml-0.5" />
                       </div>
                     </CardContent>

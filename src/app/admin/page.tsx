@@ -1,7 +1,8 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
+import { ErrorRetry } from "@/components/ui/error-retry";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
@@ -105,17 +106,28 @@ const renderPieLabel = (p: any) =>
 export default function AdminDashboard() {
   const [stats, setStats] = useState<Stats | null>(null);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
-  useEffect(() => {
+  const loadStats = useCallback(() => {
+    setError(null);
+    setLoading(true);
     const token = localStorage.getItem("admin_token");
     fetch("/api/admin/stats", { headers: { Authorization: "Bearer " + token } })
       .then((r) => r.json())
       .then((res) => {
         if (res.success) setStats(res.data);
+        else setError(res.error ?? "Veriler yüklenemedi");
         setLoading(false);
       })
-      .catch(() => setLoading(false));
+      .catch(() => {
+        setError("Bağlantı hatası.");
+        setLoading(false);
+      });
   }, []);
+
+  useEffect(() => {
+    loadStats();
+  }, [loadStats]);
 
   const statCards = stats
     ? [
@@ -186,12 +198,17 @@ export default function AdminDashboard() {
     );
   }
 
-  if (!stats)
+  if (error || (!loading && !stats))
     return (
-      <div className="flex items-center justify-center h-64 text-muted-foreground">
-        Veriler yüklenemedi.
+      <div className="flex items-center justify-center min-h-[300px] p-4">
+        <ErrorRetry
+          message={error ?? "Veriler yüklenemedi."}
+          onRetry={loadStats}
+        />
       </div>
     );
+
+  if (!stats) return null;
 
   return (
     <div className="space-y-6">

@@ -29,8 +29,11 @@ export default function AdminLoginPage() {
       const data = await res.json();
 
       if (data.success) {
-        localStorage.setItem("admin_token", data.data.token);
+        const token = data.data.token;
+        localStorage.setItem("admin_token", token);
         localStorage.setItem("admin_user", JSON.stringify(data.data.admin));
+        // Cookie for middleware (server-side /admin protection)
+        document.cookie = `admin_token=${encodeURIComponent(token)}; path=/; max-age=${7 * 24 * 60 * 60}; SameSite=Lax`;
         router.push("/admin");
       } else {
         setError(data.error || "Giriş başarısız");

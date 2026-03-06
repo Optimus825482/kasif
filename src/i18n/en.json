@@ -14,6 +14,12 @@
   "map": {
     "title": "Tourism Map",
     "myLocation": "My Location",
+    "goToMyLocation": "Go to my location",
+    "searchResults": "{{count}} results",
+    "routeCalculating": "Calculating route…",
+    "routeError": "Route could not be calculated.",
+    "openInGoogleMaps": "Open in Google Maps",
+    "openInAppleMaps": "Open in Apple Maps",
     "nearbyPlaces": "Nearby Places",
     "allPlaces": "All Places",
     "filterByCategory": "Filter by Category",
@@ -24,7 +30,12 @@
     "locationPermission": "Location permission required",
     "locationDenied": "Location permission denied. Using default location."
   },
+  "explore": {
+    "viewDetails": "View Details"
+  },
   "detail": {
+    "notFound": "This location was not found or has been removed.",
+    "similarPlaces": "Similar Places",
     "visitHours": "Visit Hours",
     "fee": "Entrance Fee",
     "free": "Free",
@@ -48,6 +59,14 @@
     "cultural": "Cultural Venues",
     "gastronomy": "Gastronomy",
     "all": "All"
+  },
+  "admin": {
+    "locationsEmpty": "No locations added yet.",
+    "addFirst": "Add First Location",
+    "preview": "Preview"
+  },
+  "offline": {
+    "message": "You are offline. Some data may be outdated."
   },
   "common": {
     "loading": "Loading...",
