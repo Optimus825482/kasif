@@ -9,6 +9,8 @@ import {
   LayoutDashboard,
   MapPinned,
   Crosshair,
+  Settings,
+  ImagePlus,
   LogOut,
   ChevronLeft,
 } from "lucide-react";
@@ -52,7 +54,9 @@ export default function AdminLayout({
   const navItems = [
     { href: "/admin", label: "Dashboard", icon: LayoutDashboard },
     { href: "/admin/locations", label: "Lokasyonlar", icon: MapPinned },
+    { href: "/admin/images", label: "Eksik Görseller", icon: ImagePlus },
     { href: "/admin/coordinates", label: "Koordinat Doğrula", icon: Crosshair },
+    { href: "/admin/settings", label: "Ayarlar", icon: Settings },
   ];
 
   return (

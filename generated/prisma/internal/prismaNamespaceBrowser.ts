@@ -55,6 +55,7 @@ export const ModelName = {
   Location: 'Location',
   Admin: 'Admin',
   AnalyticsEvent: 'AnalyticsEvent',
+  AppSetting: 'AppSetting',
   AuditLog: 'AuditLog'
 } as const
 
@@ -147,6 +148,16 @@ export const AnalyticsEventScalarFieldEnum = {
 } as const
 
 export type AnalyticsEventScalarFieldEnum = (typeof AnalyticsEventScalarFieldEnum)[keyof typeof AnalyticsEventScalarFieldEnum]
+
+
+export const AppSettingScalarFieldEnum = {
+  id: 'id',
+  key: 'key',
+  value: 'value',
+  updatedAt: 'updatedAt'
+} as const
+
+export type AppSettingScalarFieldEnum = (typeof AppSettingScalarFieldEnum)[keyof typeof AppSettingScalarFieldEnum]
 
 
 export const AuditLogScalarFieldEnum = {

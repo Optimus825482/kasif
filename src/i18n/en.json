@@ -21,6 +21,7 @@
     "openInGoogleMaps": "Open in Google Maps",
     "openInAppleMaps": "Open in Apple Maps",
     "nearbyPlaces": "Nearby Places",
+    "withinRadius": "Within {{km}} km",
     "allPlaces": "All Places",
     "filterByCategory": "Filter by Category",
     "searchPlaceholder": "Search places...",
@@ -35,7 +36,8 @@
   },
   "detail": {
     "notFound": "This location was not found or has been removed.",
-    "similarPlaces": "Similar Places",
+    "nearbyPlaces": "Nearby Places",
+    "nearbyPlacesHint": "Within 20 km",
     "visitHours": "Visit Hours",
     "fee": "Entrance Fee",
     "free": "Free",

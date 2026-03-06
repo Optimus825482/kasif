@@ -1,8 +1,9 @@
 "use client";
 
-import { useEffect, useState, useCallback, useMemo } from "react";
+import { useEffect, useState, useCallback, useMemo, useRef } from "react";
 import dynamic from "next/dynamic";
 import type { Location, Category } from "@/types";
+import { haversineDistance } from "@/lib/utils";
 import type { RouteInfo } from "@/components/map/directions-modal";
 import { Header } from "@/components/layout/header";
 import { CategoryFilter } from "@/components/map/category-filter";
@@ -46,6 +47,8 @@ export default function HomePage() {
     null,
   );
   const [routeInfo, setRouteInfo] = useState<RouteInfo | null>(null);
+  const [notificationRadiusKm, setNotificationRadiusKm] = useState<number>(30);
+  const [notificationPermission, setNotificationPermission] = useState<NotificationPermission>("default");
 
   const loadData = useCallback(() => {
     setError(null);
@@ -53,13 +56,18 @@ export default function HomePage() {
     Promise.all([
       fetch("/api/locations/all").then((r) => r.json()),
       fetch("/api/categories").then((r) => r.json()),
+      fetch("/api/settings").then((r) => r.json()),
     ])
-      .then(([locRes, catRes]) => {
+      .then(([locRes, catRes, setRes]) => {
         let err: string | null = null;
         if (locRes.success) setLocations(locRes.data ?? []);
         else err = locRes.error ?? "Veriler yüklenemedi";
         if (catRes.success) setCategories(catRes.data ?? []);
         else err = err ?? catRes.error ?? "Kategoriler yüklenemedi";
+        if (setRes.success && setRes.data?.notificationRadiusKm != null) {
+          const km = Number(setRes.data.notificationRadiusKm);
+          setNotificationRadiusKm(Number.isFinite(km) && km > 0 ? km : 30);
+        }
         setError(err);
         setLoading(false);
       })
@@ -87,6 +95,16 @@ export default function HomePage() {
     }
   }, [loading]);
 
+  // Request notification permission when we have location (after user has granted location)
+  useEffect(() => {
+    if (typeof window === "undefined" || !("Notification" in window)) return;
+    if (userPosition && Notification.permission === "default") {
+      Notification.requestPermission().then(setNotificationPermission);
+    } else if (Notification.permission) {
+      setNotificationPermission(Notification.permission);
+    }
+  }, [userPosition]);
+
   const filteredLocations = useMemo(() => {
     let list = locations;
     if (activeCategory) {
@@ -102,6 +120,38 @@ export default function HomePage() {
     }
     return list;
   }, [locations, activeCategory, searchQuery]);
+
+  const nearbyCountWithinRadius = useMemo(() => {
+    if (!userPosition || notificationRadiusKm <= 0) return 0;
+    const radiusM = notificationRadiusKm * 1000;
+    return locations.filter(
+      (loc) =>
+        haversineDistance(
+          userPosition[0],
+          userPosition[1],
+          loc.latitude,
+          loc.longitude,
+        ) <= radiusM,
+    ).length;
+  }, [locations, userPosition, notificationRadiusKm]);
+
+  const nearbyNotificationShownRef = useRef(false);
+  useEffect(() => {
+    if (
+      typeof window === "undefined" ||
+      !("Notification" in window) ||
+      notificationPermission !== "granted" ||
+      nearbyCountWithinRadius === 0 ||
+      nearbyNotificationShownRef.current
+    )
+      return;
+    nearbyNotificationShownRef.current = true;
+    new Notification("Yakınınızda yerler var", {
+        body: `${nearbyCountWithinRadius} yer ${notificationRadiusKm} km çevrenizde. Haritada görmek için tıklayın.`,
+        icon: "/icon-192.png",
+        tag: "nearby-places",
+      });
+  }, [notificationPermission, nearbyCountWithinRadius, notificationRadiusKm]);
 
   const handleMarkerSelect = useCallback(
     (location: Location) => {
@@ -205,6 +255,7 @@ export default function HomePage() {
             locations={locations}
             userPosition={userPosition}
             onSelect={handleExternalSelect}
+            radiusKm={notificationRadiusKm}
           />
         )}
 

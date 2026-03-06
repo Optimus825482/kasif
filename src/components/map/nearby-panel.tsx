@@ -30,14 +30,20 @@ interface NearbyPanelProps {
   locations: Location[];
   userPosition: [number, number] | null;
   onSelect: (location: Location) => void;
+  /** Radius in km; only locations within this distance are shown. Default 30. */
+  radiusKm?: number;
 }
+
+const DEFAULT_RADIUS_KM = 30;
 
 export function NearbyPanel({
   locations,
   userPosition,
   onSelect,
+  radiusKm = DEFAULT_RADIUS_KM,
 }: NearbyPanelProps) {
   const { locale, t } = useLocale();
+  const radiusM = (radiusKm > 0 ? radiusKm : DEFAULT_RADIUS_KM) * 1000;
 
   // Only show nearby if user is within Balıkesir province
   const isUserInProvince = useMemo(() => {
@@ -57,9 +63,10 @@ export function NearbyPanel({
           loc.longitude,
         ),
       }))
+      .filter((item) => item.distance <= radiusM)
       .sort((a, b) => a.distance - b.distance)
-      .slice(0, 5);
-  }, [locations, userPosition, isUserInProvince]);
+      .slice(0, 10);
+  }, [locations, userPosition, isUserInProvince, radiusM]);
 
   // Don't render panel if user is outside Balıkesir
   if (!isUserInProvince || nearbyLocations.length === 0) return null;
@@ -72,6 +79,9 @@ export function NearbyPanel({
             <Navigation className="h-3 w-3" />
             {t("map.nearbyPlaces")}
           </h3>
+          <p className="text-[10px] text-teal-100 mt-0.5">
+            {t("map.withinRadius").replace("{{km}}", String(radiusKm > 0 ? radiusKm : DEFAULT_RADIUS_KM))}
+          </p>
         </div>
         <ScrollArea className="h-64">
           <div className="p-1.5 space-y-1">

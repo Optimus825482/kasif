@@ -7,6 +7,7 @@ import dynamic from "next/dynamic";
 import type { Location } from "@/types";
 import type { RouteInfo } from "@/components/map/directions-modal";
 import { useLocale } from "@/context/locale-context";
+import { haversineDistance, formatDistance } from "@/lib/utils";
 import { useAnalytics } from "@/hooks/use-analytics";
 import { Header } from "@/components/layout/header";
 import { Button } from "@/components/ui/button";
@@ -53,7 +54,7 @@ export default function LocationDetailPage() {
   const { locale, t } = useLocale();
   const { trackEvent } = useAnalytics();
   const [location, setLocation] = useState<Location | null>(null);
-  const [similar, setSimilar] = useState<Location[]>([]);
+  const [nearby, setNearby] = useState<Location[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [notFound, setNotFound] = useState(false);
@@ -73,18 +74,14 @@ export default function LocationDetailPage() {
           setLocation(loc);
           trackEvent("detail_view", loc.id);
           setNotFound(false);
-          if (loc.categoryId) {
-            fetch(`/api/locations?categoryId=${loc.categoryId}&limit=7`)
-              .then((r2) => r2.json())
-              .then((r2res) => {
-                if (r2res.success && r2res.data?.items) {
-                  const others = (r2res.data.items as Location[]).filter(
-                    (l) => l.id !== params.id
-                  );
-                  setSimilar(others.slice(0, 6));
-                }
-              });
-          }
+          const url = `/api/locations?latitude=${loc.latitude}&longitude=${loc.longitude}&radiusKm=20&limit=6&excludeId=${loc.id}`;
+          fetch(url)
+            .then((r2) => r2.json())
+            .then((r2res) => {
+              if (r2res.success && r2res.data?.items) {
+                setNearby((r2res.data.items as Location[]) ?? []);
+              }
+            });
         } else {
           setNotFound(true);
           setLocation(null);
@@ -363,15 +360,24 @@ export default function LocationDetailPage() {
             </CardContent>
           </Card>
 
-          {similar.length > 0 && (
+          {nearby.length > 0 && location && (
             <div className="mb-4">
               <h2 className="text-sm font-semibold mb-2">
-                {t("detail.similarPlaces")}
+                {t("detail.nearbyPlaces")}
               </h2>
+              <p className="text-xs text-muted-foreground mb-2">
+                {t("detail.nearbyPlacesHint")}
+              </p>
               <div className="grid gap-2 sm:grid-cols-2">
-                {similar.map((loc) => {
+                {nearby.map((loc) => {
                   const locName =
                     locale === "en" ? loc.nameEn : loc.name;
+                  const distanceM = haversineDistance(
+                    location.latitude,
+                    location.longitude,
+                    loc.latitude,
+                    loc.longitude,
+                  );
                   return (
                     <Link key={loc.id} href={`/locations/${loc.id}`}>
                       <Card className="hover:shadow-md transition-shadow">
@@ -387,10 +393,13 @@ export default function LocationDetailPage() {
                               ? loc.category.nameEn
                               : loc.category.name}
                           </Badge>
-                          <span className="text-sm font-medium truncate">
+                          <span className="text-sm font-medium truncate flex-1 min-w-0">
                             {locName}
                           </span>
-                          <ChevronRight className="h-4 w-4 shrink-0 ml-auto text-muted-foreground" />
+                          <span className="text-xs text-muted-foreground shrink-0">
+                            {formatDistance(distanceM)}
+                          </span>
+                          <ChevronRight className="h-4 w-4 shrink-0 text-muted-foreground" />
                         </CardContent>
                       </Card>
                     </Link>

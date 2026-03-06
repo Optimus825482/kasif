@@ -1,10 +1,14 @@
 import { unstable_cache } from "next/cache";
 import { prisma } from "@/lib/prisma";
 import { buildPagination } from "@/lib/pagination";
+import { haversineDistance } from "@/lib/utils";
 import type { LocationCreateInput, LocationUpdateInput } from "@/lib/validations";
 
 const CACHE_TAG_LOCATIONS = "locations";
 const CACHE_SECONDS = 60; // 1 minute
+
+/** ~km per degree at mid-latitudes; used for bounding box */
+const KM_PER_DEG = 111;
 
 export class LocationService {
   static async list(params: {
@@ -12,8 +16,72 @@ export class LocationService {
     limit: number;
     search?: string;
     categoryId?: string;
+    latitude?: number;
+    longitude?: number;
+    radiusKm?: number;
+    excludeId?: string;
   }) {
-    const { page, limit, search, categoryId } = params;
+    const {
+      page,
+      limit,
+      search,
+      categoryId,
+      latitude,
+      longitude,
+      radiusKm,
+      excludeId,
+    } = params;
+
+    const isNearby =
+      latitude != null &&
+      longitude != null &&
+      radiusKm != null &&
+      radiusKm > 0;
+
+    if (isNearby) {
+      const delta = radiusKm / KM_PER_DEG;
+      const where = {
+        deletedAt: null,
+        isActive: true,
+        latitude: { gte: latitude - delta, lte: latitude + delta },
+        longitude: { gte: longitude - delta, lte: longitude + delta },
+        ...(excludeId && { id: { not: excludeId } }),
+      };
+      const candidates = await prisma.location.findMany({
+        where,
+        include: {
+          category: {
+            select: {
+              id: true,
+              name: true,
+              nameEn: true,
+              icon: true,
+              color: true,
+            },
+          },
+        },
+      });
+      const radiusM = radiusKm * 1000;
+      const withDistance = candidates
+        .map((loc) => ({
+          loc,
+          distanceM: haversineDistance(
+            latitude,
+            longitude,
+            loc.latitude,
+            loc.longitude,
+          ),
+        }))
+        .filter(({ distanceM }) => distanceM <= radiusM)
+        .sort((a, b) => a.distanceM - b.distanceM)
+        .slice(0, limit)
+        .map(({ loc }) => loc);
+      return {
+        items: withDistance,
+        pagination: buildPagination(1, limit, withDistance.length),
+      };
+    }
+
     const where = {
       deletedAt: null,
       isActive: true,

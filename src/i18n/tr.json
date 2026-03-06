@@ -16,6 +16,7 @@
     "myLocation": "Konumum",
     "goToMyLocation": "Konumuma Git",
     "nearbyPlaces": "Yakınımdaki Yerler",
+    "withinRadius": "{{km}} km çevresinde",
     "allPlaces": "Tüm Noktalar",
     "filterByCategory": "Kategoriye Göre Filtrele",
     "searchPlaceholder": "Yer ara...",
@@ -43,7 +44,8 @@
   },
   "detail": {
     "notFound": "Bu lokasyon bulunamadı veya kaldırılmış.",
-    "similarPlaces": "Benzer Yerler",
+    "nearbyPlaces": "Yakındaki Yerler",
+    "nearbyPlacesHint": "20 km çevresindeki yerler",
     "visitHours": "Ziyaret Saatleri",
     "fee": "Giriş Ücreti",
     "free": "Ücretsiz",

@@ -38,6 +38,11 @@ export type Admin = Prisma.AdminModel
  */
 export type AnalyticsEvent = Prisma.AnalyticsEventModel
 /**
+ * Model AppSetting
+ * 
+ */
+export type AppSetting = Prisma.AppSettingModel
+/**
  * Model AuditLog
  * 
  */

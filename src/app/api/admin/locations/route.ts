@@ -23,6 +23,7 @@ export async function GET(req: NextRequest) {
     const limit = Number(searchParams.get("limit")) || 20;
     const search = searchParams.get("search") || "";
     const categoryId = searchParams.get("categoryId") || "";
+    const withoutImages = searchParams.get("withoutImages") === "true";
 
     const where = {
       deletedAt: null,
@@ -33,6 +34,7 @@ export async function GET(req: NextRequest) {
         ],
       }),
       ...(categoryId && { categoryId }),
+      ...(withoutImages && { images: { equals: [] as string[] } }),
     };
 
     const [items, total] = await Promise.all([

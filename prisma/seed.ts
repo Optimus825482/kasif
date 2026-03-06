@@ -2919,6 +2919,12 @@ async function main() {
     },
   });
 
+  await prisma.appSetting.upsert({
+    where: { key: "notification_radius_km" },
+    create: { key: "notification_radius_km", value: "30" },
+    update: {},
+  });
+
   console.log(
     "✅ Seed completed: " +
       locations.length +
