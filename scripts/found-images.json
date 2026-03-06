@@ -1,0 +1,980 @@
+{
+  "timestamp": "2026-03-06T09:01:45.592Z",
+  "summary": {
+    "total": 104,
+    "found": 86,
+    "notFound": 18
+  },
+  "found": [
+    {
+      "id": "cmmedd5h7d58113c647b38f3d",
+      "name": "Alaca Mescit Camisi",
+      "nameEn": "Alaca Mescit Mosque",
+      "category": "Dini Yapılar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Veli_Pasha_mosque_Ioannina.jpg/1280px-Veli_Pasha_mosque_Ioannina.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/90/Veli_Pasha_mosque_Ioannina.jpg",
+      "source": "tr.wikipedia - Veli Paşa Camii (Yanya)",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmedd5ipab983faa9684c8c8",
+      "name": "Babasultan Türbesi (Susurluk)",
+      "nameEn": "Babasultan Tomb (Susurluk)",
+      "category": "Dini Yapılar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Susurluk_railway_station.jpg/1280px-Susurluk_railway_station.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/56/Susurluk_railway_station.jpg",
+      "source": "commons - File:Susurluk railway station.jpg",
+      "strategy": "commons-search"
+    },
+    {
+      "id": "cmmedd5il5ff50fb21625f2c2",
+      "name": "Emir Sultan Türbesi (Kepsut)",
+      "nameEn": "Emir Sultan Tomb (Kepsut)",
+      "category": "Dini Yapılar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/10660_Alag%C3%BCney-Kepsut-Bal%C4%B1kesir%2C_Turkey_-_panoramio.jpg/1280px-10660_Alag%C3%BCney-Kepsut-Bal%C4%B1kesir%2C_Turkey_-_panoramio.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e0/10660_Alag%C3%BCney-Kepsut-Bal%C4%B1kesir%2C_Turkey_-_panoramio.jpg",
+      "source": "en.wikipedia - Alagüney, Kepsut",
+      "strategy": "en-wiki-pageimage"
+    },
+    {
+      "id": "cmmedd5hkbc0a3fe3c0503f9e",
+      "name": "Hacı Ali (Alibey) Camisi",
+      "nameEn": "Hacı Ali (Alibey) Mosque",
+      "category": "Dini Yapılar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Nam%C4%B1k_Kemal%2C_Cunda_Island.jpg/1280px-Nam%C4%B1k_Kemal%2C_Cunda_Island.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/56/Nam%C4%B1k_Kemal%2C_Cunda_Island.jpg",
+      "source": "tr.wikipedia - Cunda",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmedd5hi2bd8980d0d281889",
+      "name": "Hakkı Çavuş Camisi",
+      "nameEn": "Hakkı Çavuş Mosque",
+      "category": "Dini Yapılar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Kozyatagi-D100Karayolu.jpg/1280px-Kozyatagi-D100Karayolu.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Kozyatagi-D100Karayolu.jpg",
+      "source": "tr.wikipedia - Kozyatağı",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmedd5hlf670e0b542ed182d",
+      "name": "Karaoğlan Camisi",
+      "nameEn": "Karaoğlan Mosque",
+      "category": "Dini Yapılar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Ankara_asv2021-10_img11_view_from_Atakule_mall.jpg/1280px-Ankara_asv2021-10_img11_view_from_Atakule_mall.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Ankara_asv2021-10_img11_view_from_Atakule_mall.jpg",
+      "source": "tr.wikipedia - Ankara",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmedd5ha5a094d7968cfc401",
+      "name": "Kasaplar Camisi",
+      "nameEn": "Kasaplar Mosque",
+      "category": "Dini Yapılar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/16860_K%C4%B1r%C4%B1nt%C4%B1-%C4%B0znik-Bursa%2C_Turkey_-_panoramio_%285%29.jpg/1280px-16860_K%C4%B1r%C4%B1nt%C4%B1-%C4%B0znik-Bursa%2C_Turkey_-_panoramio_%285%29.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/db/16860_K%C4%B1r%C4%B1nt%C4%B1-%C4%B0znik-Bursa%2C_Turkey_-_panoramio_%285%29.jpg",
+      "source": "tr.wikipedia - Kırıntı, İznik",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmedd5hdce8b317ca29c95dd",
+      "name": "Omurbey (Umurbey) Camisi",
+      "nameEn": "Omurbey (Umurbey) Mosque",
+      "category": "Dini Yapılar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Port_of_%C4%B0zmir_21-06-2021.jpg/1280px-Port_of_%C4%B0zmir_21-06-2021.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Port_of_%C4%B0zmir_21-06-2021.jpg",
+      "source": "tr.wikipedia - Umurbey, Konak",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmedd5hmb3999ed43a3c1baa",
+      "name": "Oruç Bey Mescidi",
+      "nameEn": "Oruç Bey Masjid",
+      "category": "Dini Yapılar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/The_Kaaba_during_Hajj.jpg/1280px-The_Kaaba_during_Hajj.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/79/The_Kaaba_during_Hajj.jpg",
+      "source": "tr.wikipedia - İslam",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmedd5hc9c4c677f3a8a4385",
+      "name": "Şeyh Lütfullah Camisi",
+      "nameEn": "Şeyh Lütfullah Mosque",
+      "category": "Dini Yapılar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Imamzadeh_Ja%27far_of_Borujerd_06.jpg/1280px-Imamzadeh_Ja%27far_of_Borujerd_06.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Imamzadeh_Ja%27far_of_Borujerd_06.jpg",
+      "source": "tr.wikipedia - İran'daki camiler listesi",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmedd5h99e1a51a227ab40a8",
+      "name": "Tahtalı Cami",
+      "nameEn": "Tahtalı Mosque",
+      "category": "Dini Yapılar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/46/Tahtal%C4%B1_Cami_mosque.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/46/Tahtal%C4%B1_Cami_mosque.jpg",
+      "source": "tr.wikipedia - Tahtalı Cami (Bahçesaray)",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmeb7hrp001twggsr2g9sufp",
+      "name": "Taşlı Manastır (Tımarhane Adası)",
+      "nameEn": "Tasli Monastery (Timarhane Island)",
+      "category": "Dini Yapılar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/General_view_of_Ayval%C4%B1k_%28cropped%29.jpg/1280px-General_view_of_Ayval%C4%B1k_%28cropped%29.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/91/General_view_of_Ayval%C4%B1k_%28cropped%29.jpg",
+      "source": "tr.wikipedia - Ayvalık",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmedd5hg9d96019dbd2b99d6",
+      "name": "Yeşilli Cami (Hisariçi Camisi)",
+      "nameEn": "Yeşilli Mosque (Hisariçi Mosque)",
+      "category": "Dini Yapılar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Yesilli_cami_2.jpg/1280px-Yesilli_cami_2.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Yesilli_cami_2.jpg",
+      "source": "tr.wikipedia - Yeşilli Cami (Balıkesir)",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmedd5iga40781ccc5e342fb",
+      "name": "Alaçam (Dursunbey)",
+      "nameEn": "Alaçam (Dursunbey)",
+      "category": "Doğal Alanlar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/10800_Hasanlar-Dursunbey-Bal%C4%B1kesir%2C_Turkey_-_panoramio_%2813%29.jpg/1280px-10800_Hasanlar-Dursunbey-Bal%C4%B1kesir%2C_Turkey_-_panoramio_%2813%29.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/53/10800_Hasanlar-Dursunbey-Bal%C4%B1kesir%2C_Turkey_-_panoramio_%2813%29.jpg",
+      "source": "tr.wikipedia - Hasanlar, Dursunbey",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmeb7hsx002owggs78hpvpel",
+      "name": "Atatürk Kayalıkları (Gömeç)",
+      "nameEn": "Ataturk Rocks (Gomec)",
+      "category": "Doğal Alanlar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Istanbul_asv2020-02_img48_Galata_Tower.jpg/1280px-Istanbul_asv2020-02_img48_Galata_Tower.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Istanbul_asv2020-02_img48_Galata_Tower.jpg",
+      "source": "tr.wikipedia - Galata Kulesi",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmeb7hri001pwggsdxdqc58p",
+      "name": "Atatürk Parkı (Balıkesir)",
+      "nameEn": "Ataturk Park (Balikesir)",
+      "category": "Doğal Alanlar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Atat%C3%BCrk_Park%C4%B1.JPG/1280px-Atat%C3%BCrk_Park%C4%B1.JPG",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Atat%C3%BCrk_Park%C4%B1.JPG",
+      "source": "tr.wikipedia - Atatürk Parkı (Balıkesir)",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmeb7hsd002bwggspn814lft",
+      "name": "Atatürk Parkı (Bandırma)",
+      "nameEn": "Ataturk Park (Bandirma)",
+      "category": "Doğal Alanlar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Atat%C3%BCrk_Park%C4%B1.JPG/1280px-Atat%C3%BCrk_Park%C4%B1.JPG",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Atat%C3%BCrk_Park%C4%B1.JPG",
+      "source": "tr.wikipedia - Atatürk Parkı (Balıkesir)",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmeb7hsr002jwggs39q1m2ed",
+      "name": "Ayaklı Kır Bahçesi (Burhaniye)",
+      "nameEn": "Ayakli Country Garden (Burhaniye)",
+      "category": "Doğal Alanlar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Sokak_burhaniye.JPG/1280px-Sokak_burhaniye.JPG",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Sokak_burhaniye.JPG",
+      "source": "tr.wikipedia - Burhaniye",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmedd5hx868873b477c140ec",
+      "name": "Babakaya Kalesi (Gönen)",
+      "nameEn": "Babakaya Castle (Gönen)",
+      "category": "Doğal Alanlar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/G%C3%B6nen%E2%80%93IMG_5607_02.jpg/1280px-G%C3%B6nen%E2%80%93IMG_5607_02.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/de/G%C3%B6nen%E2%80%93IMG_5607_02.jpg",
+      "source": "tr.wikipedia - Gönen, Balıkesir",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmeb7hs10021wggsxb1grptf",
+      "name": "Bent (Altınoluk)",
+      "nameEn": "Bent (Altinoluk)",
+      "category": "Doğal Alanlar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/57/Altinoluk.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/57/Altinoluk.jpg",
+      "source": "tr.wikipedia - Altınoluk",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmeb7hrh001owggsotzbdxzs",
+      "name": "Çamlık Mesire Alanı",
+      "nameEn": "Camlik Recreation Area",
+      "category": "Doğal Alanlar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/%C3%9Cnye%2C_%C3%87aml%C4%B1k%2C_restaurant.jpg/1280px-%C3%9Cnye%2C_%C3%87aml%C4%B1k%2C_restaurant.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6f/%C3%9Cnye%2C_%C3%87aml%C4%B1k%2C_restaurant.jpg",
+      "source": "tr.wikipedia - Çamlık, Ünye",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmedd5inf5a3b4abf307aac0",
+      "name": "Çamlık Mesire Alanı (Kepsut)",
+      "nameEn": "Çamlık Recreation Area (Kepsut)",
+      "category": "Doğal Alanlar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/10660_Alag%C3%BCney-Kepsut-Bal%C4%B1kesir%2C_Turkey_-_panoramio.jpg/1280px-10660_Alag%C3%BCney-Kepsut-Bal%C4%B1kesir%2C_Turkey_-_panoramio.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e0/10660_Alag%C3%BCney-Kepsut-Bal%C4%B1kesir%2C_Turkey_-_panoramio.jpg",
+      "source": "en.wikipedia - Alagüney, Kepsut",
+      "strategy": "en-wiki-pageimage"
+    },
+    {
+      "id": "cmmeb7hrm001rwggsy5aohty4",
+      "name": "Çamlık Tepesi (Ayvalık)",
+      "nameEn": "Camlik Hill (Ayvalik)",
+      "category": "Doğal Alanlar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Zonguldak_Lighthouse.JPG",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Zonguldak_Lighthouse.JPG",
+      "source": "tr.wikipedia - Türkiye'deki deniz fenerleri listesi",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmedd5ii289d41b3db2ed05d",
+      "name": "Candere (Dursunbey)",
+      "nameEn": "Candere (Dursunbey)",
+      "category": "Doğal Alanlar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/10800_Hasanlar-Dursunbey-Bal%C4%B1kesir%2C_Turkey_-_panoramio_%2813%29.jpg/1280px-10800_Hasanlar-Dursunbey-Bal%C4%B1kesir%2C_Turkey_-_panoramio_%2813%29.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/53/10800_Hasanlar-Dursunbey-Bal%C4%B1kesir%2C_Turkey_-_panoramio_%2813%29.jpg",
+      "source": "tr.wikipedia - Hasanlar, Dursunbey",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmeb7hsg002dwggsxx46t7vm",
+      "name": "Cevizli Mesire Alanı",
+      "nameEn": "Cevizli Recreation Area",
+      "category": "Doğal Alanlar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Devrek_meydani_-_panoramio_%281%29.jpg/1280px-Devrek_meydani_-_panoramio_%281%29.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Devrek_meydani_-_panoramio_%281%29.jpg",
+      "source": "tr.wikipedia - Devrek",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmedd5i89e13dde631bf8700",
+      "name": "Çınarlı Köyü (Marmara Adası)",
+      "nameEn": "Çınarlı Village (Marmara Island)",
+      "category": "Doğal Alanlar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/G%C3%B6k%C3%A7eada_Manzaras%C4%B1.jpg/1280px-G%C3%B6k%C3%A7eada_Manzaras%C4%B1.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b0/G%C3%B6k%C3%A7eada_Manzaras%C4%B1.jpg",
+      "source": "en.wikipedia - Imbros",
+      "strategy": "en-wiki-pageimage"
+    },
+    {
+      "id": "cmmeb7hsv002nwggsqluur7p1",
+      "name": "Çınarlı Pınar (Dursunbey)",
+      "nameEn": "Cinarli Pinar (Dursunbey)",
+      "category": "Doğal Alanlar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/10800_Hasanlar-Dursunbey-Bal%C4%B1kesir%2C_Turkey_-_panoramio_%2813%29.jpg/1280px-10800_Hasanlar-Dursunbey-Bal%C4%B1kesir%2C_Turkey_-_panoramio_%2813%29.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/53/10800_Hasanlar-Dursunbey-Bal%C4%B1kesir%2C_Turkey_-_panoramio_%2813%29.jpg",
+      "source": "tr.wikipedia - Hasanlar, Dursunbey",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmeb7ht3002swggsommr2z05",
+      "name": "Çınarlıhan Mesire Yeri (Havran)",
+      "nameEn": "Cinarlihan Recreation Area (Havran)",
+      "category": "Doğal Alanlar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Havra%C5%88_-_kostel_sv._Vav%C5%99ince_17.jpg/1280px-Havra%C5%88_-_kostel_sv._Vav%C5%99ince_17.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/97/Havra%C5%88_-_kostel_sv._Vav%C5%99ince_17.jpg",
+      "source": "en.wikipedia - Havraň",
+      "strategy": "en-wiki-pageimage"
+    },
+    {
+      "id": "cmmeb7hrs001vwggsxpei0n4e",
+      "name": "Çıplak Tepe",
+      "nameEn": "Ciplak Hill",
+      "category": "Doğal Alanlar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/%C3%87%C4%B1plak_K%C3%B6y%C3%BC_%2C_%C3%87anakkale_9Nisan2024_03.jpg/1280px-%C3%87%C4%B1plak_K%C3%B6y%C3%BC_%2C_%C3%87anakkale_9Nisan2024_03.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c2/%C3%87%C4%B1plak_K%C3%B6y%C3%BC_%2C_%C3%87anakkale_9Nisan2024_03.jpg",
+      "source": "tr.wikipedia - Çıplak, Çanakkale",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmeb7hre001mwggsdls5d5u3",
+      "name": "Değirmen Boğazı Piknik Alanı",
+      "nameEn": "Degirmen Bogazi Picnic Area",
+      "category": "Doğal Alanlar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Lake_Egirdir.jpg/1280px-Lake_Egirdir.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Lake_Egirdir.jpg",
+      "source": "tr.wikipedia - Eğirdir Gölü",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmedd5ifd08afcc206c66b2f",
+      "name": "Değirmenek (Dursunbey)",
+      "nameEn": "Değirmenek (Dursunbey)",
+      "category": "Doğal Alanlar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/10800_Hasanlar-Dursunbey-Bal%C4%B1kesir%2C_Turkey_-_panoramio_%2813%29.jpg/1280px-10800_Hasanlar-Dursunbey-Bal%C4%B1kesir%2C_Turkey_-_panoramio_%2813%29.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/53/10800_Hasanlar-Dursunbey-Bal%C4%B1kesir%2C_Turkey_-_panoramio_%2813%29.jpg",
+      "source": "tr.wikipedia - Hasanlar, Dursunbey",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmedd5hy24c7213ac8153353",
+      "name": "Eybek Kulesi (Havran)",
+      "nameEn": "Eybek Tower (Havran)",
+      "category": "Doğal Alanlar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Fellerkoffel_Lausitzer_Gebirge.JPG/1280px-Fellerkoffel_Lausitzer_Gebirge.JPG",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/92/Fellerkoffel_Lausitzer_Gebirge.JPG",
+      "source": "commons - File:Fellerkoffel Lausitzer Gebirge.JPG",
+      "strategy": "commons-search"
+    },
+    {
+      "id": "cmmedd5ika372bf2c64e3d83b",
+      "name": "Faruk Şeker Tesisleri (Dursunbey)",
+      "nameEn": "Faruk Şeker Facilities (Dursunbey)",
+      "category": "Doğal Alanlar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/10800_Hasanlar-Dursunbey-Bal%C4%B1kesir%2C_Turkey_-_panoramio_%2813%29.jpg/1280px-10800_Hasanlar-Dursunbey-Bal%C4%B1kesir%2C_Turkey_-_panoramio_%2813%29.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/53/10800_Hasanlar-Dursunbey-Bal%C4%B1kesir%2C_Turkey_-_panoramio_%2813%29.jpg",
+      "source": "tr.wikipedia - Hasanlar, Dursunbey",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmedd5ijed1253a57fa19ac9",
+      "name": "Gölcük (Dursunbey)",
+      "nameEn": "Gölcük (Dursunbey)",
+      "category": "Doğal Alanlar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/10800_Hasanlar-Dursunbey-Bal%C4%B1kesir%2C_Turkey_-_panoramio_%2813%29.jpg/1280px-10800_Hasanlar-Dursunbey-Bal%C4%B1kesir%2C_Turkey_-_panoramio_%2813%29.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/53/10800_Hasanlar-Dursunbey-Bal%C4%B1kesir%2C_Turkey_-_panoramio_%2813%29.jpg",
+      "source": "tr.wikipedia - Hasanlar, Dursunbey",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmeb7hs80026wggsaxh16nk1",
+      "name": "Hasan Boğuldu",
+      "nameEn": "Hasan Boguldu",
+      "category": "Doğal Alanlar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4b/G%C3%BCzin_%C3%96zya%C4%9Fc%C4%B1lar.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4b/G%C3%BCzin_%C3%96zya%C4%9Fc%C4%B1lar.jpg",
+      "source": "tr.wikipedia - Güzin Özyağcılar",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmedd5hz3aa34a9d838245a2",
+      "name": "Havutçu Yaylası (İvrindi)",
+      "nameEn": "Havutçu Plateau (İvrindi)",
+      "category": "Doğal Alanlar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Koyun_-_panoramio.jpg/1280px-Koyun_-_panoramio.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/96/Koyun_-_panoramio.jpg",
+      "source": "en.wikipedia - İvrindi",
+      "strategy": "en-wiki-pageimage"
+    },
+    {
+      "id": "cmmeb7ht5002uwggsemnlvkeu",
+      "name": "İnönü Mağaraları (Havran)",
+      "nameEn": "Inonu Caves (Havran)",
+      "category": "Doğal Alanlar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Havra%C5%88_-_kostel_sv._Vav%C5%99ince_17.jpg/1280px-Havra%C5%88_-_kostel_sv._Vav%C5%99ince_17.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/97/Havra%C5%88_-_kostel_sv._Vav%C5%99ince_17.jpg",
+      "source": "en.wikipedia - Havraň",
+      "strategy": "en-wiki-pageimage"
+    },
+    {
+      "id": "cmmeb7hsc002awggs9qywudwi",
+      "name": "Kavlaklar (Körfezin Balkonu)",
+      "nameEn": "Kavlaklar (Balcony of the Gulf)",
+      "category": "Doğal Alanlar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/82/Asansor_From_Ground_Level_Izmir_Turkey.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/82/Asansor_From_Ground_Level_Izmir_Turkey.jpg",
+      "source": "tr.wikipedia - Tarihî Asansör",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmeb7htb002zwggsxqtxae6p",
+      "name": "Kertil-Çamurlu Mesire Alanı (Sındırgı)",
+      "nameEn": "Kertil-Camurlu Recreation Area (Sindirgi)",
+      "category": "Doğal Alanlar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3e/T%C3%BCrkiye_bal%C4%B1kesir_s%C4%B1nd%C4%B1rg%C4%B1_cayg%C3%B6ren_k%C3%B6y%C3%BC_-_panoramio.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3e/T%C3%BCrkiye_bal%C4%B1kesir_s%C4%B1nd%C4%B1rg%C4%B1_cayg%C3%B6ren_k%C3%B6y%C3%BC_-_panoramio.jpg",
+      "source": "en.wikipedia - Sındırgı",
+      "strategy": "en-wiki-pageimage"
+    },
+    {
+      "id": "cmmeb7ht0002pwggsiffom6lf",
+      "name": "Koca Çınar (Gömeç)",
+      "nameEn": "Great Plane Tree (Gomec)",
+      "category": "Doğal Alanlar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/24/Suleyman_Demirel_1998_%28cropped%29.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/24/Suleyman_Demirel_1998_%28cropped%29.jpg",
+      "source": "tr.wikipedia - Haziran 1992 Türkiye ara yerel seçimleri",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmedd5i0a54fa67e65243adb",
+      "name": "Kocakatran Ormanları (İvrindi)",
+      "nameEn": "Kocakatran Forests (İvrindi)",
+      "category": "Doğal Alanlar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Koyun_-_panoramio.jpg/1280px-Koyun_-_panoramio.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/96/Koyun_-_panoramio.jpg",
+      "source": "en.wikipedia - İvrindi",
+      "strategy": "en-wiki-pageimage"
+    },
+    {
+      "id": "cmmeb7ht6002vwggs3we45llq",
+      "name": "Madra Dağı (İvrindi)",
+      "nameEn": "Mount Madra (Ivrindi)",
+      "category": "Doğal Alanlar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Koca%C3%A7ay_deltas%C4%B1.jpg/1280px-Koca%C3%A7ay_deltas%C4%B1.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Koca%C3%A7ay_deltas%C4%B1.jpg",
+      "source": "tr.wikipedia - Kocaçay",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmedd5i3b87261ee83c2eff3",
+      "name": "Manyas Gölü",
+      "nameEn": "Manyas Lake",
+      "category": "Doğal Alanlar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Ku%C5%9F_G%C3%B6l%C3%BC_%28Bird_lake%29%2C_Ku%C5%9Fcenneti_National_Park._Bandirma_region%2C_Turkey_-_panoramio.jpg/1280px-Ku%C5%9F_G%C3%B6l%C3%BC_%28Bird_lake%29%2C_Ku%C5%9Fcenneti_National_Park._Bandirma_region%2C_Turkey_-_panoramio.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Ku%C5%9F_G%C3%B6l%C3%BC_%28Bird_lake%29%2C_Ku%C5%9Fcenneti_National_Park._Bandirma_region%2C_Turkey_-_panoramio.jpg",
+      "source": "tr.wikipedia - Manyas Kuşgölü",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmedd5i45a4f34df7413fe6b",
+      "name": "Mermer Ocakları (Marmara Adası)",
+      "nameEn": "Marble Quarries (Marmara Island)",
+      "category": "Doğal Alanlar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Tavsan_Adasi.JPG/1280px-Tavsan_Adasi.JPG",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Tavsan_Adasi.JPG",
+      "source": "en.wikipedia - Tavşan Adası",
+      "strategy": "en-wiki-pageimage"
+    },
+    {
+      "id": "cmmeb7hs60025wggswvz2ayca",
+      "name": "Pınarbaşı Piknik Alanı",
+      "nameEn": "Pinarbasi Picnic Area",
+      "category": "Doğal Alanlar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Nevzat_demir_-_panoramio.jpg/1280px-Nevzat_demir_-_panoramio.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Nevzat_demir_-_panoramio.jpg",
+      "source": "tr.wikipedia - Zeytinli, Edremit",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmedd5i90e139e6cdf383d0b",
+      "name": "Saraylar Köyü (Marmara Adası)",
+      "nameEn": "Saraylar Village (Marmara Island)",
+      "category": "Doğal Alanlar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Tavsan_Adasi.JPG/1280px-Tavsan_Adasi.JPG",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Tavsan_Adasi.JPG",
+      "source": "en.wikipedia - Tavşan Adası",
+      "strategy": "en-wiki-pageimage"
+    },
+    {
+      "id": "cmmeb7hsu002mwggsis38n5gk",
+      "name": "Saz Mesire Yeri (Dursunbey)",
+      "nameEn": "Saz Recreation Area (Dursunbey)",
+      "category": "Doğal Alanlar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/10800_Hasanlar-Dursunbey-Bal%C4%B1kesir%2C_Turkey_-_panoramio_%2813%29.jpg/1280px-10800_Hasanlar-Dursunbey-Bal%C4%B1kesir%2C_Turkey_-_panoramio_%2813%29.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/53/10800_Hasanlar-Dursunbey-Bal%C4%B1kesir%2C_Turkey_-_panoramio_%2813%29.jpg",
+      "source": "tr.wikipedia - Hasanlar, Dursunbey",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmeb7hsq002iwggssq92n135",
+      "name": "Seklik Çamlığı (Burhaniye)",
+      "nameEn": "Seklik Pine Grove (Burhaniye)",
+      "category": "Doğal Alanlar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Sokak_burhaniye.JPG/1280px-Sokak_burhaniye.JPG",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Sokak_burhaniye.JPG",
+      "source": "tr.wikipedia - Burhaniye",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmeb7ht4002twggsszkgqf78",
+      "name": "Serhat Mesire Alanı (Havran)",
+      "nameEn": "Serhat Recreation Area (Havran)",
+      "category": "Doğal Alanlar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Havra%C5%88_-_kostel_sv._Vav%C5%99ince_17.jpg/1280px-Havra%C5%88_-_kostel_sv._Vav%C5%99ince_17.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/97/Havra%C5%88_-_kostel_sv._Vav%C5%99ince_17.jpg",
+      "source": "en.wikipedia - Havraň",
+      "strategy": "en-wiki-pageimage"
+    },
+    {
+      "id": "cmmedd5i2df13ec8c6fe75697",
+      "name": "Simav Çayı Vadisi (Sındırgı)",
+      "nameEn": "Simav River Valley (Sındırgı)",
+      "category": "Doğal Alanlar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/K%C3%BCtahya_hisar-%C3%BC%C3%A7ler_tepesinden.jpg/1280px-K%C3%BCtahya_hisar-%C3%BC%C3%A7ler_tepesinden.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3c/K%C3%BCtahya_hisar-%C3%BC%C3%A7ler_tepesinden.jpg",
+      "source": "tr.wikipedia - Kütahya (il)",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmedd5iq009f2ddcc79a96c2",
+      "name": "Sındırgı Yaylaları",
+      "nameEn": "Sındırgı Highlands",
+      "category": "Doğal Alanlar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Otlu_tulum_peyniri.jpg/1280px-Otlu_tulum_peyniri.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Otlu_tulum_peyniri.jpg",
+      "source": "tr.wikipedia - Tulum peyniri",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmeb7hrz0020wggsfin6gpoc",
+      "name": "Subaşı Çınarları (Altınoluk)",
+      "nameEn": "Subasi Plane Trees (Altinoluk)",
+      "category": "Doğal Alanlar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/57/Altinoluk.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/57/Altinoluk.jpg",
+      "source": "tr.wikipedia - Altınoluk",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmeb7hst002lwggs64tu69e3",
+      "name": "Suçıktı Mesire Yeri (Dursunbey)",
+      "nameEn": "Sucikti Recreation Area (Dursunbey)",
+      "category": "Doğal Alanlar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/10800_Hasanlar-Dursunbey-Bal%C4%B1kesir%2C_Turkey_-_panoramio_%2813%29.jpg/1280px-10800_Hasanlar-Dursunbey-Bal%C4%B1kesir%2C_Turkey_-_panoramio_%2813%29.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/53/10800_Hasanlar-Dursunbey-Bal%C4%B1kesir%2C_Turkey_-_panoramio_%2813%29.jpg",
+      "source": "tr.wikipedia - Hasanlar, Dursunbey",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmeb7hrq001uwggsn2enfvvh",
+      "name": "Tavşan Kulakları Tepesi",
+      "nameEn": "Rabbit Ears Hill",
+      "category": "Doğal Alanlar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Falco_peregrinus_-_01.jpg/1280px-Falco_peregrinus_-_01.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/21/Falco_peregrinus_-_01.jpg",
+      "source": "tr.wikipedia - Bayağı doğan",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmedd5ie5a95bc9655133748",
+      "name": "Yayla Mesire Alanı (Dursunbey)",
+      "nameEn": "Highland Recreation Area (Dursunbey)",
+      "category": "Doğal Alanlar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/10800_Hasanlar-Dursunbey-Bal%C4%B1kesir%2C_Turkey_-_panoramio_%2813%29.jpg/1280px-10800_Hasanlar-Dursunbey-Bal%C4%B1kesir%2C_Turkey_-_panoramio_%2813%29.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/53/10800_Hasanlar-Dursunbey-Bal%C4%B1kesir%2C_Turkey_-_panoramio_%2813%29.jpg",
+      "source": "tr.wikipedia - Hasanlar, Dursunbey",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmeb7hrx001ywggsnz2ipd9b",
+      "name": "Yunus Emre Parkı",
+      "nameEn": "Yunus Emre Park",
+      "category": "Doğal Alanlar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/%C3%9Cnye_%C5%9Eeyh_Yunus_Emre_T%C3%BCrbesi.jpg/1280px-%C3%9Cnye_%C5%9Eeyh_Yunus_Emre_T%C3%BCrbesi.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/86/%C3%9Cnye_%C5%9Eeyh_Yunus_Emre_T%C3%BCrbesi.jpg",
+      "source": "tr.wikipedia - Şeyh Yunus Emre Türbesi",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmedd5iab02ffa6ff54a7d40",
+      "name": "Zeytinli (Edremit)",
+      "nameEn": "Zeytinli (Edremit)",
+      "category": "Doğal Alanlar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Nevzat_demir_-_panoramio.jpg/1280px-Nevzat_demir_-_panoramio.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Nevzat_demir_-_panoramio.jpg",
+      "source": "tr.wikipedia - Zeytinli, Edremit",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmeb7hso002hwggsya35b7gi",
+      "name": "İskele Mahallesi (Burhaniye)",
+      "nameEn": "Iskele Quarter (Burhaniye)",
+      "category": "Kültürel Mekanlar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Sokak_burhaniye.JPG/1280px-Sokak_burhaniye.JPG",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Sokak_burhaniye.JPG",
+      "source": "tr.wikipedia - Burhaniye",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmeb7hry001zwggswtbpy6uj",
+      "name": "Sarıkız Heykeli (Akçay)",
+      "nameEn": "Sarikiz Statue (Akcay)",
+      "category": "Kültürel Mekanlar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Ak%C3%A7ay_ve_Ak%C3%A7ay_K%C3%B6pr%C3%BCs%C3%BC.jpg/1280px-Ak%C3%A7ay_ve_Ak%C3%A7ay_K%C3%B6pr%C3%BCs%C3%BC.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Ak%C3%A7ay_ve_Ak%C3%A7ay_K%C3%B6pr%C3%BCs%C3%BC.jpg",
+      "source": "tr.wikipedia - Akçay Nehri",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmedd5h2b0b1c22674c918da",
+      "name": "Ali Çetinkaya (Armutçuk) Plajı",
+      "nameEn": "Ali Çetinkaya (Armutçuk) Beach",
+      "category": "Plajlar & Adalar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/44/Eregli_railway.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/44/Eregli_railway.jpg",
+      "source": "tr.wikipedia - Ereğli-Armutçuk demiryolu",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmedd5ic8c034075603019a3",
+      "name": "Altınoluk Sahili",
+      "nameEn": "Altınoluk Coast",
+      "category": "Plajlar & Adalar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/57/Altinoluk.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/57/Altinoluk.jpg",
+      "source": "tr.wikipedia - Edremit, Balıkesir",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmedd5h01fb23b47ebaf5c16",
+      "name": "Altınova Plajı (Ayvalık)",
+      "nameEn": "Altınova Beach (Ayvalık)",
+      "category": "Plajlar & Adalar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/76/Islands_near_Ayvalik.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/76/Islands_near_Ayvalik.jpg",
+      "source": "tr.wikipedia - Ayvalık Adaları",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmedd5h479fe83ea7dd38e6b",
+      "name": "Duba Mevkii Plajı",
+      "nameEn": "Duba Beach Area",
+      "category": "Plajlar & Adalar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/%D8%A7%D9%84%D8%AB%D9%84%D9%88%D8%AC_%D8%AA%D8%BA%D8%B7%D9%8A_%D8%AC%D8%A8%D9%84_%D8%A7%D9%84%D9%84%D9%88%D8%B2_%D9%81%D9%8A_%D8%AA%D8%A8%D9%88%D9%83_2022.jpg/1280px-%D8%A7%D9%84%D8%AB%D9%84%D9%88%D8%AC_%D8%AA%D8%BA%D8%B7%D9%8A_%D8%AC%D8%A8%D9%84_%D8%A7%D9%84%D9%84%D9%88%D8%B2_%D9%81%D9%8A_%D8%AA%D8%A8%D9%88%D9%83_2022.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0a/%D8%A7%D9%84%D8%AB%D9%84%D9%88%D8%AC_%D8%AA%D8%BA%D8%B7%D9%8A_%D8%AC%D8%A8%D9%84_%D8%A7%D9%84%D9%84%D9%88%D8%B2_%D9%81%D9%8A_%D8%AA%D8%A8%D9%88%D9%83_2022.jpg",
+      "source": "en.wikipedia - Tabuk Province",
+      "strategy": "en-wiki-pageimage"
+    },
+    {
+      "id": "cmmedd5id5585c09c0f79f79d",
+      "name": "Güre Sahili",
+      "nameEn": "Güre Coast",
+      "category": "Plajlar & Adalar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ca/G%C3%BCre%2C_Edremit%2C_Bal%C4%B1kesir%2C_Turkey.png",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ca/G%C3%BCre%2C_Edremit%2C_Bal%C4%B1kesir%2C_Turkey.png",
+      "source": "tr.wikipedia - Güre, Edremit",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmedd5i673cf6dd6dd31f30f",
+      "name": "Ilıca Plajı (Erdek)",
+      "nameEn": "Ilıca Beach (Erdek)",
+      "category": "Plajlar & Adalar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Erdek.jpg/1280px-Erdek.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/71/Erdek.jpg",
+      "source": "tr.wikipedia - Erdek",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmeb7htg0033wggsguogwvtr",
+      "name": "Ocaklar Plajı (Erdek)",
+      "nameEn": "Ocaklar Beach (Erdek)",
+      "category": "Plajlar & Adalar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Erdek.jpg/1280px-Erdek.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/71/Erdek.jpg",
+      "source": "tr.wikipedia - Erdek",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmeb7hsl002gwggse0qmwq35",
+      "name": "Ören Plajı (Burhaniye)",
+      "nameEn": "Oren Beach (Burhaniye)",
+      "category": "Plajlar & Adalar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Sokak_burhaniye.JPG/1280px-Sokak_burhaniye.JPG",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Sokak_burhaniye.JPG",
+      "source": "tr.wikipedia - Burhaniye",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmedd5gyb81fdfb8ed97151e",
+      "name": "Şahinkaya (Badavut) Plajı",
+      "nameEn": "Şahinkaya (Badavut) Beach",
+      "category": "Plajlar & Adalar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Ignimbrite.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Ignimbrite.jpg",
+      "source": "tr.wikipedia - İgnimbirit",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmeb7htm0037wggs9w23nkft",
+      "name": "Saraylar Mermer Plajı",
+      "nameEn": "Saraylar Marble Beach",
+      "category": "Plajlar & Adalar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Istanbul_K%C3%BC%C3%A7%C3%BCksu_Palace_%28239058277%29.jpeg/1280px-Istanbul_K%C3%BC%C3%A7%C3%BCksu_Palace_%28239058277%29.jpeg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Istanbul_K%C3%BC%C3%A7%C3%BCksu_Palace_%28239058277%29.jpeg",
+      "source": "tr.wikipedia - Küçüksu Kasrı",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmedd5ibf6ef97f6c13975d8",
+      "name": "Zeytinli Altınkum Plajı",
+      "nameEn": "Zeytinli Altınkum Beach",
+      "category": "Plajlar & Adalar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/57/Altinoluk.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/57/Altinoluk.jpg",
+      "source": "tr.wikipedia - Edremit, Balıkesir",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmeb7ht2002rwggspzgi2gr4",
+      "name": "Alacaoluk Kalesi (Gönen)",
+      "nameEn": "Alacaoluk Castle (Gonen)",
+      "category": "Tarihi Yapılar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/G%C3%B6nen%E2%80%93IMG_5607_02.jpg/1280px-G%C3%B6nen%E2%80%93IMG_5607_02.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/de/G%C3%B6nen%E2%80%93IMG_5607_02.jpg",
+      "source": "tr.wikipedia - Gönen, Balıkesir",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmeb7hsj002fwggsj3xtwdxv",
+      "name": "Hisarköy (Bigadiç)",
+      "nameEn": "Hisarkoy (Bigadic)",
+      "category": "Tarihi Yapılar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Bigadic_Borate.png",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Bigadic_Borate.png",
+      "source": "en.wikipedia - Bigadiç mine",
+      "strategy": "en-wiki-pageimage"
+    },
+    {
+      "id": "cmmeb7hrt001wwggslradshof",
+      "name": "İlk Kurşun Tepesi",
+      "nameEn": "First Bullet Hill",
+      "category": "Tarihi Yapılar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Balya_Belediyesi.jpg/1280px-Balya_Belediyesi.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/54/Balya_Belediyesi.jpg",
+      "source": "tr.wikipedia - Balya",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmeb7ht1002qwggsbg0wsiqf",
+      "name": "Kız Çiftliği (Gömeç)",
+      "nameEn": "Kiz Ciftligi (Gomec)",
+      "category": "Tarihi Yapılar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Hazarlar.jpg/1280px-Hazarlar.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Hazarlar.jpg",
+      "source": "tr.wikipedia - Hazar Kağanlığı",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmeb7hro001swggsxll65zlw",
+      "name": "Pordoselene Kulesi",
+      "nameEn": "Pordoselene Tower",
+      "category": "Tarihi Yapılar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Pordoselene_Kulesi.png",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Pordoselene_Kulesi.png",
+      "source": "tr.wikipedia - Pordoselene",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmeb7hrk001qwggswt4j5l3w",
+      "name": "Şadırvan Meydanı",
+      "nameEn": "Sadirvan Square",
+      "category": "Tarihi Yapılar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/%C5%9Ead%C4%B1rvan_-_Prizren_01.jpg/1280px-%C5%9Ead%C4%B1rvan_-_Prizren_01.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/69/%C5%9Ead%C4%B1rvan_-_Prizren_01.jpg",
+      "source": "tr.wikipedia - Şadırvan, Prizren",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmeb7hti0034wggscuv0p414",
+      "name": "Seyitgazi Tepesi (Erdek)",
+      "nameEn": "Seyitgazi Hill (Erdek)",
+      "category": "Tarihi Yapılar",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Erdek.jpg/1280px-Erdek.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/71/Erdek.jpg",
+      "source": "tr.wikipedia - Erdek",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmedd5gq34709b8d2e57733e",
+      "name": "Balya Dağ Ilıcası",
+      "nameEn": "Balya Mountain Hot Spring",
+      "category": "Termal & Jeopark",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/G%C3%B6nen%E2%80%93IMG_5607_02.jpg/1280px-G%C3%B6nen%E2%80%93IMG_5607_02.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/de/G%C3%B6nen%E2%80%93IMG_5607_02.jpg",
+      "source": "tr.wikipedia - Gönen, Balıkesir",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmedd5gd2b2de30f7e9ec3c4",
+      "name": "Bostancı Köyü Kaplıcaları",
+      "nameEn": "Bostancı Village Thermal Springs",
+      "category": "Termal & Jeopark",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Sivas_location_Sark%C4%B1%C5%9Fla.png",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Sivas_location_Sark%C4%B1%C5%9Fla.png",
+      "source": "tr.wikipedia - Şarkışla",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmedd5gf613eb5c88e42679d",
+      "name": "Derman Ilıcası",
+      "nameEn": "Derman Hot Spring",
+      "category": "Termal & Jeopark",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/62/Steve_Valentine.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/62/Steve_Valentine.jpg",
+      "source": "en.wikipedia - Steve Valentine",
+      "strategy": "en-wiki-pageimage"
+    },
+    {
+      "id": "cmmedd5gid6c53580c802dac6",
+      "name": "Ekşidere Dağ Ilıcası",
+      "nameEn": "Ekşidere Mountain Hot Spring",
+      "category": "Termal & Jeopark",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/G%C3%B6nen%E2%80%93IMG_5607_02.jpg/1280px-G%C3%B6nen%E2%80%93IMG_5607_02.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/de/G%C3%B6nen%E2%80%93IMG_5607_02.jpg",
+      "source": "tr.wikipedia - Gönen, Balıkesir",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmeb7hs40023wggsmi7s9rfo",
+      "name": "Güre Kaplıcaları",
+      "nameEn": "Gure Thermal Springs",
+      "category": "Termal & Jeopark",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Nacentemackinac.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Nacentemackinac.jpg",
+      "source": "tr.wikipedia - Kaynak (coğrafya)",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmedd5ga367db232a7c4d679",
+      "name": "Kiraz Kaplıcaları",
+      "nameEn": "Kiraz Thermal Springs",
+      "category": "Termal & Jeopark",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Resim_Turgutlu_orta-park.jpg/1280px-Resim_Turgutlu_orta-park.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Resim_Turgutlu_orta-park.jpg",
+      "source": "tr.wikipedia - Turgutlu",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmedd5fj91b4dc9e4f484ed8",
+      "name": "Pamukçu Kaplıcaları",
+      "nameEn": "Pamukçu Thermal Springs",
+      "category": "Termal & Jeopark",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/%C5%9Eahinderesi_Canyon.jpg/1280px-%C5%9Eahinderesi_Canyon.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1b/%C5%9Eahinderesi_Canyon.jpg",
+      "source": "tr.wikipedia - Balıkesir",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmedd5gmd90db40add468b66",
+      "name": "Susurluk Kepekler (Ilıca Boğazı) Kaplıcası",
+      "nameEn": "Susurluk Kepekler Thermal Springs",
+      "category": "Termal & Jeopark",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Allianoi_3.png",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Allianoi_3.png",
+      "source": "tr.wikipedia - Allianoi",
+      "strategy": "tr-wiki-pageimage"
+    },
+    {
+      "id": "cmmedd5gnec5cf85ecd9fb930",
+      "name": "Susurluk Yıldız (Yellice Tepe) Kaplıcası",
+      "nameEn": "Susurluk Yıldız Thermal Springs",
+      "category": "Termal & Jeopark",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/be/G%C3%B6r%C3%BCn%C3%BCm.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/be/G%C3%B6r%C3%BCn%C3%BCm.jpg",
+      "source": "tr.wikipedia - Yunt Dağları",
+      "strategy": "tr-wiki-pageimage"
+    }
+  ],
+  "notFound": [
+    {
+      "id": "cmmeb7hsi002ewggsxsza9ga5",
+      "name": "Bigadiç Kalesi (Achyraos)",
+      "nameEn": "Bigadic Castle (Achyraos)",
+      "category": "Antik Kentler"
+    },
+    {
+      "id": "cmmedd5hfdc190f8627494538",
+      "name": "İbrahimbey Camisi (Hacı Arifağa Camisi)",
+      "nameEn": "İbrahimbey Mosque (Hacı Arifağa Mosque)",
+      "category": "Dini Yapılar"
+    },
+    {
+      "id": "cmmeb7hsb0029wggseorqohph",
+      "name": "Çamlıbel - Şarlak Piknik Yeri",
+      "nameEn": "Camlibel - Sarlak Picnic Area",
+      "category": "Doğal Alanlar"
+    },
+    {
+      "id": "cmmeb7hrv001xwggsz3u8aygv",
+      "name": "Delikli Taş ve Kartal Yuvası",
+      "nameEn": "Delikli Tas and Eagle's Nest",
+      "category": "Doğal Alanlar"
+    },
+    {
+      "id": "cmmeb7hsa0028wggsrta2zco6",
+      "name": "Edremit Hanlar Mevkii",
+      "nameEn": "Edremit Hanlar Area",
+      "category": "Doğal Alanlar"
+    },
+    {
+      "id": "cmmeb7hs50024wggsialiazzp",
+      "name": "Güre Gelinçamı Piknik Yeri",
+      "nameEn": "Gure Gelincami Picnic Area",
+      "category": "Doğal Alanlar"
+    },
+    {
+      "id": "cmmeb7hs90027wggsltru9k04",
+      "name": "Kızılkeçili Çağlayan",
+      "nameEn": "Kizilkecili Waterfall",
+      "category": "Doğal Alanlar"
+    },
+    {
+      "id": "cmmeb7hs20022wggsu8mrux5u",
+      "name": "Mıhlı Çayı / Baş Değirmen",
+      "nameEn": "Mihli Stream / Bas Degirmen",
+      "category": "Doğal Alanlar"
+    },
+    {
+      "id": "cmmeb7hrg001nwggs6sqcea3i",
+      "name": "Necati Sezgin Piknik Alanı",
+      "nameEn": "Necati Sezgin Picnic Area",
+      "category": "Doğal Alanlar"
+    },
+    {
+      "id": "cmmeb7hss002kwggs972okka2",
+      "name": "Taylıeli Köyü Seyir Noktası",
+      "nameEn": "Taylielli Village Viewpoint",
+      "category": "Doğal Alanlar"
+    },
+    {
+      "id": "cmmeb7hsf002cwggsppb8c52n",
+      "name": "Yörücekler Mesire Alanı",
+      "nameEn": "Yorucekler Recreation Area",
+      "category": "Doğal Alanlar"
+    },
+    {
+      "id": "cmmedd5iq5b9a50a3208e5198",
+      "name": "Susurluk Ayranı ve Çarşı",
+      "nameEn": "Susurluk Ayran and Bazaar",
+      "category": "Gastronomi"
+    },
+    {
+      "id": "cmmedd5ir47f29a2d40073bea",
+      "name": "Zeytinli Çay Bahçesi",
+      "nameEn": "Zeytinli Tea Garden",
+      "category": "Kültürel Mekanlar"
+    },
+    {
+      "id": "cmmedd5h5e7c8ae7588f85c1a",
+      "name": "Gömeç Artur Koyları",
+      "nameEn": "Gömeç Artur Coves",
+      "category": "Plajlar & Adalar"
+    },
+    {
+      "id": "cmmedd5gs1d0b8f78063a0c38",
+      "name": "Bigadiç Hisarköy Kaplıcaları",
+      "nameEn": "Bigadiç Hisarköy Thermal Springs",
+      "category": "Termal & Jeopark"
+    },
+    {
+      "id": "cmmedd5gw515dc1cdf75df269",
+      "name": "Dursunbey Aşağımusalar Ilıcası",
+      "nameEn": "Dursunbey Aşağımusalar Hot Spring",
+      "category": "Termal & Jeopark"
+    },
+    {
+      "id": "cmmedd5gk4a2e08110c646985",
+      "name": "Manyas Kızıkköy Kaplıcaları",
+      "nameEn": "Manyas Kızıkköy Thermal Springs",
+      "category": "Termal & Jeopark"
+    },
+    {
+      "id": "cmmedd5gu48c94da48cd2a7e5",
+      "name": "Sındırgı Emendere Kaplıcası",
+      "nameEn": "Sındırgı Emendere Thermal Springs",
+      "category": "Termal & Jeopark"
+    }
+  ]
+}

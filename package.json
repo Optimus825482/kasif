@@ -13,7 +13,8 @@
     "db:push": "prisma db push",
     "db:migrate": "prisma migrate dev",
     "db:seed": "npx tsx prisma/seed.ts",
-    "db:studio": "prisma studio"
+    "db:studio": "prisma studio",
+    "update-coordinates": "npx tsx scripts/update-coordinates-from-json.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
