@@ -103,5 +103,42 @@ Bu doküman mevcut kod incelemesi ve `ANALIZ-RAPORU.md` / `GELISTIRME-ONERILERI-
 | **2.5 i18n / a11y** | ErrorRetry: `useLocale`, `t("common.retry")`, `t("common.close")`. LocationCard: `t("explore.viewDetails")`, `t("detail.getDirections")`, `aria-label`. OfflineBanner: `t("offline.message")`. Directions modal: `t("map.routeError")`, `t("map.clearRoute")`, `t("common.close")`. `map.clearRoute` tr/en eklendi. |
 | **2.5 Görsel alt** | Lokasyon detay hero’da `alt={name}` zaten vardı. |
 | **Harita loading / rota / offline** | Ana sayfada loading overlay (Skeleton) zaten vardı; rota modal loading/error i18n kullanıyor; OfflineBanner zaten vardı, i18n eklendi. |
-| **Testler** | İstenen gibi en sona bırakıldı; eklenmedi. |
+| **Testler** | İstenen gibi en sona bırakıldı. Sadece `checkEventsRateLimit` için unit test eklendi. Kalan testler aşağıda. |
 | **JWT httpOnly cookie** | Opsiyonel olarak bırakıldı; uygulanmadı. |
+
+---
+
+## 6. Kalan Testler (yapılacaklar)
+
+### Şu an olan (Vitest unit + API entegrasyon)
+- **`src/lib/validations.test.ts`**: `loginSchema`, `eventSchema`, `locationCreateSchema`, `locationUpdateSchema`
+- **`src/lib/rate-limit.test.ts`**: `checkLoginRateLimit`, `checkAdminApiRateLimit`, `checkEventsRateLimit`
+- **`src/app/api/events/route.test.ts`**: POST /api/events → 201, 422, 429
+- **`src/app/api/auth/login/route.test.ts`**: POST /api/auth/login → 200, 401, 422, 429
+- **`src/app/api/locations/route.test.ts`**: GET /api/locations → 200, query params (page, limit, search, categoryId, latitude, longitude, radiusKm, excludeId)
+- **`src/lib/auth.test.ts`**: signToken, verifyToken, comparePassword, hashPassword (bcrypt mock); production'da JWT_SECRET yoksa hata
+- **`src/lib/api-response.test.ts`**: successResponse, errorResponse (status ve body)
+- **`src/lib/utils.test.ts`**: haversineDistance, formatDistance (sınır değerler)
+- **`src/services/location.service.test.ts`**: list (nearby + excludeId, non-nearby), getById (mock Prisma)
+- **`src/lib/transit-guide.test.ts`**: generateTransitGuide (yakın mesafe, aynı ilçe, ada, ilçeler arası)  
+  → `npm run test` ile hepsi çalışır (64 test).
+
+### Yapılması önerilen
+
+| Öncelik | Tür | Ne test edilecek |
+|--------|-----|-------------------|
+| **Orta** | **Unit** | `src/lib/auth.ts`: `signToken` / `comparePassword` (mock bcrypt); `getJwtSecret` production’da env yoksa hata. |
+| **Orta** | **Unit** | `src/lib/api-response.ts`: `successResponse` / `errorResponse` status ve body. |
+| **Orta** | **Unit** | `src/lib/utils.ts`: `haversineDistance`, `formatDistance` (sınır değerler). |
+| **Orta** | **API entegrasyon** | `POST /api/events`: geçerli body → 201; eksik alan → 422; aynı IP’den 120+ istek → 429. |
+| **Orta** | **API entegrasyon** | `POST /api/auth/login`: geçerli kimlik → 200 + token; geçersiz → 401; 5+ hatalı deneme → 429. |
+| **Orta** | **API entegrasyon** | `GET /api/locations`: `latitude`, `longitude`, `radiusKm` ile yakındaki yerler; `excludeId`; sayfalama. |
+| **Düşük** | **Unit** | `src/services/location.service.ts`: `list` (radius/nearby), `getById` (mock Prisma). |
+| **Düşük** | **Unit** | `src/lib/transit-guide.ts`: `generateTransitGuide` (bilinen koordinatlar için adım sayısı / tür). |
+| **Düşük** | **E2E (Playwright)** | Kurulum: `playwright.config.ts`, `tests/e2e/`; senaryolar: admin login → dashboard; haritada marker tıklama → kart açılması; lokasyon detay sayfası; admin lokasyon listesi + yeni lokasyon (opsiyonel). |
+
+### E2E için adımlar
+1. `npm install -D @playwright/test` (veya zaten vitest ile geliyorsa sadece Playwright’ı e2e için ekle).
+2. `playwright.config.ts` oluştur: `baseURL: 'http://localhost:3011'`, `webServer: { command: 'npm run start', url: '...' }`.
+3. `tests/e2e/admin-login.spec.ts`, `tests/e2e/map.spec.ts`, `tests/e2e/location-detail.spec.ts` benzeri dosyalar.
+4. `package.json`: `"test:e2e": "playwright test"`.
