@@ -41,12 +41,16 @@ async function main() {
   const notFound: string[] = [];
 
   for (const { name, lat, lng } of entries) {
-    if (typeof name !== "string" || typeof lat !== "number" || typeof lng !== "number") {
+    if (
+      typeof name !== "string" ||
+      typeof lat !== "number" ||
+      typeof lng !== "number"
+    ) {
       continue;
     }
 
     // Önce tam eşleşme (name / nameEn), yoksa büyük/küçük harf duyarsız tam eşleşme
-    let loc = await prisma.location.findFirst({
+    let loc: any = await prisma.location.findFirst({
       where: {
         deletedAt: null,
         OR: [{ name: name }, { nameEn: name }],
@@ -58,11 +62,12 @@ async function main() {
         where: { deletedAt: null },
         select: { id: true, name: true, nameEn: true },
       });
-      loc = all.find(
-        (l) =>
-          l.name?.trim().toLowerCase() === norm.toLowerCase() ||
-          l.nameEn?.trim().toLowerCase() === norm.toLowerCase(),
-      ) ?? null;
+      loc =
+        all.find(
+          (l) =>
+            l.name?.trim().toLowerCase() === norm.toLowerCase() ||
+            l.nameEn?.trim().toLowerCase() === norm.toLowerCase(),
+        ) ?? null;
     }
 
     if (!loc) {
