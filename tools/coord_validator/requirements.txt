@@ -1,0 +1,4 @@
+# Koordinat doğrulama aracı - bağımlılıklar
+psycopg[binary]>=3.1.0
+python-dotenv>=1.0.0
+geopy>=2.4.0

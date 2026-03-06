@@ -1,8 +1,20 @@
 import "dotenv/config";
+import fs from "fs";
+import path from "path";
 import { Pool } from "pg";
 import { PrismaClient } from "../generated/prisma/client";
 import { PrismaPg } from "@prisma/adapter-pg";
 import bcrypt from "bcryptjs";
+
+function loadCoordOverrides(): Record<string, { latitude: number; longitude: number }> {
+  try {
+    const p = path.join(process.cwd(), "prisma", "coord-overrides.json");
+    if (fs.existsSync(p)) return JSON.parse(fs.readFileSync(p, "utf-8"));
+  } catch {
+    // ignore
+  }
+  return {};
+}
 
 const pool = new Pool({ connectionString: process.env.DATABASE_URL });
 const adapter = new PrismaPg(pool);
@@ -130,8 +142,8 @@ async function main() {
       descriptionEn: `A historic castle point in Gonen district where foundation remnants are still visible. Positioned on a strategic hilltop, the castle was built to control the surrounding plain and bears witness to the rich history of the region.`,
       shortDesc: `Gönen'deki tarihi kale kalıntıları`,
       shortDescEn: `Historic castle ruins in Gonen`,
-      latitude: 40.0987,
-      longitude: 27.5098,
+      latitude: 40.08996120032594,
+      longitude: 27.53524800316918,
       categoryId: historical.id,
       images: [],
       address: `Alacaoluk, Gönen, Balıkesir`,
@@ -399,8 +411,8 @@ async function main() {
       descriptionEn: `Ancient Aeolian city at the coastal neighborhood of Ören in Burhaniye. Significant trade center from 4th century BC. In 2020 and 2025, receding sea levels revealed ancient port remains.`,
       shortDesc: `Antik liman kenti, Ege ticaret düğüm noktası`,
       shortDescEn: `Ancient port city, Aegean trade hub`,
-      latitude: 39.59306,
-      longitude: 27.02028,
+      latitude: 39.50076466967017,
+      longitude: 26.933222417187366,
       categoryId: ancient.id,
       images: [
         "https://images.unsplash.com/photo-1568322503122-d237ab09f422?w=1024&q=80",
@@ -783,8 +795,8 @@ async function main() {
       descriptionEn: `A high-altitude forest area connected to Dursunbey. Suitable for nature walks and picnics.`,
       shortDesc: `Yüksek rakımlı orman alanı`,
       shortDescEn: `High-altitude forest area`,
-      latitude: 39.52,
-      longitude: 28.55,
+      latitude: 39.41367636210442,
+      longitude: 28.66687029745558,
       categoryId: nature.id,
       images: [],
       address: `Alaçam, Dursunbey, Balıkesir`,
@@ -1767,8 +1779,8 @@ async function main() {
       descriptionEn: `One of the most popular beaches on the Gulf of Edremit. Blue Flag beach with fine sand and shallow waters, ideal for families. Cafes, restaurants, and water sports along the shore.`,
       shortDesc: `Mavi Bayraklı aile plajı`,
       shortDescEn: `Blue Flag family beach`,
-      latitude: 39.5858,
-      longitude: 26.9239,
+      latitude: 39.57372636952993,
+      longitude: 26.94066556303673,
       categoryId: beach.id,
       images: [
         "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1024&q=80",
@@ -2502,8 +2514,8 @@ async function main() {
       descriptionEn: `Construction date and patron unknown as inscription has not survived. Last restored in 1911. Historically significant as the first decisions of the Kuvay-i Milliye Movement in Balıkesir were made here (1919).`,
       shortDesc: `Kuvay-i Milliye kararlarının alındığı tarihi cami`,
       shortDescEn: `Historic mosque where Kuvay-i Milliye decisions were made`,
-      latitude: 39.6486,
-      longitude: 27.8826,
+      latitude: 39.648342383220516,
+      longitude: 27.883534586554337,
       categoryId: religious.id,
       images: [],
       address: `Balıkesir Merkez`,
@@ -2711,8 +2723,8 @@ async function main() {
       descriptionEn: `In Omurbey Quarter. Built by Hacı Omur Bey in 1413, underwent major restorations in 1635 and 1925. Cut stone and brick mosque without a narthex.`,
       shortDesc: `1413 tarihli, erken Osmanlı dönemi`,
       shortDescEn: `Dated 1413, early Ottoman period`,
-      latitude: 39.6475,
-      longitude: 27.882,
+      latitude: 39.64710251218878,
+      longitude: 27.884543029090068,
       categoryId: religious.id,
       images: [],
       address: `Omurbey Mahallesi, Balıkesir Merkez`,
@@ -2888,8 +2900,11 @@ async function main() {
     },
   ];
 
+  const coordOverrides = loadCoordOverrides();
   for (const loc of locations) {
-    await prisma.location.create({ data: loc });
+    const over = coordOverrides[loc.name];
+    const data = over ? { ...loc, latitude: over.latitude, longitude: over.longitude } : loc;
+    await prisma.location.create({ data });
   }
 
   // ── Admin ──

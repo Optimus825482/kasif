@@ -1,11 +1,28 @@
 import { NextRequest } from "next/server";
 import { revalidateTag } from "next/cache";
+import fs from "fs";
+import path from "path";
 import { prisma } from "@/lib/prisma";
 import { verifyToken } from "@/lib/auth";
 import { successResponse, errorResponse } from "@/lib/api-response";
 import { locationUpdateSchema } from "@/lib/validations";
 import { LocationService } from "@/services/location.service";
 import { checkAdminApiRateLimit, getClientIp } from "@/lib/rate-limit";
+
+function writeCoordOverride(name: string, latitude: number, longitude: number) {
+  try {
+    const dir = path.join(process.cwd(), "prisma");
+    const filePath = path.join(dir, "coord-overrides.json");
+    let overrides: Record<string, { latitude: number; longitude: number }> = {};
+    if (fs.existsSync(filePath)) {
+      overrides = JSON.parse(fs.readFileSync(filePath, "utf-8"));
+    }
+    overrides[name] = { latitude, longitude };
+    fs.writeFileSync(filePath, JSON.stringify(overrides, null, 2), "utf-8");
+  } catch {
+    // ignore (e.g. read-only FS in production)
+  }
+}
 
 type Params = { params: Promise<{ id: string }> };
 
@@ -55,6 +72,14 @@ export async function PUT(req: NextRequest, { params }: Params) {
     if (!existing) return errorResponse("Lokasyon bulunamadı", 404, "NOT_FOUND");
 
     const location = await LocationService.update(id, parsed.data);
+
+    if (
+      parsed.data.latitude != null &&
+      parsed.data.longitude != null &&
+      location.name
+    ) {
+      writeCoordOverride(location.name, location.latitude, location.longitude);
+    }
 
     await prisma.auditLog.create({
       data: {
