@@ -8,6 +8,7 @@ import type { Location } from "@/types";
 import type { RouteInfo } from "@/components/map/directions-modal";
 import { useLocale } from "@/context/locale-context";
 import { haversineDistance, formatDistance } from "@/lib/utils";
+import { getImageSrc } from "@/lib/image-src";
 import { useAnalytics } from "@/hooks/use-analytics";
 import { Header } from "@/components/layout/header";
 import { Button } from "@/components/ui/button";
@@ -198,7 +199,7 @@ export default function LocationDetailPage() {
           >
             {hasRealImage ? (
               <img
-                src={location.images[0]}
+                src={getImageSrc(location.images[0])}
                 alt={name}
                 className="absolute inset-0 w-full h-full object-cover"
                 onError={() => setHeroImageError(true)}

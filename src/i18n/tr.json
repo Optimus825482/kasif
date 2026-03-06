@@ -26,6 +26,7 @@
     "loading": "Harita yükleniyor...",
     "locationPermission": "Konum izni gerekli",
     "locationDenied": "Konum açılmadı; haritayı elle hareket ettirebilirsiniz.",
+    "locationBlockedHint": "İzin birkaç kez reddedildiyse tarayıcı engellemiş olabilir. Sıfırlamak için: adres çubuğundaki kilit/simge > Site ayarları > Konum > İzin ver veya Sıfırla.",
     "routeCalculating": "Rota hesaplanıyor…",
     "routeError": "Rota şu an hesaplanamıyor.",
     "openInGoogleMaps": "Google Haritalar'da Aç",

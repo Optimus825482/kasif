@@ -12,6 +12,7 @@ import {
 import L from "leaflet";
 import type { Location } from "@/types";
 import { useAnalytics } from "@/hooks/use-analytics";
+import { useLocale } from "@/context/locale-context";
 import { createCategoryMarkerHtml } from "./category-icons";
 import "leaflet/dist/leaflet.css";
 
@@ -134,6 +135,7 @@ export default function TourismMap({
   onRetryGeo,
 }: TourismMapProps) {
   const { trackEvent } = useAnalytics();
+  const { t } = useLocale();
   const [userPositionInternal, setUserPositionInternal] = useState<
     [number, number] | null
   >(null);
@@ -260,9 +262,10 @@ export default function TourismMap({
       {(geoError || userPosition) && (
         <div className="absolute top-14 right-3 z-[1000] flex flex-col gap-2">
           {geoError && onRetryGeo && (
-            <div className="rounded-lg bg-amber-500/10 border border-amber-500/30 px-3 py-2 text-xs text-amber-800 dark:text-amber-200 flex items-center gap-2">
+            <div className="rounded-lg bg-amber-500/10 border border-amber-500/30 px-3 py-2 text-xs text-amber-800 dark:text-amber-200 flex flex-col gap-1.5 max-w-[240px]">
               <span>Konum açılmadı.</span>
-              <button type="button" onClick={onRetryGeo} className="underline font-medium">
+              <p className="text-[11px] opacity-90">{t("map.locationBlockedHint")}</p>
+              <button type="button" onClick={onRetryGeo} className="underline font-medium self-start">
                 Tekrar dene
               </button>
             </div>

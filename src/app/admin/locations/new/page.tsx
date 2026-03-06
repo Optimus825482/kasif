@@ -33,6 +33,7 @@ import {
   Phone,
 } from "lucide-react";
 import type { Category } from "@/types";
+import { getImageSrc } from "@/lib/image-src";
 
 const emptyForm = {
   name: "",
@@ -67,7 +68,7 @@ function ImageThumb({ src, onRemove }: { src: string; onRemove: () => void }) {
         </div>
       ) : (
         <img
-          src={src}
+          src={getImageSrc(src)}
           alt=""
           className="h-full w-full object-cover"
           onError={() => setError(true)}

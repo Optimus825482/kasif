@@ -29,6 +29,7 @@
     "noResults": "No results found",
     "loading": "Loading map...",
     "locationPermission": "Location permission required",
+    "locationBlockedHint": "If you dismissed the prompt several times, the browser may have blocked it. To reset: click the lock icon next to the URL > Site settings > Location > Allow or Reset.",
     "locationDenied": "Location permission denied. Using default location."
   },
   "explore": {

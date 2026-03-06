@@ -47,6 +47,7 @@ import {
   ChevronRight,
 } from "lucide-react";
 import type { Category } from "@/types";
+import { getImageSrc } from "@/lib/image-src";
 
 interface AdminLocation {
   id: string;
@@ -72,7 +73,7 @@ function ListThumb({
   if (error) return <>{fallback}</>;
   return (
     <img
-      src={src}
+      src={getImageSrc(src)}
       alt=""
       className="h-10 w-10 rounded-lg object-cover border"
       onError={() => setError(true)}
