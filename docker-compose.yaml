@@ -9,8 +9,6 @@ services:
       POSTGRES_DB: ${POSTGRES_DB:-smartcity}
     volumes:
       - pgdata:/var/lib/postgresql/data
-    ports:
-      - "${DB_PORT:-5432}:5432"
     healthcheck:
       test:
         [
