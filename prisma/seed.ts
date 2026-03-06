@@ -1199,6 +1199,7 @@ async function main() {
   const hashedPassword = await bcrypt.hash("admin123", 12);
   await prisma.admin.create({
     data: {
+      username: "admin",
       email: "admin@balikesir.gov.tr",
       password: hashedPassword,
       name: "Sistem Yöneticisi",

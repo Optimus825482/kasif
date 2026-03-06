@@ -5,11 +5,11 @@ import { comparePassword, signToken } from "@/lib/auth";
 
 export async function POST(req: NextRequest) {
   try {
-    const { email, password } = await req.json();
-    if (!email || !password)
-      return errorResponse("E-posta ve şifre gerekli", 422);
+    const { username, password } = await req.json();
+    if (!username || !password)
+      return errorResponse("Kullanıcı adı ve şifre gerekli", 422);
 
-    const admin = await prisma.admin.findUnique({ where: { email } });
+    const admin = await prisma.admin.findUnique({ where: { username } });
     if (!admin || !admin.isActive)
       return errorResponse("Geçersiz kimlik bilgileri", 401);
 
@@ -18,7 +18,7 @@ export async function POST(req: NextRequest) {
 
     const token = signToken({
       id: admin.id,
-      email: admin.email,
+      email: admin.email || "",
       role: admin.role,
     });
     return successResponse({
@@ -26,7 +26,7 @@ export async function POST(req: NextRequest) {
       admin: {
         id: admin.id,
         name: admin.name,
-        email: admin.email,
+        username: admin.username,
         role: admin.role,
       },
     });

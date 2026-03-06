@@ -58,7 +58,8 @@ model Location {
 
 model Admin {
   id        String   @id @default(cuid())
-  email     String   @unique
+  username  String   @unique
+  email     String?
   password  String
   name      String
   role      String   @default("ADMIN") // SYSTEM_ADMIN, ADMIN, EDITOR

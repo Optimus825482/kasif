@@ -124,6 +124,7 @@ export type LocationScalarFieldEnum = (typeof LocationScalarFieldEnum)[keyof typ
 
 export const AdminScalarFieldEnum = {
   id: 'id',
+  username: 'username',
   email: 'email',
   password: 'password',
   name: 'name',

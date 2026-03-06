@@ -13,6 +13,8 @@ export async function GET(req: NextRequest) {
     const limit = Number(searchParams.get("limit")) || 20;
     const search = searchParams.get("search") || "";
 
+    const categoryId = searchParams.get("categoryId") || "";
+
     const where = {
       deletedAt: null,
       ...(search && {
@@ -21,6 +23,7 @@ export async function GET(req: NextRequest) {
           { nameEn: { contains: search, mode: "insensitive" as const } },
         ],
       }),
+      ...(categoryId && { categoryId }),
     };
 
     const [items, total] = await Promise.all([
