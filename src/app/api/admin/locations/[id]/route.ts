@@ -5,6 +5,25 @@ import { successResponse, errorResponse } from "@/lib/api-response";
 
 type Params = { params: Promise<{ id: string }> };
 
+export async function GET(req: NextRequest, { params }: Params) {
+  const admin = verifyToken(req);
+  if (!admin) return errorResponse("Yetkisiz erişim", 401);
+
+  try {
+    const { id } = await params;
+    const location = await prisma.location.findUnique({
+      where: { id, deletedAt: null },
+      include: { category: true },
+    });
+
+    if (!location) return errorResponse("Lokasyon bulunamadı", 404);
+
+    return successResponse(location);
+  } catch {
+    return errorResponse("Lokasyon getirilemedi", 500);
+  }
+}
+
 export async function PUT(req: NextRequest, { params }: Params) {
   const admin = verifyToken(req);
   if (!admin) return errorResponse("Yetkisiz erişim", 401);
