@@ -5,9 +5,19 @@ export type ApiResponse<T = unknown> = {
   errorCode?: string;
 };
 
-export function successResponse<T>(data: T, status = 200): Response {
+export function successResponse<T>(
+  data: T,
+  status = 200,
+  cacheSeconds?: number,
+): Response {
+  const headers: HeadersInit = {};
+  if (cacheSeconds && cacheSeconds > 0) {
+    headers["Cache-Control"] =
+      `public, s-maxage=${cacheSeconds}, stale-while-revalidate=${cacheSeconds * 2}`;
+  }
   return Response.json({ success: true, data } satisfies ApiResponse<T>, {
     status,
+    headers,
   });
 }
 
@@ -17,7 +27,11 @@ export function errorResponse(
   errorCode?: string,
 ): Response {
   return Response.json(
-    { success: false, error, ...(errorCode && { errorCode }) } satisfies ApiResponse,
+    {
+      success: false,
+      error,
+      ...(errorCode && { errorCode }),
+    } satisfies ApiResponse,
     { status },
   );
 }

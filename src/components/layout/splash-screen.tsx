@@ -17,13 +17,13 @@ export function SplashScreen() {
     setShouldShow(true);
 
     const t0 = setTimeout(() => setPhase(1), 100);
-    const t1 = setTimeout(() => setPhase(2), 1200);
-    const t2 = setTimeout(() => setPhase(3), 2000);
-    const t3 = setTimeout(() => setPhase(4), 3500);
+    const t1 = setTimeout(() => setPhase(2), 800);
+    const t2 = setTimeout(() => setPhase(3), 1400);
+    const t3 = setTimeout(() => setPhase(4), 2200);
     const t4 = setTimeout(() => {
       setVisible(false);
       sessionStorage.setItem("splash-shown", "1");
-    }, 4000);
+    }, 2600);
 
     return () => {
       clearTimeout(t0);
@@ -36,8 +36,14 @@ export function SplashScreen() {
 
   if (!visible || !shouldShow) return null;
 
+  const skip = () => {
+    setVisible(false);
+    sessionStorage.setItem("splash-shown", "1");
+  };
+
   return (
     <div
+      onClick={skip}
       style={{
         position: "fixed",
         inset: 0,

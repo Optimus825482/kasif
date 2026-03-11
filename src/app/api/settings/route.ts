@@ -4,7 +4,7 @@ import { SettingsService } from "@/services/settings.service";
 export async function GET() {
   try {
     const data = await SettingsService.getPublicSettings();
-    return successResponse(data);
+    return successResponse(data, 200, 600);
   } catch {
     return errorResponse("Sunucu hatası", 500);
   }

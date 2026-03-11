@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState, useCallback, useMemo } from "react";
 import Link from "next/link";
 import type { Location, Category } from "@/types";
 import { useLocale } from "@/context/locale-context";
@@ -62,14 +62,16 @@ export default function ExplorePage() {
     }
   }, [debouncedSearch, locale, locations, trackEvent]);
 
-  const filtered = locations.filter((loc) => {
-    const name = locale === "en" ? loc.nameEn : loc.name;
-    const matchSearch =
-      !debouncedSearch ||
-      name.toLowerCase().includes(debouncedSearch.toLowerCase());
-    const matchCat = !activeCategory || loc.category.slug === activeCategory;
-    return matchSearch && matchCat;
-  });
+  const filtered = useMemo(() => {
+    return locations.filter((loc) => {
+      const name = locale === "en" ? loc.nameEn : loc.name;
+      const matchSearch =
+        !debouncedSearch ||
+        name.toLowerCase().includes(debouncedSearch.toLowerCase());
+      const matchCat = !activeCategory || loc.category.slug === activeCategory;
+      return matchSearch && matchCat;
+    });
+  }, [locations, locale, debouncedSearch, activeCategory]);
 
   return (
     <div className="flex flex-col min-h-screen">

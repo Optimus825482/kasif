@@ -70,14 +70,6 @@ export default function LocationDetailPage() {
           setLocation(loc);
           trackEvent("detail_view", loc.id);
           setNotFound(false);
-          const url = `/api/locations?latitude=${loc.latitude}&longitude=${loc.longitude}&radiusKm=20&limit=6&excludeId=${loc.id}`;
-          fetch(url)
-            .then((r2) => r2.json())
-            .then((r2res) => {
-              if (r2res.success && r2res.data?.items) {
-                setNearby((r2res.data.items as Location[]) ?? []);
-              }
-            });
         } else {
           setNotFound(true);
           setLocation(null);
@@ -90,6 +82,20 @@ export default function LocationDetailPage() {
   useEffect(() => {
     loadLocation();
   }, [loadLocation]);
+
+  // Fetch nearby separately — no waterfall dependency on main location fetch
+  useEffect(() => {
+    if (!location) return;
+    const url = `/api/locations?latitude=${location.latitude}&longitude=${location.longitude}&radiusKm=20&limit=6&excludeId=${location.id}`;
+    fetch(url)
+      .then((r) => r.json())
+      .then((res) => {
+        if (res.success && res.data?.items) {
+          setNearby((res.data.items as Location[]) ?? []);
+        }
+      })
+      .catch(() => {});
+  }, [location?.id, location?.latitude, location?.longitude]);
 
   useEffect(() => {
     setHeroImageError(false);

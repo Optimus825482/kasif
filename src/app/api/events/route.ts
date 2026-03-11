@@ -9,7 +9,9 @@ export async function POST(req: NextRequest) {
     const ip = getClientIp(req);
     const rate = checkEventsRateLimit(ip);
     if (!rate.allowed) {
-      const retrySec = rate.retryAfterMs ? Math.ceil(rate.retryAfterMs / 1000) : 60;
+      const retrySec = rate.retryAfterMs
+        ? Math.ceil(rate.retryAfterMs / 1000)
+        : 60;
       return errorResponse(
         `Çok fazla istek. ${retrySec} saniye sonra tekrar deneyin.`,
         429,
@@ -20,16 +22,17 @@ export async function POST(req: NextRequest) {
     const body = await req.json();
     const parsed = eventSchema.safeParse(body);
     if (!parsed.success) {
-      const msg = parsed.error.issues[0]?.message ?? "eventType ve sessionId gerekli";
+      const msg =
+        parsed.error.issues[0]?.message ?? "eventType ve sessionId gerekli";
       return errorResponse(msg, 422, "VALIDATION_ERROR");
     }
     let { eventType, locationId, sessionId, metadata } = parsed.data;
 
-    // Validate locationId exists before inserting (prevent FK violation)
     let validLocationId = locationId || null;
     if (validLocationId) {
-      const { prisma } = await import("@/lib/prisma");
-      const exists = await prisma.location.findUnique({
+      const exists = await (
+        await import("@/lib/prisma")
+      ).prisma.location.findUnique({
         where: { id: validLocationId },
         select: { id: true },
       });

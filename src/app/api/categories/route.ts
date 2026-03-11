@@ -4,7 +4,7 @@ import { CategoryService } from "@/services/category.service";
 export async function GET() {
   try {
     const categories = await CategoryService.getAll();
-    return successResponse(categories);
+    return successResponse(categories, 200, 300);
   } catch {
     return errorResponse("Sunucu hatası", 500);
   }
