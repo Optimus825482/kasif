@@ -6,14 +6,77 @@ import { PrismaClient } from "../generated/prisma/client";
 import { PrismaPg } from "@prisma/adapter-pg";
 import bcrypt from "bcryptjs";
 
-function loadCoordOverrides(): Record<string, { latitude: number; longitude: number }> {
+/** coordinates.json: sistemde kalması gereken lokasyonlar (isim + koordinat). Seed sadece bunları oluşturur. */
+interface CoordEntry {
+  id: number;
+  name: string;
+  latitude: number;
+  longitude: number;
+  openInMap?: boolean;
+  newCoordinates?: unknown;
+}
+
+function loadCoordinatesJson(): CoordEntry[] {
   try {
-    const p = path.join(process.cwd(), "prisma", "coord-overrides.json");
-    if (fs.existsSync(p)) return JSON.parse(fs.readFileSync(p, "utf-8"));
+    const p = path.join(process.cwd(), "data", "coordinates.json");
+    if (fs.existsSync(p)) {
+      const raw = JSON.parse(fs.readFileSync(p, "utf-8"));
+      return Array.isArray(raw) ? raw : [];
+    }
   } catch {
     // ignore
   }
-  return {};
+  return [];
+}
+
+/**
+ * location-details.json: Doğruluğu kesin, elle doğrulanmış lokasyon detayları.
+ * Sadece coordinates.json'da adı geçen yerler için kullanılır; alanlar isteğe bağlı.
+ */
+export interface LocationDetailsEntry {
+  name: string;
+  nameEn?: string;
+  description?: string;
+  descriptionEn?: string;
+  shortDesc?: string;
+  shortDescEn?: string;
+  address?: string;
+  addressEn?: string;
+  visitHours?: string;
+  fee?: string;
+  feeEn?: string;
+  categorySlug?: string;
+  images?: string[];
+  website?: string;
+  phone?: string;
+  publicTransport?: string;
+  publicTransportEn?: string;
+  isFeatured?: boolean;
+  isActive?: boolean;
+  /** Kaynak (örn. "Belediye", "Wikipedia - doğrulandı"); doğruluğu belirtmek için. */
+  source?: string;
+}
+
+function loadLocationDetails(): Map<string, LocationDetailsEntry> {
+  const out = new Map<string, LocationDetailsEntry>();
+  try {
+    const p = path.join(process.cwd(), "data", "location-details.json");
+    if (!fs.existsSync(p)) return out;
+    const raw = JSON.parse(fs.readFileSync(p, "utf-8"));
+    const arr = Array.isArray(raw)
+      ? raw
+      : Array.isArray((raw as { locations?: unknown })?.locations)
+        ? (raw as { locations: unknown[] }).locations
+        : [];
+    for (const entry of arr) {
+      if (entry && typeof entry.name === "string") {
+        out.set(entry.name.trim(), entry as LocationDetailsEntry);
+      }
+    }
+  } catch {
+    // ignore
+  }
+  return out;
 }
 
 const pool = new Pool({ connectionString: process.env.DATABASE_URL });
@@ -2900,10 +2963,74 @@ async function main() {
     },
   ];
 
-  const coordOverrides = loadCoordOverrides();
-  for (const loc of locations) {
-    const over = coordOverrides[loc.name];
-    const data = over ? { ...loc, latitude: over.latitude, longitude: over.longitude } : loc;
+  // Sadece coordinates.json'da olan lokasyonlar seed'lenir; koordinatlar bu dosyadan alınır.
+  const coordEntries = loadCoordinatesJson();
+  const seedByName = new Map(locations.map((loc) => [loc.name, loc]));
+  const locationDetailsByName = loadLocationDetails();
+  const slugToCategoryId: Record<string, string> = {
+    historical: historical.id,
+    ancient: ancient.id,
+    museum: museum.id,
+    nature: nature.id,
+    beach: beach.id,
+    cultural: cultural.id,
+    gastronomy: gastronomy.id,
+    thermal: thermal.id,
+    religious: religious.id,
+  };
+
+  for (const coord of coordEntries) {
+    const seedLoc = seedByName.get(coord.name);
+    const details = locationDetailsByName.get(coord.name);
+
+    const base = seedLoc
+      ? { ...seedLoc, latitude: coord.latitude, longitude: coord.longitude }
+      : {
+          name: coord.name,
+          nameEn: coord.name,
+          description: "",
+          descriptionEn: "",
+          shortDesc: "",
+          shortDescEn: "",
+          latitude: coord.latitude,
+          longitude: coord.longitude,
+          categoryId: historical.id,
+          images: [] as string[],
+        };
+
+    const categoryId =
+      details?.categorySlug && slugToCategoryId[details.categorySlug]
+        ? slugToCategoryId[details.categorySlug]
+        : base.categoryId;
+
+    const data = {
+      ...base,
+      categoryId,
+      ...(details?.nameEn != null && { nameEn: details.nameEn }),
+      ...(details?.description != null && { description: details.description }),
+      ...(details?.descriptionEn != null && {
+        descriptionEn: details.descriptionEn,
+      }),
+      ...(details?.shortDesc != null && { shortDesc: details.shortDesc }),
+      ...(details?.shortDescEn != null && { shortDescEn: details.shortDescEn }),
+      ...(details?.address != null && { address: details.address }),
+      ...(details?.addressEn != null && { addressEn: details.addressEn }),
+      ...(details?.visitHours != null && { visitHours: details.visitHours }),
+      ...(details?.fee != null && { fee: details.fee }),
+      ...(details?.feeEn != null && { feeEn: details.feeEn }),
+      ...(details?.images != null &&
+        details.images.length > 0 && { images: details.images }),
+      ...(details?.website != null && { website: details.website }),
+      ...(details?.phone != null && { phone: details.phone }),
+      ...(details?.publicTransport != null && {
+        publicTransport: details.publicTransport,
+      }),
+      ...(details?.publicTransportEn != null && {
+        publicTransportEn: details.publicTransportEn,
+      }),
+      ...(details?.isFeatured != null && { isFeatured: details.isFeatured }),
+      ...(details?.isActive != null && { isActive: details.isActive }),
+    };
     await prisma.location.create({ data });
   }
 
@@ -2927,8 +3054,8 @@ async function main() {
 
   console.log(
     "✅ Seed completed: " +
-      locations.length +
-      " locations, 9 categories, 1 admin",
+      coordEntries.length +
+      " locations (from coordinates.json), 9 categories, 1 admin",
   );
 }
 

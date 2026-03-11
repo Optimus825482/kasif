@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useRef } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 function getSessionId(): string {
   if (typeof window === "undefined") return "";
@@ -12,12 +12,20 @@ function getSessionId(): string {
   return id;
 }
 
+function readConsent(): boolean {
+  if (typeof window === "undefined") return false;
+  return localStorage.getItem("analytics_consent") === "true";
+}
+
 export function useAnalytics() {
-  const consentRef = useRef<boolean>(
-    typeof window !== "undefined"
-      ? localStorage.getItem("analytics_consent") === "true"
-      : false,
-  );
+  const [consent, setConsent] = useState(readConsent);
+
+  useEffect(() => {
+    const handler = () => setConsent(readConsent());
+    window.addEventListener("analytics-consent-change", handler);
+    return () =>
+      window.removeEventListener("analytics-consent-change", handler);
+  }, []);
 
   const trackEvent = useCallback(
     async (
@@ -25,7 +33,7 @@ export function useAnalytics() {
       locationId?: string,
       metadata?: Record<string, unknown>,
     ) => {
-      if (!consentRef.current) return;
+      if (!consent) return;
       try {
         await fetch("/api/events", {
           method: "POST",
@@ -41,7 +49,7 @@ export function useAnalytics() {
         // silently fail
       }
     },
-    [],
+    [consent],
   );
 
   return { trackEvent };

@@ -9,20 +9,24 @@ const WINDOW_MS = 60 * 1000; // 1 minute
 const MAX_LOGIN_ATTEMPTS = 5;
 const MAX_ADMIN_REQUESTS = 100;
 const MAX_EVENTS_PER_MINUTE = 120;
+const CLEANUP_INTERVAL_MS = 5 * 60 * 1000; // 5 minutes
+
+// Periodic cleanup to prevent unbounded memory growth
+setInterval(() => {
+  const now = Date.now();
+  for (const [key, entry] of store) {
+    if (entry.resetAt < now) store.delete(key);
+  }
+}, CLEANUP_INTERVAL_MS);
 
 function getKey(prefix: string, id: string): string {
   return `${prefix}:${id}`;
 }
 
-function getOrCreate(key: string, maxAttempts: number): { count: number; resetAt: number } {
+function getOrCreate(key: string): { count: number; resetAt: number } {
   const now = Date.now();
   const entry = store.get(key);
-  if (!entry) {
-    const resetAt = now + WINDOW_MS;
-    store.set(key, { count: 1, resetAt });
-    return { count: 1, resetAt };
-  }
-  if (now >= entry.resetAt) {
+  if (!entry || now >= entry.resetAt) {
     const resetAt = now + WINDOW_MS;
     store.set(key, { count: 1, resetAt });
     return { count: 1, resetAt };
@@ -32,9 +36,12 @@ function getOrCreate(key: string, maxAttempts: number): { count: number; resetAt
 }
 
 /** Returns true if allowed, false if rate limited. */
-export function checkLoginRateLimit(ip: string): { allowed: boolean; retryAfterMs?: number } {
+export function checkLoginRateLimit(ip: string): {
+  allowed: boolean;
+  retryAfterMs?: number;
+} {
   const key = getKey("login", ip);
-  const { count, resetAt } = getOrCreate(key, MAX_LOGIN_ATTEMPTS);
+  const { count, resetAt } = getOrCreate(key);
   if (count > MAX_LOGIN_ATTEMPTS) {
     return { allowed: false, retryAfterMs: resetAt - Date.now() };
   }
@@ -42,9 +49,12 @@ export function checkLoginRateLimit(ip: string): { allowed: boolean; retryAfterM
 }
 
 /** Returns true if allowed, false if rate limited. */
-export function checkAdminApiRateLimit(ip: string): { allowed: boolean; retryAfterMs?: number } {
+export function checkAdminApiRateLimit(ip: string): {
+  allowed: boolean;
+  retryAfterMs?: number;
+} {
   const key = getKey("admin-api", ip);
-  const { count, resetAt } = getOrCreate(key, MAX_ADMIN_REQUESTS);
+  const { count, resetAt } = getOrCreate(key);
   if (count > MAX_ADMIN_REQUESTS) {
     return { allowed: false, retryAfterMs: resetAt - Date.now() };
   }
@@ -52,9 +62,12 @@ export function checkAdminApiRateLimit(ip: string): { allowed: boolean; retryAft
 }
 
 /** Events API: IP bazlı dakikalık limit (spam/DoS önleme). */
-export function checkEventsRateLimit(ip: string): { allowed: boolean; retryAfterMs?: number } {
+export function checkEventsRateLimit(ip: string): {
+  allowed: boolean;
+  retryAfterMs?: number;
+} {
   const key = getKey("events", ip);
-  const { count, resetAt } = getOrCreate(key, MAX_EVENTS_PER_MINUTE);
+  const { count, resetAt } = getOrCreate(key);
   if (count > MAX_EVENTS_PER_MINUTE) {
     return { allowed: false, retryAfterMs: resetAt - Date.now() };
   }

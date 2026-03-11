@@ -15,5 +15,10 @@ export function buildPagination(
   limit: number,
   total: number,
 ): PaginationResult {
-  return { page, limit, total, pageCount: Math.ceil(total / limit) };
+  return {
+    page,
+    limit,
+    total,
+    pageCount: limit > 0 ? Math.ceil(total / limit) : 0,
+  };
 }

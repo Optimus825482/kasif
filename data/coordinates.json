@@ -1,0 +1,650 @@
+[
+  {
+    "id": 1,
+    "name": "Adramytteion Antik Kenti",
+    "latitude": 39.500869592157976,
+    "longitude": 26.933143846340457,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 2,
+    "name": "Akçay Plajı",
+    "latitude": 39.571270183894626,
+    "longitude": 26.940751426564127,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 3,
+    "name": "Alacaoluk Kalesi (Gönen)",
+    "latitude": 40.0900908328741,
+    "longitude": 27.535266030903756,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 4,
+    "name": "Antandros Antik Kenti",
+    "latitude": 39.57157489445892,
+    "longitude": 26.786398895932226,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 5,
+    "name": "Apostol (Çifte Oluklar) (Erdek)",
+    "latitude": 40.421780590483685,
+    "longitude": 27.785934642352107,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 6,
+    "name": "Atatürk Kayalıkları (Gömeç)",
+    "latitude": 39.38909268167466,
+    "longitude": 26.836005289723225,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 7,
+    "name": "Atatürk Parkı (Balıkesir)",
+    "latitude": 39.64370268602456,
+    "longitude": 27.886058338209892,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 8,
+    "name": "Atatürk Parkı (Bandırma)",
+    "latitude": 40.347427837916584,
+    "longitude": 27.95530398242911,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 9,
+    "name": "Avşa Adası",
+    "latitude": 40.512432448286916,
+    "longitude": 27.4985680193631,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 10,
+    "name": "Avşa Çınar Koyu",
+    "latitude": 40.48097459170465,
+    "longitude": 27.49106068687364,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 11,
+    "name": "Ayaklı Kır Bahçesi (Burhaniye)",
+    "latitude": 39.50046780206439,
+    "longitude": 27.020465823861496,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 12,
+    "name": "Ayşe Sıdıka Erke Etnografya Müzesi",
+    "latitude": 39.5916268986158,
+    "longitude": 27.01760940459491,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 13,
+    "name": "Ayvalık Adaları Tabiat Parkı",
+    "latitude": 39.2914420030645,
+    "longitude": 26.654419522467823,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 14,
+    "name": "Ayvalık Tarihi Sokaklar",
+    "latitude": 39.3193,
+    "longitude": 26.6934,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 15,
+    "name": "Balıkesir Saat Kulesi",
+    "latitude": 39.645786312725626,
+    "longitude": 27.879836780016188,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 16,
+    "name": "Balıkesir Ulu Camii (Zağnos Paşa Camii Yanı)",
+    "latitude": 39.64885509167982,
+    "longitude": 27.879931028618042,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 17,
+    "name": "Bandırma Arkeoloji Müzesi",
+    "latitude": 40.34830225538115,
+    "longitude": 27.954003973330767,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 18,
+    "name": "Bandırma Balık Hali",
+    "latitude": 40.3532573369778,
+    "longitude": 27.96861286361297,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 19,
+    "name": "Bigadiç Kalesi (Achyraos)",
+    "latitude": 39.396185955433154,
+    "longitude": 28.13547618237714,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 20,
+    "name": "Bigadiç Müze ve Kültür Evi",
+    "latitude": 39.39152947493361,
+    "longitude": 28.132957890186432,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 21,
+    "name": "Burhaniye Kuva-yı Milliye Müzesi",
+    "latitude": 39.64579948892022,
+    "longitude": 27.879826378687486,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 22,
+    "name": "Cunda Adası (Alibey Adası)",
+    "latitude": 39.33790642100927,
+    "longitude": 26.653999431357605,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 23,
+    "name": "Çamlık Tepesi (Ayvalık)",
+    "latitude": 39.296432338011094,
+    "longitude": 26.666115065864204,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 24,
+    "name": "Çataldağ - Aygır Çeşmesi (Susurluk)",
+    "latitude": 39.875270477909346,
+    "longitude": 28.258761041928228,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 25,
+    "name": "Çaylak Şelalesi (Susurluk)",
+    "latitude": 39.89517514205463,
+    "longitude": 28.192976884257128,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 26,
+    "name": "Daskyleion Antik Kenti",
+    "latitude": 40.132267636563085,
+    "longitude": 28.051909995908776,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 27,
+    "name": "Değirmenboğazı Köprüsü",
+    "latitude": 39.69744259346678,
+    "longitude": 27.966005574425434,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 28,
+    "name": "Delikli Taş ve Kartal Yuvası",
+    "latitude": 39.29228072655141,
+    "longitude": 26.658762923037727,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 29,
+    "name": "Devrim Erbil Çağdaş Sanatlar Müzesi",
+    "latitude": 39.64874631649664,
+    "longitude": 27.886969503751853,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 30,
+    "name": "Edremit Zeytinyağı Müzesi",
+    "latitude": 39.5935,
+    "longitude": 27.0164,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 31,
+    "name": "Edremit Zeytinyağlı Mutfak",
+    "latitude": 39.5936,
+    "longitude": 27.0244,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 32,
+    "name": "Erdek Plajları",
+    "latitude": 40.40798561340852,
+    "longitude": 27.786183324272166,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 33,
+    "name": "Gönen Kaplıcaları",
+    "latitude": 40.1131,
+    "longitude": 27.6492,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 34,
+    "name": "Gönen Kaymağı",
+    "latitude": 40.09996043929434,
+    "longitude": 27.66100735736741,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 35,
+    "name": "Gönen Mozaik Müzesi",
+    "latitude": 40.10429169776214,
+    "longitude": 27.65341033485346,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 36,
+    "name": "Hasan Boğuldu",
+    "latitude": 39.64637954260325,
+    "longitude": 26.91864985300446,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 37,
+    "name": "Havran Kent Müzesi (Hocazade Konağı)",
+    "latitude": 39.55735576566269,
+    "longitude": 27.098154530700448,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 38,
+    "name": "Havran Terzizade Konağı (Atatürk ve Seyit Onbaşı Müzesi)",
+    "latitude": 39.55626706633655,
+    "longitude": 27.09514745354963,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 39,
+    "name": "Hisarköy (Bigadiç)",
+    "latitude": 39.43021348013119,
+    "longitude": 28.287799843496057,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 40,
+    "name": "İlk Kurşun Tepesi",
+    "latitude": 39.321078907165806,
+    "longitude": 26.697864075288486,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 41,
+    "name": "İnboğazı Mağaraları (Havran)",
+    "latitude": 39.57525544162325,
+    "longitude": 27.171070449082617,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 42,
+    "name": "İskele Mahallesi (Burhaniye)",
+    "latitude": 39.486726020097436,
+    "longitude": 26.92906570587061,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 43,
+    "name": "Kapıdağ Yarımadası",
+    "latitude": 40.468268802051874,
+    "longitude": 27.853714216275645,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 44,
+    "name": "Karesi Bey Camii ve Külliyesi",
+    "latitude": 39.666691,
+    "longitude": 27.898061,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 45,
+    "name": "Kazdağı Tabiat Müzesi",
+    "latitude": 39.586213409996134,
+    "longitude": 26.887588149833455,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 46,
+    "name": "Kazdağları Milli Parkı",
+    "latitude": 39.64696582075258,
+    "longitude": 26.956578586553885,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 47,
+    "name": "Kertil-Çamurlu Mesire Alanı (Sındırgı)",
+    "latitude": 39.20686441689703,
+    "longitude": 28.100224107775563,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 48,
+    "name": "Kışla Mesire Yeri (Kepsut)",
+    "latitude": 39.6961301828512,
+    "longitude": 28.14324440495441,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 49,
+    "name": "Kız Çiftliği (Gömeç)",
+    "latitude": 39.38849283815817,
+    "longitude": 26.803563522775807,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 50,
+    "name": "Kuvayi Milliye Müzesi",
+    "latitude": 39.64592507368693,
+    "longitude": 27.87990959773503,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 51,
+    "name": "Kyzikos Antik Kenti",
+    "latitude": 40.387785420534875,
+    "longitude": 27.870915946362683,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 52,
+    "name": "Madra Dağı (İvrindi)",
+    "latitude": 39.4124,
+    "longitude": 27.2023,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 53,
+    "name": "Manyas Kuş Cenneti (Kuşcenneti Milli Parkı)",
+    "latitude": 40.23209363202995,
+    "longitude": 28.04028980582785,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 54,
+    "name": "Marmara Adası",
+    "latitude": 40.62368150158861,
+    "longitude": 27.60920589378406,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 55,
+    "name": "Ocaklar Plajı (Erdek)",
+    "latitude": 40.44753016300636,
+    "longitude": 27.755390833084924,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 56,
+    "name": "Ören Plajı (Burhaniye)",
+    "latitude": 39.488518536206946,
+    "longitude": 26.93322303224276,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 57,
+    "name": "Panayia Kilisesi (Cunda)",
+    "latitude": 39.335676282691566,
+    "longitude": 26.66001515784119,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 58,
+    "name": "Pordoselene Kulesi",
+    "latitude": 39.38277356030485,
+    "longitude": 26.58513158793495,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 59,
+    "name": "Rahmi M. Koç Müzesi (Cunda)",
+    "latitude": 39.33381976836754,
+    "longitude": 26.658646663157647,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 60,
+    "name": "Saraylar Açık Hava Müzesi",
+    "latitude": 40.653381484045795,
+    "longitude": 27.653626707054705,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 61,
+    "name": "Saraylar Mermer Plajı",
+    "latitude": 40.66114699294433,
+    "longitude": 27.67033607516154,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 62,
+    "name": "Sarıkız Heykeli (Akçay)",
+    "latitude": 39.58389644601752,
+    "longitude": 26.923128034416273,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 63,
+    "name": "Sarımsaklı Plajı",
+    "latitude": 39.26816159532117,
+    "longitude": 26.66219092602905,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 64,
+    "name": "Serhat Mesire Alanı (Havran)",
+    "latitude": 39.5723556289205,
+    "longitude": 27.14103532833163,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 65,
+    "name": "Seyitgazi Tepesi (Erdek)",
+    "latitude": 40.38635355723134,
+    "longitude": 27.79716868005667,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 66,
+    "name": "Sındırgı Hisaralan Kaplıcaları",
+    "latitude": 39.268988744583034,
+    "longitude": 28.314802227882055,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 67,
+    "name": "Sındırgı Kışla Müze Han",
+    "latitude": 39.235137143251656,
+    "longitude": 28.179746343746327,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 68,
+    "name": "Soğuksu Köyü Kalıntıları (Manyas)",
+    "latitude": 40.00413512567959,
+    "longitude": 28.05148162912813,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 69,
+    "name": "Su Çıktı (Kepsut)",
+    "latitude": 39.60223408824628,
+    "longitude": 28.648433652383765,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 70,
+    "name": "Su Uçtu Şelalesi (Kepsut)",
+    "latitude": 39.901853826383736,
+    "longitude": 28.386110360998913,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 71,
+    "name": "Suçıktı Mesire Yeri (Dursunbey)",
+    "latitude": 39.5977098374197,
+    "longitude": 28.626356686013555,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 72,
+    "name": "Sütüven Şelalesi",
+    "latitude": 39.64500545972955,
+    "longitude": 26.91889495488563,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 73,
+    "name": "Şadırvan Meydanı",
+    "latitude": 39.648068057498044,
+    "longitude": 27.881542310183423,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 74,
+    "name": "Şahinderesi Kanyonu",
+    "latitude": 39.58142987045747,
+    "longitude": 26.75876201854916,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 75,
+    "name": "Şeytan Sofrası",
+    "latitude": 39.28909633453363,
+    "longitude": 26.644121318097117,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 76,
+    "name": "Tahtakuşlar Etnografya Müzesi",
+    "latitude": 39.591134433779,
+    "longitude": 26.858742311223736,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 77,
+    "name": "Taksiyarhis Kilisesi",
+    "latitude": 39.3199170725595,
+    "longitude": 26.69456726702848,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 78,
+    "name": "Taşlı Manastır (Tımarhane Adası)",
+    "latitude": 39.30422914000558,
+    "longitude": 26.655871148537425,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 79,
+    "name": "Taylıeli Köyü Seyir Noktası",
+    "latitude": 39.46764240392398,
+    "longitude": 26.929982023665342,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 80,
+    "name": "Yıldırım Camii ve Külliyesi",
+    "latitude": 39.65076926697659,
+    "longitude": 27.883202876822235,
+    "openInMap": true,
+    "newCoordinates": null
+  },
+  {
+    "id": 81,
+    "name": "Zağnos Paşa Camii ve Külliyesi",
+    "latitude": 39.649068610613504,
+    "longitude": 27.879705750501625,
+    "openInMap": true,
+    "newCoordinates": null
+  }
+]

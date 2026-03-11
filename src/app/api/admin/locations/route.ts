@@ -95,7 +95,7 @@ export async function POST(req: NextRequest) {
       },
     });
 
-    revalidateTag("locations", "max");
+    revalidateTag("locations");
     return successResponse(location, 201);
   } catch (err) {
     console.error("[admin/locations POST]", err);

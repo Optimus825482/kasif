@@ -1,5 +1,4 @@
 // Side-arrow marker: PNG icon on left + arrow pointing right to exact location
-// Clean, no background circle
 
 const CATEGORY_IMAGES: Record<string, string> = {
   historical: "/kategoriler/Antik.png",

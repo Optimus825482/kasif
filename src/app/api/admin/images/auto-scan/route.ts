@@ -14,6 +14,7 @@ export async function GET(req: NextRequest) {
     return new Response("Unauthorized", { status: 401 });
   }
 
+  const abortSignal = req.signal;
   const encoder = new TextEncoder();
   const stream = new ReadableStream({
     async start(controller) {
@@ -46,6 +47,9 @@ export async function GET(req: NextRequest) {
         let notFound = 0;
 
         for (let i = 0; i < locations.length; i++) {
+          // Stop processing if client disconnected
+          if (abortSignal.aborted || controller.desiredSize === null) break;
+
           const loc = locations[i];
 
           send("progress", {
@@ -91,19 +95,26 @@ export async function GET(req: NextRequest) {
           }
         }
 
-        send("complete", {
-          total: locations.length,
-          found,
-          notFound,
-          message: `Tarama tamamlandı. ${found} görsel bulundu, ${notFound} bulunamadı.`,
-        });
+        if (!abortSignal.aborted) {
+          send("complete", {
+            total: locations.length,
+            found,
+            notFound,
+            message: `Tarama tamamlandı. ${found} görsel bulundu, ${notFound} bulunamadı.`,
+          });
+        }
       } catch (err) {
-        send("error", {
-          message: err instanceof Error ? err.message : "Bilinmeyen hata",
-        });
+        if (!abortSignal.aborted) {
+          send("error", {
+            message: err instanceof Error ? err.message : "Bilinmeyen hata",
+          });
+        }
       } finally {
         controller.close();
       }
+    },
+    cancel() {
+      // Client disconnected — loop checks abortSignal/desiredSize
     },
   });
 

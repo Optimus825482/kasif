@@ -1,6 +1,6 @@
 import { NextRequest } from "next/server";
 import { revalidateTag } from "next/cache";
-import fs from "fs";
+import fs from "fs/promises";
 import path from "path";
 import { prisma } from "@/lib/prisma";
 import { verifyToken } from "@/lib/auth";
@@ -9,16 +9,23 @@ import { locationUpdateSchema } from "@/lib/validations";
 import { LocationService } from "@/services/location.service";
 import { checkAdminApiRateLimit, getClientIp } from "@/lib/rate-limit";
 
-function writeCoordOverride(name: string, latitude: number, longitude: number) {
+async function writeCoordOverride(
+  name: string,
+  latitude: number,
+  longitude: number,
+) {
   try {
-    const dir = path.join(process.cwd(), "prisma");
+    const dir = path.join(process.cwd(), "data");
     const filePath = path.join(dir, "coord-overrides.json");
     let overrides: Record<string, { latitude: number; longitude: number }> = {};
-    if (fs.existsSync(filePath)) {
-      overrides = JSON.parse(fs.readFileSync(filePath, "utf-8"));
+    try {
+      const content = await fs.readFile(filePath, "utf-8");
+      overrides = JSON.parse(content);
+    } catch {
+      // file doesn't exist yet
     }
     overrides[name] = { latitude, longitude };
-    fs.writeFileSync(filePath, JSON.stringify(overrides, null, 2), "utf-8");
+    await fs.writeFile(filePath, JSON.stringify(overrides, null, 2), "utf-8");
   } catch {
     // ignore (e.g. read-only FS in production)
   }
@@ -42,7 +49,8 @@ export async function GET(req: NextRequest, { params }: Params) {
       include: { category: true },
     });
 
-    if (!location) return errorResponse("Lokasyon bulunamadı", 404, "NOT_FOUND");
+    if (!location)
+      return errorResponse("Lokasyon bulunamadı", 404, "NOT_FOUND");
     return successResponse(location);
   } catch (err) {
     console.error("[admin/locations/[id] GET]", err);
@@ -69,7 +77,8 @@ export async function PUT(req: NextRequest, { params }: Params) {
     }
 
     const existing = await prisma.location.findUnique({ where: { id } });
-    if (!existing) return errorResponse("Lokasyon bulunamadı", 404, "NOT_FOUND");
+    if (!existing)
+      return errorResponse("Lokasyon bulunamadı", 404, "NOT_FOUND");
 
     const location = await LocationService.update(id, parsed.data);
 
@@ -78,7 +87,11 @@ export async function PUT(req: NextRequest, { params }: Params) {
       parsed.data.longitude != null &&
       location.name
     ) {
-      writeCoordOverride(location.name, location.latitude, location.longitude);
+      await writeCoordOverride(
+        location.name,
+        location.latitude,
+        location.longitude,
+      );
     }
 
     await prisma.auditLog.create({
@@ -92,8 +105,8 @@ export async function PUT(req: NextRequest, { params }: Params) {
       },
     });
 
-    revalidateTag("locations", "max");
-    revalidateTag(`location-${id}`, "max");
+    revalidateTag("locations");
+    revalidateTag(`location-${id}`);
     return successResponse(location);
   } catch (err) {
     console.error("[admin/locations/[id] PUT]", err);
@@ -123,8 +136,8 @@ export async function DELETE(req: NextRequest, { params }: Params) {
       },
     });
 
-    revalidateTag("locations", "max");
-    revalidateTag(`location-${id}`, "max");
+    revalidateTag("locations");
+    revalidateTag(`location-${id}`);
     return successResponse({ deleted: true });
   } catch (err) {
     console.error("[admin/locations/[id] DELETE]", err);

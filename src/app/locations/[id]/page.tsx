@@ -5,7 +5,6 @@ import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
 import dynamic from "next/dynamic";
 import type { Location } from "@/types";
-import type { RouteInfo } from "@/components/map/directions-modal";
 import { useLocale } from "@/context/locale-context";
 import { haversineDistance, formatDistance } from "@/lib/utils";
 import { getImageSrc } from "@/lib/image-src";
@@ -37,17 +36,12 @@ const DirectionsModal = dynamic(
   { ssr: false },
 );
 
-const CATEGORY_GRADIENTS: Record<string, string> = {
-  historical: "from-amber-700 to-amber-900",
-  ancient: "from-amber-800 to-stone-900",
-  museum: "from-violet-600 to-violet-800",
-  nature: "from-green-600 to-green-800",
-  beach: "from-cyan-600 to-cyan-800",
-  cultural: "from-pink-600 to-pink-800",
-  gastronomy: "from-orange-500 to-orange-700",
-  thermal: "from-red-600 to-red-800",
-  religious: "from-purple-700 to-purple-900",
-};
+/** Derive a Tailwind gradient pair from a hex color by using it directly via style */
+function categoryGradientStyle(color: string): React.CSSProperties {
+  return {
+    backgroundImage: `linear-gradient(to bottom right, ${color}, ${color}dd)`,
+  };
+}
 
 export default function LocationDetailPage() {
   const params = useParams();
@@ -113,11 +107,13 @@ export default function LocationDetailPage() {
   const handleShare = async () => {
     if (navigator.share && location) {
       const n = locale === "en" ? location.nameEn : location.name;
-      await navigator.share({ title: n, url: window.location.href });
+      try {
+        await navigator.share({ title: n, url: window.location.href });
+      } catch (err) {
+        if (err instanceof Error && err.name !== "AbortError") throw err;
+      }
     }
   };
-
-  const handleRouteReady = useCallback((_r: RouteInfo | null) => {}, []);
 
   if (loading) {
     return (
@@ -173,8 +169,7 @@ export default function LocationDetailPage() {
     locale === "en" ? location.category.nameEn : location.category.name;
   const fee = locale === "en" ? location.feeEn : location.fee;
   const address = locale === "en" ? location.addressEn : location.address;
-  const gradient =
-    CATEGORY_GRADIENTS[location.category.slug] || "from-teal-600 to-teal-800";
+  const gradientStyle = categoryGradientStyle(location.category.color);
   const hasRealImage =
     location.images?.length > 0 &&
     !location.images[0].startsWith("/images/") &&
@@ -195,7 +190,8 @@ export default function LocationDetailPage() {
           </Button>
 
           <div
-            className={`relative h-48 sm:h-64 rounded-xl bg-gradient-to-br ${gradient} mb-4 flex items-center justify-center overflow-hidden`}
+            className="relative h-48 sm:h-64 rounded-xl mb-4 flex items-center justify-center overflow-hidden"
+            style={gradientStyle}
           >
             {hasRealImage ? (
               <img
@@ -379,8 +375,7 @@ export default function LocationDetailPage() {
               </p>
               <div className="grid gap-2 sm:grid-cols-2">
                 {nearby.map((loc) => {
-                  const locName =
-                    locale === "en" ? loc.nameEn : loc.name;
+                  const locName = locale === "en" ? loc.nameEn : loc.name;
                   const distanceM = haversineDistance(
                     location.latitude,
                     location.longitude,
@@ -424,7 +419,6 @@ export default function LocationDetailPage() {
           location={location}
           userPosition={userPos}
           onClose={() => setShowDirections(false)}
-          onRouteReady={handleRouteReady}
         />
       )}
     </div>

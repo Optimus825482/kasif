@@ -1,6 +1,6 @@
 /**
  * Admin API istekleri için fetch sarmalayıcı.
- * - Authorization: Bearer token ekler (localStorage admin_token)
+ * - Authorization: Bearer token ekler (HttpOnly admin_token cookie'den okur)
  * - 401: Oturumu temizler, toast gösterir, /admin/login'e yönlendirir
  * - 429: Rate limit mesajı toast ile gösterir
  */
@@ -10,10 +10,14 @@ import { toast } from "sonner";
 const SESSION_EXPIRED_MSG = "Oturumunuz sona erdi. Tekrar giriş yapın.";
 const RATE_LIMIT_MSG = "Çok fazla istek. Lütfen bir süre sonra tekrar deneyin.";
 
+function getTokenFromCookie(): string | null {
+  if (typeof document === "undefined") return null;
+  const match = document.cookie.match(/(?:^|;\s*)admin_token=([^;]*)/);
+  return match ? decodeURIComponent(match[1]) : null;
+}
+
 function clearAdminSession() {
   if (typeof window === "undefined") return;
-  localStorage.removeItem("admin_token");
-  localStorage.removeItem("admin_user");
   document.cookie = "admin_token=; path=/; max-age=0";
 }
 
@@ -21,8 +25,7 @@ export async function adminFetch(
   input: RequestInfo | URL,
   init?: RequestInit,
 ): Promise<Response> {
-  const token =
-    typeof window !== "undefined" ? localStorage.getItem("admin_token") : null;
+  const token = getTokenFromCookie();
   const headers = new Headers(init?.headers);
   if (token) headers.set("Authorization", `Bearer ${token}`);
 

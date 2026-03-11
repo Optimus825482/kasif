@@ -2,7 +2,10 @@ import { unstable_cache } from "next/cache";
 import { prisma } from "@/lib/prisma";
 import { buildPagination } from "@/lib/pagination";
 import { haversineDistance } from "@/lib/utils";
-import type { LocationCreateInput, LocationUpdateInput } from "@/lib/validations";
+import type {
+  LocationCreateInput,
+  LocationUpdateInput,
+} from "@/lib/validations";
 
 const CACHE_TAG_LOCATIONS = "locations";
 const CACHE_SECONDS = 60; // 1 minute
@@ -33,18 +36,17 @@ export class LocationService {
     } = params;
 
     const isNearby =
-      latitude != null &&
-      longitude != null &&
-      radiusKm != null &&
-      radiusKm > 0;
+      latitude != null && longitude != null && radiusKm != null && radiusKm > 0;
 
     if (isNearby) {
       const delta = radiusKm / KM_PER_DEG;
+      const lngDelta =
+        radiusKm / (KM_PER_DEG * Math.cos((latitude * Math.PI) / 180));
       const where = {
         deletedAt: null,
         isActive: true,
         latitude: { gte: latitude - delta, lte: latitude + delta },
-        longitude: { gte: longitude - delta, lte: longitude + delta },
+        longitude: { gte: longitude - lngDelta, lte: longitude + lngDelta },
         ...(excludeId && { id: { not: excludeId } }),
       };
       const candidates = await prisma.location.findMany({
@@ -146,30 +148,15 @@ export class LocationService {
     return unstable_cache(
       async () =>
         prisma.location.findFirst({
-          where: { id, deletedAt: null },
+          where: { id, deletedAt: null, isActive: true },
           include: { category: true },
         }),
       [`location-${id}`],
-      { revalidate: CACHE_SECONDS, tags: [CACHE_TAG_LOCATIONS, `location-${id}`] },
-    )();
-  }
-
-  static async getFeatured() {
-    return prisma.location.findMany({
-      where: { deletedAt: null, isActive: true, isFeatured: true },
-      include: {
-        category: {
-          select: {
-            id: true,
-            name: true,
-            nameEn: true,
-            icon: true,
-            color: true,
-          },
-        },
+      {
+        revalidate: CACHE_SECONDS,
+        tags: [CACHE_TAG_LOCATIONS, `location-${id}`],
       },
-      take: 6,
-    });
+    )();
   }
 
   static async create(data: LocationCreateInput) {
@@ -220,9 +207,12 @@ export class LocationService {
     if (data.addressEn !== undefined) payload.addressEn = data.addressEn;
     if (data.phone !== undefined) payload.phone = data.phone;
     if (data.website !== undefined) payload.website = data.website || null;
-    if (data.accessibility !== undefined) payload.accessibility = data.accessibility;
-    if (data.publicTransport !== undefined) payload.publicTransport = data.publicTransport;
-    if (data.publicTransportEn !== undefined) payload.publicTransportEn = data.publicTransportEn;
+    if (data.accessibility !== undefined)
+      payload.accessibility = data.accessibility;
+    if (data.publicTransport !== undefined)
+      payload.publicTransport = data.publicTransport;
+    if (data.publicTransportEn !== undefined)
+      payload.publicTransportEn = data.publicTransportEn;
     if (data.isActive !== undefined) payload.isActive = data.isActive;
     if (data.isFeatured !== undefined) payload.isFeatured = data.isFeatured;
     return prisma.location.update({ where: { id }, data: payload });

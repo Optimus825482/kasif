@@ -17,11 +17,13 @@ export function ConsentBanner() {
 
   const handleAccept = () => {
     localStorage.setItem("analytics_consent", "true");
+    window.dispatchEvent(new Event("analytics-consent-change"));
     setShow(false);
   };
 
   const handleDecline = () => {
     localStorage.setItem("analytics_consent", "false");
+    window.dispatchEvent(new Event("analytics-consent-change"));
     setShow(false);
   };
 

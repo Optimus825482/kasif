@@ -24,7 +24,7 @@ interface CoordEntry {
 }
 
 async function main() {
-  const jsonPath = path.resolve(process.cwd(), "coordinates.json");
+  const jsonPath = path.resolve(process.cwd(), "data", "coordinates.json");
   if (!fs.existsSync(jsonPath)) {
     console.error("coordinates.json bulunamadı:", jsonPath);
     process.exit(1);

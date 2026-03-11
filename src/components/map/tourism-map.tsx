@@ -264,11 +264,11 @@ export default function TourismMap({
       {(geoError || userPosition) && (
         <div className="absolute top-14 right-3 z-[1000] flex flex-col gap-2">
           {geoError && onRetryGeo && (
-            <div className="rounded-lg bg-amber-500/10 border border-amber-500/30 px-3 py-2 text-xs text-amber-800 dark:text-amber-200 flex flex-col gap-1.5 max-w-[240px]">
-              <span>Konum açılmadı.</span>
-              <p className="text-[11px] opacity-90">{t("map.locationBlockedHint")}</p>
-              <button type="button" onClick={onRetryGeo} className="underline font-medium self-start">
-                Tekrar dene
+            <div className="rounded-xl bg-amber-50 dark:bg-amber-950/95 border-2 border-amber-500 shadow-lg px-4 py-3 text-sm flex flex-col gap-2 max-w-[260px]">
+              <span className="font-semibold text-amber-900 dark:text-amber-100">Konum açılmadı.</span>
+              <p className="text-xs text-amber-800 dark:text-amber-200 leading-relaxed">{t("map.locationBlockedHint")}</p>
+              <button type="button" onClick={onRetryGeo} className="mt-0.5 px-3 py-1.5 rounded-lg bg-amber-500 hover:bg-amber-600 text-amber-950 font-medium text-sm transition-colors">
+                {t("common.retry")}
               </button>
             </div>
           )}

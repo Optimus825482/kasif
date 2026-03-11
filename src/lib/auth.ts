@@ -4,12 +4,10 @@ import bcrypt from "bcryptjs";
 
 function getJwtSecret(): string {
   const secret = process.env.JWT_SECRET;
-  if (process.env.NODE_ENV === "production" && !secret) {
-    throw new Error(
-      "JWT_SECRET is required in production. Set the environment variable.",
-    );
+  if (!secret) {
+    throw new Error("JWT_SECRET is required. Set the environment variable.");
   }
-  return secret || "smartcity-secret-key-change-in-production";
+  return secret;
 }
 
 export interface TokenPayload {

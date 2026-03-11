@@ -1,0 +1,1603 @@
+[
+  {
+    "name": "Adramytteion Antik Kenti",
+    "nameEn": "Adramytteion Ancient City",
+    "description": "Burhaniye'nin 4 km batısında Ören sahil mahallesinde kurulmuş antik Aiolis kenti. MÖ 4. yüzyıldan itibaren önemli ticaret ve denizcilik merkezi. 2020 ve 2025'te deniz seviyesinin düşmesiyle antik liman kalıntıları gün yüzüne çıkmıştır.",
+    "descriptionEn": "Ancient Aeolian city at the coastal neighborhood of Ören in Burhaniye. Significant trade center from 4th century BC. In 2020 and 2025, receding sea levels revealed ancient port remains.",
+    "shortDesc": "Antik liman kenti, Ege ticaret düğüm noktası",
+    "shortDescEn": "Ancient port city, Aegean trade hub",
+    "address": "Ören, Burhaniye, Balıkesir",
+    "addressEn": "Ören, Burhaniye, Balıkesir",
+    "visitHours": "Salı-Pazar 08:30-17:00",
+    "fee": "Ücretsiz",
+    "feeEn": "Free",
+    "categorySlug": "ancient",
+    "images": [
+      "https://images.unsplash.com/photo-1568322503122-d237ab09f422?w=1024&q=80"
+    ],
+    "publicTransport": "Balıkesir otogarından Burhaniye otobüsü (1.5 saat), ardından Ören dolmuşu (15 dk).",
+    "publicTransportEn": "Bus from Balıkesir to Burhaniye (1.5 hours), then minibus to Ören (15 min).",
+    "isFeatured": false,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Akçay Plajı",
+    "nameEn": "Akçay Beach",
+    "description": "Edremit Körfezi'nin en popüler plajlarından biri. Mavi Bayraklı plaj, ince kum yapısı ve sığ denizi ile aileler için ideal. Sahil boyunca kafeler, restoranlar ve su sporları imkanları mevcut.",
+    "descriptionEn": "One of the most popular beaches on the Gulf of Edremit. Blue Flag beach with fine sand and shallow waters, ideal for families. Cafes, restaurants, and water sports along the shore.",
+    "shortDesc": "Mavi Bayraklı aile plajı",
+    "shortDescEn": "Blue Flag family beach",
+    "address": "Akçay, Edremit, Balıkesir",
+    "addressEn": "Akçay, Edremit, Balıkesir",
+    "visitHours": "Her gün (yaz sezonu Haziran-Eylül)",
+    "fee": "Ücretsiz (şezlong ücretli)",
+    "feeEn": "Free (sunbed paid)",
+    "categorySlug": "beach",
+    "images": [
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1024&q=80"
+    ],
+    "publicTransport": "Edremit'ten Akçay'a dolmuş sık sefer yapar (15 dk).",
+    "publicTransportEn": "Frequent minibuses from Edremit to Akçay (15 min).",
+    "isFeatured": false,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Alacaoluk Kalesi (Gönen)",
+    "nameEn": "Alacaoluk Castle (Gonen)",
+    "description": "Gönen ilçesinde yer alan, temel kalıntıları hala görülebilen tarihi bir kale noktasıdır. Stratejik tepede konumlanan kale, çevresindeki ovayı kontrol etmek amacıyla inşa edilmiş olup bölgenin zengin tarihine tanıklık eder.",
+    "descriptionEn": "A historic castle point in Gonen district where foundation remnants are still visible. Positioned on a strategic hilltop, the castle was built to control the surrounding plain and bears witness to the rich history of the region.",
+    "shortDesc": "Gönen'deki tarihi kale kalıntıları",
+    "shortDescEn": "Historic castle ruins in Gonen",
+    "address": "Alacaoluk, Gönen, Balıkesir",
+    "addressEn": "Alacaoluk, Gonen, Balikesir",
+    "categorySlug": "historical",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/G%C3%B6nen%E2%80%93IMG_5607_02.jpg/1280px-G%C3%B6nen%E2%80%93IMG_5607_02.jpg"
+    ],
+    "isFeatured": false,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Antandros Antik Kenti",
+    "nameEn": "Antandros Ancient City",
+    "description": "Kazdağları'nın güney eteklerinde, 215 metre yüksekliğindeki Kaletaşı tepesinde kurulmuş antik Troas kenti. MÖ 7. yüzyılda Lelegler tarafından kurulduğu rivayet edilir. İkinci Efes olarak nitelendirilen yamaç evleri, Anadolu'da Efes'ten sonra en iyi korunmuş duvar freskleri ve zemin mozaiklerine sahiptir.",
+    "descriptionEn": "Ancient Troad city on the 215m Kaletaşı hilltop on the southern slopes of Mount Ida. Its hillside houses, dubbed Second Ephesus, have the best-preserved wall frescoes and floor mosaics in Anatolia after Ephesus.",
+    "shortDesc": "İkinci Efes: Roma freskleri ve mozaikleri",
+    "shortDescEn": "Second Ephesus: Roman frescoes and mosaics",
+    "address": "Altınoluk, Edremit, Balıkesir",
+    "addressEn": "Altınoluk, Edremit, Balıkesir",
+    "visitHours": "Salı-Pazar 08:30-17:30",
+    "fee": "Ücretsiz",
+    "feeEn": "Free",
+    "categorySlug": "ancient",
+    "images": [
+      "https://images.unsplash.com/photo-1584551246679-0daf3d275d0f?w=1024&q=80"
+    ],
+    "publicTransport": "Balıkesir otogarından Edremit/Altınoluk otobüsü (2 saat). Altınoluk merkezden yürüyerek 15 dk.",
+    "publicTransportEn": "Bus from Balıkesir to Edremit/Altınoluk (2 hours). 15 min walk from Altınoluk center.",
+    "isFeatured": true,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Apostol (Çifte Oluklar) (Erdek)",
+    "nameEn": "Apostol (Cifte Oluklar) (Erdek)",
+    "description": "Erdek'te ormanlık bir alan içinde yer alan, tarihi çeşmeleri ve piknik alanlarıyla bilinen doğal bir mesire yeridir. Çifte Oluklar adıyla da anılan bu alan, çam ormanları arasında huzurlu bir doğa deneyimi sunar.",
+    "descriptionEn": "A natural recreation area in Erdek, known for its historic fountains and picnic areas within a forested setting. Also called Cifte Oluklar, this area offers a peaceful nature experience among pine forests.",
+    "shortDesc": "Ormanlık alandaki tarihi çeşmeli mesire yeri",
+    "shortDescEn": "Recreation area with historic fountains in forest",
+    "address": "Apostol, Erdek, Balıkesir",
+    "addressEn": "Apostol, Erdek, Balikesir",
+    "categorySlug": "nature",
+    "images": [
+      "/uploads/loc_1772842485183_6nlrwi.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Atatürk Kayalıkları (Gömeç)",
+    "nameEn": "Ataturk Rocks (Gomec)",
+    "description": "Gömeç ilçesinde İzmir karayolu üzerinden bakıldığında Atatürk'ün profil silüetini andıran doğal kaya oluşumudur. Bu ilginç doğa harikası, fotoğraf çekmek ve manzara seyretmek için popüler bir durak noktasıdır.",
+    "descriptionEn": "A natural rock formation in Gomec district that resembles Ataturk's profile silhouette when viewed from the Izmir highway. This interesting natural wonder is a popular stop for photography and sightseeing.",
+    "shortDesc": "Atatürk profili silüetli doğal kaya oluşumu",
+    "shortDescEn": "Natural rock formation resembling Ataturk's profile",
+    "address": "İzmir Karayolu, Gömeç, Balıkesir",
+    "addressEn": "Izmir Highway, Gomec, Balikesir",
+    "categorySlug": "nature",
+    "isFeatured": false,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Atatürk Parkı (Balıkesir)",
+    "nameEn": "Ataturk Park (Balikesir)",
+    "description": "Balıkesir şehir merkezinin kalbinde yer alan en büyük rekreasyon alanlarından biridir. Geniş yeşil alanları, yürüyüş yolları ve dinlenme mekanlarıyla hem yerel halkın hem de ziyaretçilerin vazgeçilmez buluşma noktasıdır.",
+    "descriptionEn": "One of the largest recreation areas in the heart of Balikesir city center. With its expansive green spaces, walking paths, and resting areas, it is an essential gathering point for both locals and visitors.",
+    "shortDesc": "Şehir merkezindeki ana park ve rekreasyon alanı",
+    "shortDescEn": "Main park and recreation area in the city center",
+    "address": "Karesi Merkez, Balıkesir",
+    "addressEn": "Karesi Center, Balikesir",
+    "categorySlug": "nature",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Atat%C3%BCrk_Park%C4%B1.JPG/1280px-Atat%C3%BCrk_Park%C4%B1.JPG"
+    ],
+    "isFeatured": false,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Atatürk Parkı (Bandırma)",
+    "nameEn": "Ataturk Park (Bandirma)",
+    "description": "Bandırma'nın Erdek yolu üzerinde yer alan, geniş yeşil alanları ve göl kenarı yürüyüş parkurlarıyla şehrin en büyük rekreasyon alanıdır. Piknik alanları, spor sahaları ve çocuk oyun alanlarıyla her yaştan ziyaretçiye hitap eder.",
+    "descriptionEn": "The largest recreation area in Bandirma, located along the Erdek road with wide green spaces and lakeside walking trails. It caters to visitors of all ages with picnic areas, sports fields, and playgrounds.",
+    "shortDesc": "Bandırma'nın en büyük park ve rekreasyon alanı",
+    "shortDescEn": "Bandirma's largest park and recreation area",
+    "address": "Erdek Yolu, Bandırma, Balıkesir",
+    "addressEn": "Erdek Road, Bandirma, Balikesir",
+    "categorySlug": "nature",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Atat%C3%BCrk_Park%C4%B1.JPG/1280px-Atat%C3%BCrk_Park%C4%B1.JPG"
+    ],
+    "isFeatured": false,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Avşa Adası",
+    "nameEn": "Avşa Island",
+    "description": "Marmara Denizi'ndeki tatil adası. Temiz plajları, üzüm bağları ve şarap üretimi ile ünlü. Yaz aylarında İstanbul'dan feribot ile kolayca ulaşılır.",
+    "descriptionEn": "Holiday island in the Sea of Marmara. Famous for clean beaches, vineyards, and wine production. Easily accessible by ferry from Istanbul in summer.",
+    "shortDesc": "Marmara'nın tatil adası, şarap ve plajlar",
+    "shortDescEn": "Marmara's holiday island, wine and beaches",
+    "address": "Avşa Adası, Marmara, Balıkesir",
+    "addressEn": "Avşa Island, Marmara, Balıkesir",
+    "visitHours": "Her zaman açık",
+    "fee": "Ücretsiz",
+    "feeEn": "Free",
+    "categorySlug": "beach",
+    "images": [
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1024&q=80"
+    ],
+    "publicTransport": "Erdek veya İstanbul Yenikapı'dan feribot (2-3 saat).",
+    "publicTransportEn": "Ferry from Erdek or Istanbul Yenikapı (2-3 hours).",
+    "isFeatured": false,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Avşa Çınar Koyu",
+    "nameEn": "Avsa Cinar Bay",
+    "description": "Avşa Adası'nın en popüler koylarından biri olan Çınar Koyu, berrak turkuaz suları ve ince kumlu plajıyla yaz tatilcilerinin gözdesidir. Koyun çevresindeki çınar ağaçları doğal gölge sağlarken, sahil boyunca restoranlar ve kafeler hizmet vermektedir.",
+    "descriptionEn": "One of the most popular bays of Avsa Island, Cinar Bay is a favorite of summer vacationers with its crystal-clear turquoise waters and fine sandy beach. Plane trees around the bay provide natural shade, while restaurants and cafes serve along the shore.",
+    "shortDesc": "Avşa Adası'nın turkuaz sulu popüler koyu",
+    "shortDescEn": "Popular bay of Avsa Island with turquoise waters",
+    "address": "Çınar Koyu, Avşa Adası, Marmara, Balıkesir",
+    "addressEn": "Cinar Bay, Avsa Island, Marmara, Balikesir",
+    "categorySlug": "beach",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/0/04/Sunset_at_Av%C5%9Fa_Island%2C_Turkey.jpg"
+    ],
+    "isFeatured": false,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Ayaklı Kır Bahçesi (Burhaniye)",
+    "nameEn": "Ayakli Country Garden (Burhaniye)",
+    "description": "Burhaniye'de doğal su kaynaklarına sahip, ağaçlık bir kır bahçesi ve piknik alanıdır. Taze kaynak suları ve gölgelik çınar ağaçlarıyla sıcak yaz günlerinde serinlemek için tercih edilen bir mesire yeridir.",
+    "descriptionEn": "A wooded country garden and picnic area in Burhaniye with natural water sources. A preferred recreation spot for cooling off on hot summer days with its fresh spring waters and shady plane trees.",
+    "shortDesc": "Su kaynaklı ağaçlık kır bahçesi",
+    "shortDescEn": "Wooded country garden with water sources",
+    "address": "Ayaklı, Burhaniye, Balıkesir",
+    "addressEn": "Ayakli, Burhaniye, Balikesir",
+    "categorySlug": "nature",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Sokak_burhaniye.JPG/1280px-Sokak_burhaniye.JPG"
+    ],
+    "isFeatured": false,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Ayşe Sıdıka Erke Etnografya Müzesi",
+    "nameEn": "Ayşe Sıdıka Erke Ethnography Museum",
+    "description": "Edremit Belediyesi tarafından kurulmuş özel müze. Kuvâ-yı Milliye odası, geleneksel Türk evi düzeni, el yapımı eserler ve eski silahlar sergilenir. 18.-19. yüzyıl Edremit ev yaşamını yansıtır.",
+    "descriptionEn": "Special museum established by Edremit Municipality. Displays a Kuva-yi Milliye room, traditional Turkish house layout, handmade artifacts and antique weapons. Reflects 18th-19th century Edremit domestic life.",
+    "shortDesc": "Edremit'in etnografik mirası",
+    "shortDescEn": "Edremit's ethnographic heritage",
+    "address": "Soğanyemez Mah., Yılmaz Akpınar Bulvarı No:12A, Edremit",
+    "addressEn": "Soğanyemez District, Yılmaz Akpınar Blvd No:12A, Edremit",
+    "visitHours": "Salı-Pazar 09:00-17:00",
+    "fee": "Ücretsiz",
+    "feeEn": "Free",
+    "categorySlug": "museum",
+    "images": [
+      "https://images.unsplash.com/photo-1590076215667-875c2d76b544?w=1024&q=80"
+    ],
+    "publicTransport": "Balıkesir otogarından Edremit otobüsü (1.5 saat). Edremit merkezden yürüyerek 10 dk.",
+    "publicTransportEn": "Bus from Balıkesir to Edremit (1.5 hours). 10 min walk from Edremit center.",
+    "isFeatured": false,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Ayvalık Adaları Tabiat Parkı",
+    "nameEn": "Ayvalık Islands Nature Park",
+    "description": "22 ada ve kayalıktan oluşan deniz tabiat parkı. Akdeniz foku, kırmızı mercan ve endemik bitki türlerine ev sahipliği yapar. Dalış, tekne turu ve doğa yürüyüşü için ideal.",
+    "descriptionEn": "Marine nature park consisting of 22 islands and islets. Home to Mediterranean monk seals, red coral, and endemic plant species. Ideal for diving, boat tours, and nature walks.",
+    "shortDesc": "22 adalık deniz tabiat parkı",
+    "shortDescEn": "Marine nature park with 22 islands",
+    "address": "Ayvalık, Balıkesir",
+    "addressEn": "Ayvalık, Balıkesir",
+    "visitHours": "Her gün (tekne turları 09:00-18:00)",
+    "fee": "Tekne turu 200-400 TL",
+    "feeEn": "Boat tour 200-400 TRY",
+    "categorySlug": "nature",
+    "images": [
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1024&q=80"
+    ],
+    "publicTransport": "Ayvalık merkezden tekne turları kalkar. Balıkesir'den Ayvalık otobüsü (3 saat).",
+    "publicTransportEn": "Boat tours depart from Ayvalık center. Bus from Balıkesir to Ayvalık (3 hours).",
+    "isFeatured": false,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Ayvalık Tarihi Sokaklar",
+    "nameEn": "Ayvalık Historic Streets",
+    "description": "Rum mimarisinin en iyi korunduğu sokaklar. Taş evler, dar sokaklar, zeytinyağı fabrikaları ve kilise kalıntıları ile Osmanlı-Rum kültürel mirasının canlı müzesi. UNESCO Dünya Mirası Geçici Listesi'ndedir.",
+    "descriptionEn": "Best-preserved streets of Greek architecture. Stone houses, narrow streets, olive oil factories, and church ruins form a living museum of Ottoman-Greek cultural heritage. On UNESCO World Heritage Tentative List.",
+    "shortDesc": "UNESCO adayı Rum mimarisi sokakları",
+    "shortDescEn": "UNESCO-nominated Greek architecture streets",
+    "address": "Ayvalık Merkez, Balıkesir",
+    "addressEn": "Ayvalık Center, Balıkesir",
+    "visitHours": "Her zaman açık",
+    "fee": "Ücretsiz",
+    "feeEn": "Free",
+    "categorySlug": "cultural",
+    "images": [
+      "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1024&q=80"
+    ],
+    "publicTransport": "Balıkesir otogarından Ayvalık otobüsü (3 saat). İzmir'den de otobüs mevcut (2.5 saat).",
+    "publicTransportEn": "Bus from Balıkesir to Ayvalık (3 hours). Also buses from İzmir (2.5 hours).",
+    "isFeatured": true,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Balıkesir Saat Kulesi",
+    "nameEn": "Balıkesir Clock Tower",
+    "description": "İlk yapımı 1827'ye dayanan, 1897 depreminde yıkıldıktan sonra 1901'de yeniden inşa edilen 20 metre yüksekliğindeki saat kulesi. Klasik Osmanlı mimari üslubunda tasarlanmış, şehrin en tanınmış simgelerinden biridir.",
+    "descriptionEn": "Originally built in 1827, rebuilt in 1901 after the 1897 earthquake. Rising 20 meters high in classical Ottoman architectural style, it is one of the city's most recognizable landmarks and a focal point of the city square.",
+    "shortDesc": "1827'den kalma şehir simgesi",
+    "shortDescEn": "City symbol dating from 1827",
+    "address": "Belediye Parkı içi, Karesi, Balıkesir",
+    "addressEn": "Inside Municipality Park, Karesi, Balıkesir",
+    "visitHours": "Dış mekan, her zaman görülebilir",
+    "fee": "Ücretsiz",
+    "feeEn": "Free",
+    "categorySlug": "historical",
+    "images": [
+      "/uploads/loc_1772838034552_pv11ko.webp"
+    ],
+    "publicTransport": "Merkez belediye otobüsleri ile Çarşı/Merkez durağında inin. Otogardan yürüyerek 10 dk.",
+    "publicTransportEn": "Take city buses to Çarşı/Merkez stop. 10 min walk from bus station.",
+    "isFeatured": true,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Balıkesir Ulu Camii (Zağnos Paşa Camii Yanı)",
+    "nameEn": "Balıkesir Grand Mosque",
+    "description": "Balıkesir'in tarihi merkezinde yer alan ulu cami. Osmanlı döneminde inşa edilmiş, şehrin en önemli ibadet mekanlarından biri. Zağnos Paşa Camii ile birlikte dini mimari bütünlük oluşturur.",
+    "descriptionEn": "Grand mosque in the historic center of Balıkesir. Built during the Ottoman period, one of the city's most important places of worship. Forms a religious architectural ensemble with Zağnos Paşa Mosque.",
+    "shortDesc": "Balıkesir'in tarihi ulu camii",
+    "shortDescEn": "Balıkesir's historic grand mosque",
+    "address": "Karesi Merkez, Balıkesir",
+    "addressEn": "Karesi Center, Balıkesir",
+    "visitHours": "Her gün 05:00-22:00",
+    "fee": "Ücretsiz",
+    "feeEn": "Free",
+    "categorySlug": "religious",
+    "images": [
+      "https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=1024&q=80"
+    ],
+    "publicTransport": "Merkez belediye otobüsleri ile Çarşı durağında inin. Otogardan yürüyerek 10 dk.",
+    "publicTransportEn": "Take city buses to Çarşı stop. 10 min walk from bus station.",
+    "isFeatured": false,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Bandırma Arkeoloji Müzesi",
+    "nameEn": "Bandırma Archaeology Museum",
+    "description": "2003 yılında açılmış, Güney Marmara'nın en önemli arkeoloji müzelerinden biri. Kyzikos, Daskyleion ve çevre yerleşimlerden çıkarılan Roma, Bizans ve Osmanlı dönemlerine ait lahitler, heykeller, sikkeler sergilenmektedir.",
+    "descriptionEn": "Opened in 2003, one of the most significant archaeological museums in the Southern Marmara region. Houses sarcophagi, sculptures, coins from Kyzikos, Daskyleion and surrounding settlements.",
+    "shortDesc": "Pers ve antik dönem arkeolojik eserleri",
+    "shortDescEn": "Persian and ancient period archaeological artifacts",
+    "address": "Paşakent Mah., Şehit Cemil Kaya Cad. No:17, Bandırma",
+    "addressEn": "Paşakent District, Şehit Cemil Kaya St. No:17, Bandırma",
+    "visitHours": "Salı-Pazar 09:00-17:00",
+    "fee": "Ücretsiz",
+    "feeEn": "Free",
+    "categorySlug": "museum",
+    "images": [
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1024&q=80"
+    ],
+    "publicTransport": "Balıkesir otogarından Bandırma otobüsü (1.5 saat). İstanbul'dan İDO feribotu ile de ulaşılır. Merkezden yürüyerek 10 dk.",
+    "publicTransportEn": "Bus from Balıkesir to Bandırma (1.5 hours). Also IDO ferry from Istanbul. 10 min walk from center.",
+    "isFeatured": false,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Bandırma Balık Hali",
+    "nameEn": "Bandırma Fish Market",
+    "description": "Marmara Denizi'nin en taze deniz ürünlerinin satıldığı ve pişirildiği balık hali. Balık restoranları, meyhane kültürü ve deniz mahsulleri ile Bandırma'nın gastronomi merkezi.",
+    "descriptionEn": "Fish market where the freshest seafood from the Sea of Marmara is sold and cooked. Fish restaurants, meyhane culture, and seafood make it Bandırma's gastronomy center.",
+    "shortDesc": "Marmara'nın en taze deniz ürünleri",
+    "shortDescEn": "Freshest seafood from the Sea of Marmara",
+    "address": "Bandırma Sahil, Balıkesir",
+    "addressEn": "Bandırma Waterfront, Balıkesir",
+    "visitHours": "Her gün 08:00-22:00",
+    "fee": "Kişi başı 200-400 TL",
+    "feeEn": "Per person 200-400 TRY",
+    "categorySlug": "gastronomy",
+    "images": [
+      "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=1024&q=80"
+    ],
+    "publicTransport": "Balıkesir otogarından Bandırma otobüsü (1.5 saat). İstanbul'dan İDO feribotu ile de ulaşılır.",
+    "publicTransportEn": "Bus from Balıkesir to Bandırma (1.5 hours). Also IDO ferry from Istanbul.",
+    "isFeatured": false,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Bigadiç Kalesi (Achyraos)",
+    "nameEn": "Bigadic Castle (Achyraos)",
+    "description": "Bigadiç ilçesinin doğusundaki hakim tepede yer alan antik kale kalıntılarıdır. Antik dönemde Achyraos olarak bilinen bu yerleşim, stratejik konumuyla bölgenin önemli savunma noktalarından biriydi. Kale surları ve temel kalıntıları hala görülebilmektedir.",
+    "descriptionEn": "Ancient castle ruins located on a commanding hilltop east of Bigadic district. Known as Achyraos in ancient times, this settlement was one of the important defense points of the region with its strategic location. Castle walls and foundation remnants are still visible.",
+    "shortDesc": "Bigadiç'teki antik Achyraos kale kalıntıları",
+    "shortDescEn": "Ancient Achyraos castle ruins in Bigadic",
+    "address": "Bigadiç Kalesi, Bigadiç, Balıkesir",
+    "addressEn": "Bigadic Castle, Bigadic, Balikesir",
+    "categorySlug": "ancient",
+    "images": [
+      "/uploads/loc_1772843240876_1ryefy.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Bigadiç Müze ve Kültür Evi",
+    "nameEn": "Bigadiç Museum and Culture House",
+    "description": "İlçe ölçeğindeki yerel kimliğin halka sunulduğu entegre kültür alanı. Arkeolojik buluntular, etnografik eserler ve yerel el sanatları sergilenir.",
+    "descriptionEn": "Integrated cultural space presenting local identity. Displays archaeological finds, ethnographic artifacts, and local handicrafts.",
+    "shortDesc": "Yerel kimlik ve kale tarihi",
+    "shortDescEn": "Local identity and castle history",
+    "address": "Bigadiç, Balıkesir",
+    "addressEn": "Bigadiç, Balıkesir",
+    "visitHours": "Salı-Cumartesi 09:00-17:00",
+    "fee": "Ücretsiz",
+    "feeEn": "Free",
+    "categorySlug": "museum",
+    "images": [
+      "https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?w=1024&q=80"
+    ],
+    "publicTransport": "Balıkesir otogarından Bigadiç otobüsleri günde 6-8 sefer (1 saat). Merkezden yürüyerek 5 dk.",
+    "publicTransportEn": "Buses from Balıkesir to Bigadiç 6-8 times daily (1 hour). 5 min walk from center.",
+    "isFeatured": false,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Burhaniye Kuva-yı Milliye Müzesi",
+    "nameEn": "Burhaniye National Forces Museum",
+    "description": "Burhaniye'nin Kurtuluş Savaşı'ndaki rolünü belgeleyen müze. Yerel direnişçilerin fotoğrafları, silahları ve kişisel eşyaları sergilenir.",
+    "descriptionEn": "Museum documenting Burhaniye's role in the War of Independence. Displays photographs, weapons, and personal belongings of local resistance fighters.",
+    "shortDesc": "Burhaniye'nin Kurtuluş Savaşı mirası",
+    "shortDescEn": "Burhaniye's War of Independence heritage",
+    "address": "Burhaniye Merkez, Balıkesir",
+    "addressEn": "Burhaniye Center, Balıkesir",
+    "visitHours": "Salı-Pazar 09:00-17:00",
+    "fee": "Ücretsiz",
+    "feeEn": "Free",
+    "categorySlug": "museum",
+    "images": [
+      "https://images.unsplash.com/photo-1590076082562-e7e3e1e0c1f4?w=1024&q=80"
+    ],
+    "publicTransport": "Balıkesir otogarından Burhaniye otobüsü (1.5 saat). Merkezden yürüyerek 5 dk.",
+    "publicTransportEn": "Bus from Balıkesir to Burhaniye (1.5 hours). 5 min walk from center.",
+    "isFeatured": false,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Cunda Adası (Alibey Adası)",
+    "nameEn": "Cunda Island (Alibey Island)",
+    "description": "Ayvalık'a köprüyle bağlı ada. Rum mimarisi, zeytinlikler, balık restoranları ve sanat galerileri ile Ege'nin en romantik destinasyonlarından biri. Taksiyarhis ve Panayia kiliseleri adanın önemli yapılarıdır.",
+    "descriptionEn": "Island connected to Ayvalık by bridge. Greek architecture, olive groves, fish restaurants, and art galleries make it one of the Aegean's most romantic destinations. Taksiyarhis and Panayia churches are notable landmarks.",
+    "shortDesc": "Ege'nin romantik adası, Rum mimarisi",
+    "shortDescEn": "Aegean's romantic island, Greek architecture",
+    "address": "Cunda (Alibey) Adası, Ayvalık, Balıkesir",
+    "addressEn": "Cunda (Alibey) Island, Ayvalık, Balıkesir",
+    "visitHours": "Her zaman açık",
+    "fee": "Ücretsiz",
+    "feeEn": "Free",
+    "categorySlug": "cultural",
+    "images": [
+      "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1024&q=80"
+    ],
+    "publicTransport": "Ayvalık merkezden Cunda'ya dolmuş sık sefer yapar (10 dk). Köprü üzerinden yürüyerek de geçilebilir.",
+    "publicTransportEn": "Frequent minibuses from Ayvalık center to Cunda (10 min). Also walkable across the bridge.",
+    "isFeatured": true,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Çamlık Tepesi (Ayvalık)",
+    "nameEn": "Camlik Hill (Ayvalik)",
+    "description": "Ayvalık ilçe merkezinin güneyinde yükselen, çam ormanlarıyla kaplı doğal bir seyir tepesidir. Ege'nin masmavi denizi ve Ayvalık adalarının eşsiz panoramasını sunar. Gün batımında büyüleyici manzarasıyla fotoğraf tutkunlarının vazgeçilmez noktasıdır.",
+    "descriptionEn": "A natural viewpoint hill covered with pine forests, rising south of Ayvalik town center. It offers a unique panorama of the Aegean's deep blue sea and Ayvalik islands. An essential spot for photography enthusiasts with its enchanting sunset views.",
+    "shortDesc": "Ayvalık'ın çam ormanlarıyla kaplı seyir tepesi",
+    "shortDescEn": "Pine-covered viewpoint hill in Ayvalik",
+    "address": "Çamlık Tepesi, Ayvalık, Balıkesir",
+    "addressEn": "Camlik Hill, Ayvalik, Balikesir",
+    "categorySlug": "nature",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/General_view_of_Ayval%C4%B1k_%28cropped%29.jpg/1280px-General_view_of_Ayval%C4%B1k_%28cropped%29.jpg"
+    ],
+    "isFeatured": false,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Çataldağ - Aygır Çeşmesi (Susurluk)",
+    "nameEn": "Cataldag - Aygir Fountain (Susurluk)",
+    "description": "Susurluk ilçesinde Çataldağ ormanları içinde yer alan doğal bir çeşme ve mesire alanıdır. Yüksek rakımlı orman içi konumuyla yaz sıcağında serinlemek ve doğa yürüyüşü yapmak için tercih edilen bir noktadır.",
+    "descriptionEn": "A natural fountain and recreation area located within the Cataldag forests of Susurluk. With its high-altitude forest location, it is a preferred spot for cooling off in summer heat and nature hiking.",
+    "shortDesc": "Çataldağ ormanlarındaki doğal çeşme ve mesire alanı",
+    "shortDescEn": "Natural fountain and recreation area in Cataldag forests",
+    "address": "Çataldağ, Susurluk, Balıkesir",
+    "addressEn": "Cataldag, Susurluk, Balikesir",
+    "categorySlug": "nature",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/8/85/%C3%87atalda%C4%9F_secdere_mevkii_-_panoramio.jpg"
+    ],
+    "isFeatured": false,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Çaylak Şelalesi (Susurluk)",
+    "nameEn": "Caylak Waterfall (Susurluk)",
+    "description": "Susurluk ilçesinde yer alan doğal bir şelale ve mesire alanıdır. Orman içinden akan derenin oluşturduğu çağlayan, çevresindeki piknik alanları ve doğal güzellikleriyle huzurlu bir gün geçirmek için ideal bir noktadır.",
+    "descriptionEn": "A natural waterfall and recreation area in Susurluk district. The cascade formed by a stream flowing through the forest is an ideal spot for spending a peaceful day with its surrounding picnic areas and natural beauty.",
+    "shortDesc": "Susurluk'taki doğal şelale ve mesire alanı",
+    "shortDescEn": "Natural waterfall and recreation area in Susurluk",
+    "address": "Çaylak, Susurluk, Balıkesir",
+    "addressEn": "Caylak, Susurluk, Balikesir",
+    "categorySlug": "nature",
+    "images": [
+      "/uploads/loc_1772842553957_srsjxk.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Daskyleion Antik Kenti",
+    "nameEn": "Daskyleion Ancient City",
+    "description": "Manyas Gölü güneybatı kıyısında, Bandırma Ergili köyü yakınlarında yer alan antik kent. MÖ 6. yüzyılda Pers İmparatorluğu'nun Hellespontos Phrygia satraplığının başkenti. Kybele tapınağı temelleri ve Pers dönemi kabartmaları bulunmuştur.",
+    "descriptionEn": "Ancient city near Ergili village in Bandırma, on the southwestern shore of Lake Manyas. Capital of the Persian satrapy of Hellespontine Phrygia in the 6th century BC. Cybele temple foundations and Persian reliefs found.",
+    "shortDesc": "MÖ 7. yüzyıl Pers satraplık merkezi",
+    "shortDescEn": "7th century BC Persian satrapy center",
+    "address": "Ergili, Bandırma, Balıkesir",
+    "addressEn": "Ergili, Bandırma, Balıkesir",
+    "visitHours": "Salı-Pazar 09:00-17:00",
+    "fee": "Ücretsiz",
+    "feeEn": "Free",
+    "categorySlug": "ancient",
+    "images": [
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1024&q=80"
+    ],
+    "publicTransport": "Balıkesir otogarından Bandırma otobüsü (1.5 saat). Bandırma'dan Ergili köyüne dolmuş veya taksi (20 dk).",
+    "publicTransportEn": "Bus from Balıkesir to Bandırma (1.5 hours). Minibus or taxi to Ergili village (20 min).",
+    "isFeatured": true,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Değirmenboğazı Köprüsü",
+    "nameEn": "Değirmenboğazı Bridge",
+    "description": "1390'da Yıldırım Beyazıt tarafından yaptırılan üç kemerli taş köprü. 30 m uzunluğunda ve 4 m genişliğinde. Kemerler yarımdaire biçimli, ortadaki kemer daha büyük. Yıldırım Beyazıt Köprüsü olarak da bilinir.",
+    "descriptionEn": "Three-arched stone bridge built in 1390 by Sultan Bayezid I. 30 m long and 4 m wide with semicircular arches, the central arch being larger. Also known as Yıldırım Beyazıt Bridge.",
+    "shortDesc": "1390 Osmanlı taş köprüsü",
+    "shortDescEn": "1390 Ottoman stone bridge",
+    "address": "Değirmenboğazı Mevkii, Ayvatlar, Balıkesir Merkez",
+    "addressEn": "Değirmenboğazı Area, Ayvatlar, Balıkesir Center",
+    "visitHours": "Her zaman açık",
+    "fee": "Ücretsiz",
+    "feeEn": "Free",
+    "categorySlug": "historical",
+    "images": [
+      "https://images.unsplash.com/photo-1568322503122-d237ab09f422?w=1024&q=80"
+    ],
+    "publicTransport": "Balıkesir merkezden Değirmenboğazı Mesire Alanı'na dolmuş veya taksi (15 dk).",
+    "publicTransportEn": "Minibus or taxi from Balıkesir center to Değirmenboğazı Recreation Area (15 min).",
+    "isFeatured": false,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Delikli Taş ve Kartal Yuvası",
+    "nameEn": "Delikli Tas and Eagle's Nest",
+    "description": "Ayvalık Çamlık Koyu'ndan denize doğru uzanan, doğal aşınmayla oluşmuş etkileyici kayalık formasyonlardır. Delikli Taş adını kayaların ortasındaki doğal geçitten alırken, Kartal Yuvası bölgesi yüksek kayalıkları ve vahşi doğasıyla dikkat çeker.",
+    "descriptionEn": "Impressive rock formations shaped by natural erosion, extending from Ayvalik's Camlik Bay toward the sea. Delikli Tas takes its name from the natural passage through the rocks, while the Eagle's Nest area stands out with its high cliffs and wild nature.",
+    "shortDesc": "Çamlık Koyu'ndaki doğal kayalık formasyonlar",
+    "shortDescEn": "Natural rock formations at Camlik Bay",
+    "address": "Çamlık Koyu, Ayvalık, Balıkesir",
+    "addressEn": "Camlik Bay, Ayvalik, Balikesir",
+    "categorySlug": "nature",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/b/be/Siirt%2C_Delikli_Ta%C5%9F.jpg"
+    ],
+    "isFeatured": false,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Devrim Erbil Çağdaş Sanatlar Müzesi",
+    "nameEn": "Devrim Erbil Contemporary Arts Museum",
+    "description": "Balıkesirli dünyaca ünlü ressam Devrim Erbil'in eserlerinin sergilendiği çağdaş sanat müzesi. Türk çağdaş sanatının öncü isimlerinden Erbil'in İstanbul manzaraları ve soyut çalışmaları yer alır.",
+    "descriptionEn": "Contemporary art museum showcasing works of world-renowned Balıkesir-born painter Devrim Erbil. Features Istanbul landscapes and abstract works by one of the pioneers of Turkish contemporary art.",
+    "shortDesc": "Dünyaca ünlü Balıkesirli ressamın müzesi",
+    "shortDescEn": "Museum of world-renowned Balıkesir-born painter",
+    "address": "Karesi Merkez, Balıkesir",
+    "addressEn": "Karesi Center, Balıkesir",
+    "visitHours": "Salı-Pazar 10:00-17:00",
+    "fee": "Ücretsiz",
+    "feeEn": "Free",
+    "categorySlug": "museum",
+    "images": [
+      "https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=1024&q=80"
+    ],
+    "publicTransport": "Merkez belediye otobüsleri ile Çarşı durağında inin. Otogardan yürüyerek 10 dk.",
+    "publicTransportEn": "Take city buses to Çarşı stop. 10 min walk from bus station.",
+    "isFeatured": false,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Edremit Zeytinyağı Müzesi",
+    "nameEn": "Edremit Olive Oil Museum",
+    "description": "Türkiye'nin ilk ve tek zeytinyağı müzesi. Geleneksel taş baskı yağhanelerden modern üretim tekniklerine kadar zeytinyağı üretiminin tüm aşamaları sergilenir. Edremit zeytinyağının AB Coğrafi İşaret tescili hikayesi de müzenin öne çıkan bölümlerindendir.",
+    "descriptionEn": "Turkey's first and only olive oil museum. Exhibits all stages of olive oil production from traditional stone-press mills to modern techniques. Features the story of Edremit olive oil's EU PGI certification.",
+    "shortDesc": "Türkiye'nin ilk zeytinyağı müzesi",
+    "shortDescEn": "Turkey's first olive oil museum",
+    "address": "Edremit, Balıkesir",
+    "addressEn": "Edremit, Balıkesir",
+    "visitHours": "Pazartesi-Cumartesi 09:00-17:00",
+    "fee": "15 TL",
+    "feeEn": "15 TRY",
+    "categorySlug": "museum",
+    "images": [
+      "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=1024&q=80"
+    ],
+    "publicTransport": "Balıkesir otogarından Edremit otobüsü (1.5 saat). Edremit merkezden yürüyerek 10 dk.",
+    "publicTransportEn": "Bus from Balıkesir to Edremit (1.5 hours). 10 min walk from Edremit center.",
+    "isFeatured": false,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Edremit Zeytinyağlı Mutfak",
+    "nameEn": "Edremit Olive Oil Cuisine",
+    "description": "Edremit Körfezi'nin zeytinyağı kültürünü yansıtan gastronomi deneyimi. Zeytinyağlı yemekler, zeytin çeşitleri ve yerel lezzetler. Edremit zeytinyağı AB Coğrafi İşaret tescillidir.",
+    "descriptionEn": "Gastronomy experience reflecting the olive oil culture of the Gulf of Edremit. Olive oil dishes, olive varieties, and local flavors. Edremit olive oil has EU PGI certification.",
+    "shortDesc": "AB tescilli zeytinyağı mutfağı",
+    "shortDescEn": "EU-certified olive oil cuisine",
+    "address": "Edremit Merkez, Balıkesir",
+    "addressEn": "Edremit Center, Balıkesir",
+    "visitHours": "Restoranlar 11:00-22:00",
+    "fee": "Kişi başı 150-300 TL",
+    "feeEn": "Per person 150-300 TRY",
+    "categorySlug": "gastronomy",
+    "images": [
+      "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=1024&q=80"
+    ],
+    "publicTransport": "Balıkesir otogarından Edremit otobüsü (1.5 saat).",
+    "publicTransportEn": "Bus from Balıkesir to Edremit (1.5 hours).",
+    "isFeatured": false,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Erdek Plajları",
+    "nameEn": "Erdek Beaches",
+    "description": "Kapıdağ Yarımadası'nın kuzey kıyısında, Marmara Denizi'ne bakan plajlar. Ocaklar, İlhan ve Narlı plajları en popüler olanları. Sakin denizi ve doğal güzellikleri ile tercih edilir.",
+    "descriptionEn": "Beaches on the northern coast of Kapıdağ Peninsula facing the Sea of Marmara. Ocaklar, İlhan, and Narlı are the most popular. Preferred for calm waters and natural beauty.",
+    "shortDesc": "Kapıdağ'ın Marmara kıyısı plajları",
+    "shortDescEn": "Kapıdağ's Marmara coast beaches",
+    "address": "Erdek, Balıkesir",
+    "addressEn": "Erdek, Balıkesir",
+    "visitHours": "Her zaman açık",
+    "fee": "Ücretsiz",
+    "feeEn": "Free",
+    "categorySlug": "beach",
+    "images": [
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1024&q=80"
+    ],
+    "publicTransport": "Bandırma'dan Erdek dolmuşları sık sefer yapar (45 dk).",
+    "publicTransportEn": "Frequent minibuses from Bandırma to Erdek (45 min).",
+    "isFeatured": false,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Gönen Kaplıcaları",
+    "nameEn": "Gönen Hot Springs",
+    "description": "2000 yıllık geçmişe sahip, Roma döneminden beri kullanılan termal kaynaklar. 82°C sıcaklığındaki sodyum klorürlü, sülfatlı termal sular romatizma, cilt hastalıkları ve solunum yolu rahatsızlıklarına iyi gelir. Modern termal tesisler ve oteller mevcuttur.",
+    "descriptionEn": "Thermal springs with 2,000 years of history, used since Roman times. Sodium chloride and sulfate thermal waters at 82°C are beneficial for rheumatism, skin diseases, and respiratory ailments. Modern thermal facilities and hotels available.",
+    "shortDesc": "2000 yıllık Roma dönemi termal kaynakları",
+    "shortDescEn": "2,000-year-old Roman-era thermal springs",
+    "address": "Gönen, Balıkesir",
+    "addressEn": "Gönen, Balıkesir",
+    "visitHours": "Her gün 07:00-22:00",
+    "fee": "Giriş 80-150 TL",
+    "feeEn": "Entry 80-150 TRY",
+    "categorySlug": "thermal",
+    "images": [
+      "https://images.unsplash.com/photo-1540555700478-4be289fbec6d?w=1024&q=80"
+    ],
+    "publicTransport": "Balıkesir otogarından Gönen otobüsü (1 saat). Gönen merkezden yürüyerek 10 dk.",
+    "publicTransportEn": "Bus from Balıkesir to Gönen (1 hour). 10 min walk from Gönen center.",
+    "isFeatured": true,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Gönen Kaymağı",
+    "nameEn": "Gönen Clotted Cream",
+    "description": "Gönen'in meşhur kaymağı, manda sütünden geleneksel yöntemlerle üretilir. Kahvaltı sofralarının vazgeçilmezi olan Gönen kaymağı, bal ve tereyağı ile servis edilir.",
+    "descriptionEn": "Gönen's famous clotted cream, traditionally produced from water buffalo milk. An essential part of Turkish breakfast, served with honey and butter.",
+    "shortDesc": "Manda sütünden geleneksel kaymak",
+    "shortDescEn": "Traditional clotted cream from buffalo milk",
+    "address": "Gönen Merkez, Balıkesir",
+    "addressEn": "Gönen Center, Balıkesir",
+    "visitHours": "Kahvaltı mekanları 07:00-12:00",
+    "fee": "Porsiyon 40-60 TL",
+    "feeEn": "Portion 40-60 TRY",
+    "categorySlug": "gastronomy",
+    "images": [
+      "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=1024&q=80"
+    ],
+    "publicTransport": "Balıkesir otogarından Gönen otobüsü (1 saat).",
+    "publicTransportEn": "Bus from Balıkesir to Gönen (1 hour).",
+    "isFeatured": false,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Gönen Mozaik Müzesi",
+    "nameEn": "Gönen Mosaic Museum",
+    "description": "Roma dönemi villalarından çıkarılan mozaik sanatının en seçkin örneklerini barındırır. Mitolojik sahneler, geometrik desenler ve doğa motifleriyle bezeli mozaikler sergilenir.",
+    "descriptionEn": "Houses the finest examples of Roman-period mosaic art excavated from villas in the region. Mosaics adorned with mythological scenes, geometric patterns, and nature motifs.",
+    "shortDesc": "Roma dönemi mozaik sanatı koleksiyonu",
+    "shortDescEn": "Roman-period mosaic art collection",
+    "address": "Gönen, Balıkesir",
+    "addressEn": "Gönen, Balıkesir",
+    "visitHours": "Salı-Pazar 09:00-17:00",
+    "fee": "Ücretsiz",
+    "feeEn": "Free",
+    "categorySlug": "museum",
+    "images": [
+      "https://images.unsplash.com/photo-1584551246679-0daf3d275d0f?w=1024&q=80"
+    ],
+    "publicTransport": "Balıkesir otogarından Gönen otobüsü (1 saat). Gönen merkezden yürüyerek 5 dk.",
+    "publicTransportEn": "Bus from Balıkesir to Gönen (1 hour). 5 min walk from Gönen center.",
+    "isFeatured": false,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Hasan Boğuldu",
+    "nameEn": "Hasan Boguldu",
+    "description": "Sütüven Şelalesi'nin hemen ilerisinde yer alan, doğal havuzları ve küçük çağlayanlarıyla bilinen bir vadi noktasıdır. Adını yerel bir efsaneden alan bu alan, yüzme ve piknik için tercih edilen saklı bir cennet köşesidir.",
+    "descriptionEn": "A valley point just beyond Sutuven Waterfall, known for its natural pools and small cascades. Named after a local legend, this area is a hidden paradise corner preferred for swimming and picnicking.",
+    "shortDesc": "Sütüven ilerisindeki doğal havuzlar",
+    "shortDescEn": "Natural pools beyond Sutuven Waterfall",
+    "address": "Zeytinli, Edremit, Balıkesir",
+    "addressEn": "Zeytinli, Edremit, Balikesir",
+    "categorySlug": "nature",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/7/72/Hasan_Bo%C4%9Fuldu_G%C3%B6l%C3%BC.jpg"
+    ],
+    "isFeatured": false,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Havran Kent Müzesi (Hocazade Konağı)",
+    "nameEn": "Havran City Museum (Hocazade Mansion)",
+    "description": "Havran'ın tarihi ve kültürel mirasını sergileyen kent müzesi. Osmanlı dönemi konağında etnografik eserler, yerel el sanatları ve Havran'ın tarihsel belgeleri yer alır.",
+    "descriptionEn": "City museum showcasing Havran's historical and cultural heritage. Ottoman-era mansion displays ethnographic artifacts, local handicrafts, and historical documents of Havran.",
+    "shortDesc": "Havran'ın tarihi ve kültürel mirası",
+    "shortDescEn": "Havran's historical and cultural heritage",
+    "address": "Havran Merkez, Balıkesir",
+    "addressEn": "Havran Center, Balıkesir",
+    "visitHours": "Salı-Pazar 09:00-17:00",
+    "fee": "Ücretsiz",
+    "feeEn": "Free",
+    "categorySlug": "museum",
+    "images": [
+      "https://images.unsplash.com/photo-1590076215667-875c2d76b544?w=1024&q=80"
+    ],
+    "publicTransport": "Balıkesir otogarından Havran dolmuşları 30 dk arayla kalkar. Havran merkezden yürüyerek 5 dk.",
+    "publicTransportEn": "Minibuses to Havran every 30 min from Balıkesir station. 5 min walk from Havran center.",
+    "isFeatured": false,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Havran Terzizade Konağı (Atatürk ve Seyit Onbaşı Müzesi)",
+    "nameEn": "Havran Terzizade Mansion (Atatürk & Seyit Onbaşı Museum)",
+    "description": "19. yüzyıl Osmanlı sivil mimarisinin Havran'daki en görkemli örneklerinden biri. Atatürk ile Çanakkale kahramanı Seyit Onbaşı'nın tarihi buluşmasına ev sahipliği yapmıştır. 2023'te müze olarak açılmıştır.",
+    "descriptionEn": "One of the most magnificent examples of 19th-century Ottoman civil architecture in Havran. Hosted the historic meeting between Atatürk and war hero Seyit Onbaşı. Opened as museum in 2023.",
+    "shortDesc": "Atatürk-Seyit Onbaşı buluşma mekanı, 2023 müze",
+    "shortDescEn": "Atatürk-Seyit Onbaşı meeting place, 2023 museum",
+    "address": "Havran, Balıkesir",
+    "addressEn": "Havran, Balıkesir",
+    "visitHours": "Salı-Pazar 09:00-17:00",
+    "fee": "Ücretsiz",
+    "feeEn": "Free",
+    "categorySlug": "historical",
+    "images": [
+      "https://images.unsplash.com/photo-1590076082562-e7e3e1e0c1f4?w=1024&q=80"
+    ],
+    "publicTransport": "Balıkesir otogarından Havran dolmuşları 30 dk arayla kalkar. Havran merkezden yürüyerek 5 dk.",
+    "publicTransportEn": "Minibuses to Havran every 30 min from Balıkesir station. 5 min walk from Havran center.",
+    "isFeatured": true,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Hisarköy (Bigadiç)",
+    "nameEn": "Hisarkoy (Bigadic)",
+    "description": "Bigadiç ilçesine bağlı, antik kalıntılar ve termal su kaynaklarıyla dikkat çeken tarihi bir köydür. Bölgedeki kale kalıntıları ve doğal sıcak su kaynakları, tarih ve doğa meraklılarını bir arada buluşturur.",
+    "descriptionEn": "A historic village in Bigadic district, notable for its ancient ruins and thermal water sources. The castle remnants and natural hot springs in the area bring together history and nature enthusiasts.",
+    "shortDesc": "Antik kalıntılar ve termal kaynakların buluştuğu köy",
+    "shortDescEn": "Village where ancient ruins meet thermal springs",
+    "address": "Hisarköy, Bigadiç, Balıkesir",
+    "addressEn": "Hisarkoy, Bigadic, Balikesir",
+    "categorySlug": "historical",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/7/71/Meryem_Ana_Manast%C4%B1r_Harabeleri_02_Ruins_of_the_Monastery_of_the_Virgin_Mary_-_panoramio.jpg"
+    ],
+    "isFeatured": false,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "İlk Kurşun Tepesi",
+    "nameEn": "First Bullet Hill",
+    "description": "Ayvalık'a hakim İlyas Peygamber Tepesi olarak da bilinen bu tarihi tepe, Kurtuluş Savaşı'nda düşmana karşı ilk kurşunun atıldığı yerdir. Türk bağımsızlık mücadelesinin sembol mekanlarından biridir.",
+    "descriptionEn": "Also known as Ilyas Peygamber Hill overlooking Ayvalik, this historic hilltop is where the first bullet was fired against the enemy during the Turkish War of Independence. One of the symbolic sites of the Turkish independence struggle.",
+    "shortDesc": "Kurtuluş Savaşı'nda ilk kurşunun atıldığı tarihi tepe",
+    "shortDescEn": "Historic hill where the first shot of the War of Independence was fired",
+    "address": "İlk Kurşun Tepesi, Ayvalık, Balıkesir",
+    "addressEn": "First Bullet Hill, Ayvalik, Balikesir",
+    "categorySlug": "historical",
+    "images": [
+      "/uploads/loc_1772843464471_b51ob9.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "İnboğazı Mağaraları (Havran)",
+    "nameEn": "Inonu Caves (Havran)",
+    "description": "Havran'ın İnboğazı mevkiinde yer alan, antik dönemlerden kalma doğal mağara sistemidir. Mağaraların içindeki sarkıt ve dikitler ile tarihi izler, doğa ve tarih meraklıları için keşfedilmeyi bekleyen gizli bir hazinedir.",
+    "descriptionEn": "A natural cave system dating from ancient times, located in the Inbogazi area of Havran. The stalactites, stalagmites, and historical traces inside the caves are a hidden treasure waiting to be discovered by nature and history enthusiasts.",
+    "shortDesc": "İnboğazı'ndaki antik doğal mağaralar",
+    "shortDescEn": "Ancient natural caves in Inbogazi",
+    "address": "İnboğazı, Havran, Balıkesir",
+    "addressEn": "Inbogazi, Havran, Balikesir",
+    "categorySlug": "nature",
+    "images": [
+      "/uploads/loc_1772842776866_whquuc.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "İskele Mahallesi (Burhaniye)",
+    "nameEn": "Iskele Quarter (Burhaniye)",
+    "description": "Burhaniye'nin sahil kesiminde yer alan, yat limanı ve çay bahçeleriyle ünlü kültürel bir buluşma noktasıdır. Deniz kenarındaki yürüyüş yolu, balıkçı barınağı ve sahil restoranlarıyla canlı bir atmosfer sunar.",
+    "descriptionEn": "A cultural meeting point in the coastal area of Burhaniye, famous for its marina and tea gardens. It offers a lively atmosphere with its seaside promenade, fishing shelter, and coastal restaurants.",
+    "shortDesc": "Yat limanı ve çay bahçeleriyle sahil mahallesi",
+    "shortDescEn": "Coastal quarter with marina and tea gardens",
+    "address": "İskele Mahallesi, Burhaniye, Balıkesir",
+    "addressEn": "Iskele Quarter, Burhaniye, Balikesir",
+    "categorySlug": "cultural",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/b/b2/Iskele_Quay_Urla_Turkey.jpg"
+    ],
+    "isFeatured": false,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Kapıdağ Yarımadası",
+    "nameEn": "Kapıdağ Peninsula",
+    "description": "Marmara Denizi'ne uzanan yarımada. Antik Kyzikos kalıntıları, bakir koylar, zeytinlikler ve balıkçı köyleri ile doğa ve tarih iç içe. Erdek ve Ocaklar plajları ile ünlü.",
+    "descriptionEn": "Peninsula extending into the Sea of Marmara. Ancient Kyzikos ruins, pristine coves, olive groves, and fishing villages blend nature and history. Famous for Erdek and Ocaklar beaches.",
+    "shortDesc": "Tarih ve doğanın buluştuğu yarımada",
+    "shortDescEn": "Peninsula where history meets nature",
+    "address": "Kapıdağ Yarımadası, Erdek, Balıkesir",
+    "addressEn": "Kapıdağ Peninsula, Erdek, Balıkesir",
+    "visitHours": "Her zaman açık",
+    "fee": "Ücretsiz",
+    "feeEn": "Free",
+    "categorySlug": "nature",
+    "images": [
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1024&q=80"
+    ],
+    "publicTransport": "Bandırma'dan Erdek dolmuşları sık sefer yapar (45 dk).",
+    "publicTransportEn": "Frequent minibuses from Bandırma to Erdek (45 min).",
+    "isFeatured": false,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Karesi Bey Camii ve Külliyesi",
+    "nameEn": "Karesi Bey Mosque & Complex",
+    "description": "Karesi Beyliği dönemine ait, 1464 tarihli kitabesiyle bilinen cami ve külliye. 1897 depreminde yıkılan yapı, 1908'de yeniden inşa edilmiştir. Hamam özgün halini korumaktadır.",
+    "descriptionEn": "Mosque and complex from the Karesi Beylik period, known from its 1464 inscription. Rebuilt in 1908 after the 1897 earthquake. The hammam preserves its original form.",
+    "shortDesc": "Karesi Beyliği dönemi cami ve külliyesi",
+    "shortDescEn": "Karesi Beylik period mosque and complex",
+    "address": "Mustafa Fakıh Mah., Çarşı içi, Karesi, Balıkesir",
+    "addressEn": "Mustafa Fakıh District, Market area, Karesi, Balıkesir",
+    "visitHours": "Her gün 05:00-22:00",
+    "fee": "Ücretsiz",
+    "feeEn": "Free",
+    "categorySlug": "historical",
+    "images": [
+      "https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=1024&q=80"
+    ],
+    "publicTransport": "Merkez belediye otobüsleri ile Çarşı durağında inin. Otogardan yürüyerek 10 dk.",
+    "publicTransportEn": "Take city buses to Çarşı stop. 10 min walk from bus station.",
+    "isFeatured": false,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Kazdağı Tabiat Müzesi",
+    "nameEn": "Mount Ida Nature Museum",
+    "description": "Kazdağları Milli Parkı içinde yer alan doğa müzesi. Bölgenin endemik bitki ve hayvan türleri, jeolojik yapısı ve ekolojik önemi hakkında interaktif sergiler sunar.",
+    "descriptionEn": "Nature museum within Mount Ida National Park. Offers interactive exhibits about the region's endemic flora and fauna, geological structure, and ecological significance.",
+    "shortDesc": "Kazdağları'nın doğal mirası",
+    "shortDescEn": "Natural heritage of Mount Ida",
+    "address": "Kazdağları Milli Parkı, Edremit, Balıkesir",
+    "addressEn": "Mount Ida National Park, Edremit, Balıkesir",
+    "visitHours": "Salı-Pazar 09:00-17:00",
+    "fee": "Ücretsiz",
+    "feeEn": "Free",
+    "categorySlug": "museum",
+    "images": [
+      "https://images.unsplash.com/photo-1590076215667-875c2d76b544?w=1024&q=80"
+    ],
+    "publicTransport": "Edremit'ten Kazdağları Milli Parkı'na dolmuş veya taksi (30 dk).",
+    "publicTransportEn": "Minibus or taxi from Edremit to Mount Ida National Park (30 min).",
+    "isFeatured": false,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Kazdağları Milli Parkı",
+    "nameEn": "Mount Ida National Park",
+    "description": "21.300 hektarlık alan üzerinde kurulu, Türkiye'nin en zengin biyoçeşitlilik alanlarından biri. 800'den fazla bitki türü, 100'den fazla kuş türü barındırır. Sarıkız Tepesi (1.774 m) en yüksek noktasıdır. Mitolojide Paris'in Altın Elma'yı verdiği yer olarak bilinir.",
+    "descriptionEn": "Spanning 21,300 hectares, one of Turkey's richest biodiversity areas. Home to over 800 plant species and 100 bird species. Sarıkız Peak (1,774 m) is the highest point. Known in mythology as where Paris awarded the Golden Apple.",
+    "shortDesc": "21.300 ha biyoçeşitlilik cenneti, mitolojik dağ",
+    "shortDescEn": "21,300 ha biodiversity paradise, mythological mountain",
+    "address": "Kazdağları Milli Parkı, Edremit, Balıkesir",
+    "addressEn": "Mount Ida National Park, Edremit, Balıkesir",
+    "visitHours": "Her gün 08:00-20:00 (yaz), 08:00-17:00 (kış)",
+    "fee": "Araç girişi 50 TL",
+    "feeEn": "Vehicle entry 50 TRY",
+    "categorySlug": "nature",
+    "images": [
+      "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1024&q=80"
+    ],
+    "publicTransport": "Edremit'ten Kazdağları yönüne dolmuş veya taksi (30 dk). Özel araç tavsiye edilir.",
+    "publicTransportEn": "Minibus or taxi from Edremit towards Mount Ida (30 min). Private vehicle recommended.",
+    "isFeatured": true,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Kertil-Çamurlu Mesire Alanı (Sındırgı)",
+    "nameEn": "Kertil-Camurlu Recreation Area (Sindirgi)",
+    "description": "Sındırgı ilçesinde İzmir karayolu üzerinde yer alan, ormanlık bir piknik ve mesire alanıdır. Çam ve meşe ağaçlarıyla kaplı bu alan, yol üstü molası ve doğa yürüyüşleri için ideal bir durak noktasıdır.",
+    "descriptionEn": "A forested picnic and recreation area in Sindirgi district along the Izmir highway. Covered with pine and oak trees, this area is an ideal stop for roadside breaks and nature walks.",
+    "shortDesc": "İzmir yolu üzeri ormanlık piknik alanı",
+    "shortDescEn": "Forested picnic area along Izmir highway",
+    "address": "Kertil-Çamurlu, Sındırgı, Balıkesir",
+    "addressEn": "Kertil-Camurlu, Sindirgi, Balikesir",
+    "categorySlug": "nature",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Kurendere.golet.jpg/1280px-Kurendere.golet.jpg"
+    ],
+    "isFeatured": false,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Kışla Mesire Yeri (Kepsut)",
+    "nameEn": "Kisla Recreation Area (Kepsut)",
+    "description": "Kepsut ilçesinin Tekke Işıklar köyünde yer alan, tarihi taş binalarıyla dikkat çeken bir mesire alanıdır. Osmanlı döneminden kalma kışla yapısı ve çevresindeki doğal güzellikler, tarih ve doğayı bir arada sunar.",
+    "descriptionEn": "A recreation area in Tekke Isiklar village of Kepsut, notable for its historic stone buildings. The Ottoman-era barracks structure and surrounding natural beauty offer history and nature together.",
+    "shortDesc": "Tarihi taş binalı mesire alanı",
+    "shortDescEn": "Recreation area with historic stone buildings",
+    "address": "Tekke Işıklar Köyü, Kepsut, Balıkesir",
+    "addressEn": "Tekke Isiklar Village, Kepsut, Balikesir",
+    "categorySlug": "nature",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/10660_Alag%C3%BCney-Kepsut-Bal%C4%B1kesir%2C_Turkey_-_panoramio.jpg/1280px-10660_Alag%C3%BCney-Kepsut-Bal%C4%B1kesir%2C_Turkey_-_panoramio.jpg"
+    ],
+    "isFeatured": false,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Kız Çiftliği (Gömeç)",
+    "nameEn": "Kiz Ciftligi (Gomec)",
+    "description": "Gömeç'te koy kıyısında yer alan tarihi bir alandır. Osmanlı döneminden kalma çiftlik kalıntıları ve çevresindeki doğal koy manzarasıyla tarih ve doğayı bir arada sunan sakin bir ziyaret noktasıdır.",
+    "descriptionEn": "A historic area located on the bay shore in Gomec. A quiet visiting point that combines history and nature with Ottoman-era farm remnants and the surrounding natural bay scenery.",
+    "shortDesc": "Koy kıyısındaki tarihi çiftlik alanı",
+    "shortDescEn": "Historic farm area on the bay shore",
+    "address": "Kız Çiftliği, Gömeç, Balıkesir",
+    "addressEn": "Kiz Ciftligi, Gomec, Balikesir",
+    "categorySlug": "historical",
+    "images": [
+      "/uploads/loc_1772843315671_lb1rda.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Kuvayi Milliye Müzesi",
+    "nameEn": "National Forces Museum",
+    "description": "1840 yılında inşa edilen tarihi konakta yer alır. 15 Mayıs 1919'da İzmir'in işgalinin ertesi günü Kuva-yi Milliye burada kurulmuştur. Zemin katta 41 vatanseverin belgeleri, üst katta arkeolojik ve etnografik eserler sergilenir. 4.979 kayıtlı eser mevcuttur.",
+    "descriptionEn": "Housed in a historic mansion built in 1840. The Kuva-yi Milliye was founded here on May 16, 1919. Ground floor displays documents of 41 patriots, upper floor has archaeological and ethnographic artifacts. 4,979 registered items.",
+    "shortDesc": "Kurtuluş Savaşı ve Kuvayi Milliye belgeleri",
+    "shortDescEn": "War of Independence and National Forces documents",
+    "address": "Anafartalar Cad. No:58, Karesi, Balıkesir",
+    "addressEn": "Anafartalar St. No:58, Karesi, Balıkesir",
+    "visitHours": "Salı-Pazar 09:00-17:00",
+    "fee": "Ücretsiz",
+    "feeEn": "Free",
+    "categorySlug": "museum",
+    "images": [
+      "https://images.unsplash.com/photo-1590076082562-e7e3e1e0c1f4?w=1024&q=80"
+    ],
+    "publicTransport": "Merkez belediye otobüsleri ile Çarşı durağında inin. Otogardan yürüyerek 10 dk.",
+    "publicTransportEn": "Take city buses to Çarşı stop. 10 min walk from bus station.",
+    "isFeatured": true,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Kyzikos Antik Kenti",
+    "nameEn": "Kyzikos Ancient City",
+    "description": "Kapıdağ Yarımadası'nda kurulmuş Mysia bölgesinin en önemli antik Yunan kentlerinden biri. İmparator Hadrianus Tapınağı burada inşa edilmiş olup sütunları 21.35 metre yüksekliğiyle Baalbek'tekileri aşmaktadır. Kyzikos altın sikkeleri antik dünyada temel para birimi olarak kullanılmıştır.",
+    "descriptionEn": "One of the most important ancient Greek cities of Mysia on the Kapıdağ Peninsula. The Temple of Emperor Hadrian had columns reaching 21.35 meters, surpassing Baalbek. Gold staters of Cyzicus served as staple currency throughout the ancient world.",
+    "shortDesc": "Hadrian Tapınağı ve antik darphane kenti",
+    "shortDescEn": "Temple of Hadrian and ancient mint city",
+    "address": "Düzler Köyü, Erdek, Balıkesir",
+    "addressEn": "Düzler Village, Erdek, Balıkesir",
+    "visitHours": "Her gün gündüz saatleri",
+    "fee": "Ücretsiz",
+    "feeEn": "Free",
+    "categorySlug": "ancient",
+    "images": [
+      "https://images.unsplash.com/photo-1564769625905-50e93615e769?w=1024&q=80"
+    ],
+    "publicTransport": "Bandırma'dan Erdek dolmuşları sık sefer yapar (45 dk). Erdek'ten Düzler köyüne taksi (10 dk).",
+    "publicTransportEn": "Frequent minibuses from Bandırma to Erdek (45 min). Taxi from Erdek to Düzler village (10 min).",
+    "isFeatured": true,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Madra Dağı (İvrindi)",
+    "nameEn": "Mount Madra (Ivrindi)",
+    "description": "İvrindi ilçesinde yükselen, trekking ve doğa yürüyüşü rotalarıyla ünlü bir dağdır. Zengin bitki örtüsü, yaban hayatı ve zirvedeki muhteşem manzarasıyla doğa sporları tutkunlarının gözdesidir.",
+    "descriptionEn": "A mountain rising in Ivrindi district, famous for its trekking and nature hiking routes. A favorite of outdoor sports enthusiasts with its rich vegetation, wildlife, and magnificent summit views.",
+    "shortDesc": "Trekking ve doğa yürüyüşü rotaları",
+    "shortDescEn": "Trekking and nature hiking routes",
+    "address": "Madra Dağı, İvrindi, Balıkesir",
+    "addressEn": "Mount Madra, Ivrindi, Balikesir",
+    "categorySlug": "nature",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Koyun_-_panoramio.jpg/1280px-Koyun_-_panoramio.jpg"
+    ],
+    "isFeatured": false,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Manyas Kuş Cenneti (Kuşcenneti Milli Parkı)",
+    "nameEn": "Manyas Bird Paradise National Park",
+    "description": "1959'da Türkiye'nin ilk milli parkı ilan edilen alan. 266 kuş türüne ev sahipliği yapar. Avrupa'nın en önemli kuş göç yollarından biri üzerinde yer alır. UNESCO Dünya Mirası Geçici Listesi'ndedir.",
+    "descriptionEn": "Declared Turkey's first national park in 1959. Home to 266 bird species on one of Europe's most important bird migration routes. On UNESCO World Heritage Tentative List.",
+    "shortDesc": "Türkiye'nin ilk milli parkı, 266 kuş türü",
+    "shortDescEn": "Turkey's first national park, 266 bird species",
+    "address": "Sığırcı Köyü, Bandırma, Balıkesir",
+    "addressEn": "Sığırcı Village, Bandırma, Balıkesir",
+    "visitHours": "Her gün 08:00-17:00",
+    "fee": "30 TL",
+    "feeEn": "30 TRY",
+    "categorySlug": "nature",
+    "images": [
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1024&q=80"
+    ],
+    "publicTransport": "Bandırma'dan Sığırcı köyüne dolmuş (30 dk). Balıkesir'den Bandırma otobüsü (1.5 saat).",
+    "publicTransportEn": "Minibus from Bandırma to Sığırcı village (30 min). Bus from Balıkesir to Bandırma (1.5 hours).",
+    "isFeatured": true,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Marmara Adası",
+    "nameEn": "Marmara Island",
+    "description": "Marmara Denizi'nin en büyük adası. Antik Prokonnesos mermer ocakları, bakir plajlar ve balıkçı köyleri ile doğa ve tarih iç içe. Saraylar Açık Hava Müzesi adanın en önemli turistik noktasıdır.",
+    "descriptionEn": "Largest island in the Sea of Marmara. Ancient Proconnesian marble quarries, pristine beaches, and fishing villages blend nature and history. Saraylar Open-Air Museum is the island's top attraction.",
+    "shortDesc": "Marmara'nın en büyük adası, antik mermer ocakları",
+    "shortDescEn": "Marmara's largest island, ancient marble quarries",
+    "address": "Marmara Adası, Balıkesir",
+    "addressEn": "Marmara Island, Balıkesir",
+    "visitHours": "Her zaman açık",
+    "fee": "Ücretsiz",
+    "feeEn": "Free",
+    "categorySlug": "beach",
+    "images": [
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1024&q=80"
+    ],
+    "publicTransport": "Erdek veya Tekirdağ'dan feribot (1-2 saat).",
+    "publicTransportEn": "Ferry from Erdek or Tekirdağ (1-2 hours).",
+    "isFeatured": false,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Ocaklar Plajı (Erdek)",
+    "nameEn": "Ocaklar Beach (Erdek)",
+    "description": "Erdek'in en popüler plajlarından biri olan Ocaklar, geniş kumsal şeridi ve berrak deniziyle Marmara Denizi'nin en güzel kıyılarından birini sunar. Yaz aylarında aileler ve tatilciler tarafından yoğun ilgi gören plaj, çeşitli su sporları imkanları da sunmaktadır.",
+    "descriptionEn": "One of Erdek's most popular beaches, Ocaklar offers one of the most beautiful coastlines of the Sea of Marmara with its wide sandy strip and crystal-clear waters. The beach, which attracts heavy interest from families and vacationers in summer, also offers various water sports.",
+    "shortDesc": "Erdek'in geniş kumsallı popüler plajı",
+    "shortDescEn": "Erdek's popular beach with wide sandy shore",
+    "address": "Ocaklar, Erdek, Balıkesir",
+    "addressEn": "Ocaklar, Erdek, Balikesir",
+    "categorySlug": "beach",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/f/f0/AKKAYADAN_OCAKLAR_G%C3%96R%C3%9CNT%C3%9C_-_panoramio.jpg"
+    ],
+    "isFeatured": false,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Ören Plajı (Burhaniye)",
+    "nameEn": "Oren Beach (Burhaniye)",
+    "description": "Burhaniye ilçesinin sahil beldesi Ören'de yer alan, Mavi Bayraklı plajıyla ünlü bir kıyı şerididir. Asırlık palamut ağaçlarının gölgelediği sahil, temiz denizi ve doğal güzelliğiyle Ege'nin en gözde plajlarından biridir.",
+    "descriptionEn": "A coastline in Oren, the coastal town of Burhaniye, famous for its Blue Flag beach. The shore, shaded by centuries-old oak trees, is one of the most popular beaches of the Aegean with its clean sea and natural beauty.",
+    "shortDesc": "Mavi Bayraklı, palamut ağaçlı Ege plajı",
+    "shortDescEn": "Blue Flag Aegean beach with ancient oak trees",
+    "address": "Ören, Burhaniye, Balıkesir",
+    "addressEn": "Oren, Burhaniye, Balikesir",
+    "categorySlug": "beach",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Plaj-%C3%96ren.jpg/1280px-Plaj-%C3%96ren.jpg"
+    ],
+    "isFeatured": false,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Panayia Kilisesi (Cunda)",
+    "nameEn": "Panayia Church (Cunda)",
+    "description": "Cunda Adası'nda 1873 yılında inşa edilen Rum Ortodoks kilisesi. Adanın en büyük kilisesi olup neoklasik mimarisi ve çan kulesi ile dikkat çeker. Restorasyon çalışmaları devam etmektedir.",
+    "descriptionEn": "Greek Orthodox church built in 1873 on Cunda Island. The island's largest church, notable for its neoclassical architecture and bell tower. Restoration work is ongoing.",
+    "shortDesc": "1873 Cunda'nın en büyük Rum kilisesi",
+    "shortDescEn": "1873 Cunda's largest Greek church",
+    "address": "Cunda Adası, Ayvalık, Balıkesir",
+    "addressEn": "Cunda Island, Ayvalık, Balıkesir",
+    "visitHours": "Dış mekan her zaman, iç mekan restorasyon durumuna göre",
+    "fee": "Ücretsiz",
+    "feeEn": "Free",
+    "categorySlug": "religious",
+    "images": [
+      "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1024&q=80"
+    ],
+    "publicTransport": "Ayvalık merkezden Cunda'ya dolmuş sık sefer yapar (10 dk). Köprü üzerinden yürüyerek de geçilebilir.",
+    "publicTransportEn": "Frequent minibuses from Ayvalık center to Cunda (10 min). Also walkable across the bridge.",
+    "isFeatured": false,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Pordoselene Kulesi",
+    "nameEn": "Pordoselene Tower",
+    "description": "Ayvalık açıklarındaki Maden Adası'nın tepesinde yer alan antik dönemden kalma tarihi bir gözetleme kulesidir. Ege Denizi'nin stratejik kontrolü için inşa edilmiş olan kule, antik Pordoselene kentinin önemli kalıntılarından biridir.",
+    "descriptionEn": "An ancient watchtower located atop Maden Island off the coast of Ayvalik. Built for strategic control of the Aegean Sea, the tower is one of the significant remnants of the ancient city of Pordoselene.",
+    "shortDesc": "Maden Adası'ndaki antik gözetleme kulesi",
+    "shortDescEn": "Ancient watchtower on Maden Island",
+    "address": "Maden Adası, Ayvalık, Balıkesir",
+    "addressEn": "Maden Island, Ayvalik, Balikesir",
+    "categorySlug": "historical",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/2/2c/Pordoselene_Kulesi.png"
+    ],
+    "isFeatured": false,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Rahmi M. Koç Müzesi (Cunda)",
+    "nameEn": "Rahmi M. Koç Museum (Cunda)",
+    "description": "Cunda Adası'nda tarihi bir zeytinyağı fabrikasında konumlanan özel endüstri müzesi. Antika otomobiller, denizcilik araçları, telgraf makineleri ve erken dönem sanayi ekipmanları sergilenir.",
+    "descriptionEn": "Private industrial museum in a historic olive oil factory on Cunda Island. Collection includes antique automobiles, maritime vessels, telegraph machines, and early industrial equipment.",
+    "shortDesc": "Endüstriyel miras ve ulaşım tarihi müzesi",
+    "shortDescEn": "Industrial heritage and transportation history museum",
+    "address": "Namık Kemal Mah., 15 Eylül Cd. No:33, Cunda, Ayvalık",
+    "addressEn": "Namık Kemal District, 15 Eylül St. No:33, Cunda, Ayvalık",
+    "visitHours": "Salı-Pazar 10:00-18:00",
+    "fee": "80 TL",
+    "feeEn": "80 TRY",
+    "categorySlug": "museum",
+    "images": [
+      "https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=1024&q=80"
+    ],
+    "publicTransport": "Ayvalık merkezden Cunda'ya dolmuş sık sefer yapar (10 dk). Köprü üzerinden yürüyerek de geçilebilir.",
+    "publicTransportEn": "Frequent minibuses from Ayvalık center to Cunda (10 min). Also walkable across the bridge.",
+    "isFeatured": false,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Saraylar Açık Hava Müzesi",
+    "nameEn": "Saraylar Open-Air Museum",
+    "description": "Marmara Adası'nın kuzeydoğusundaki Saraylar beldesinde, antik Prokonnesos mermer ocaklarının bulunduğu alan. Roma döneminden kalma yarım kalmış heykeller, lahitler ve mimari parçalar açık havada sergilenmektedir. Adanın mermeri Ayasofya ve Sultanahmet Camii'nde kullanılmıştır.",
+    "descriptionEn": "Located in the ancient Proconnesian marble quarries on Marmara Island. Displays unfinished Roman-era sculptures, sarcophagi, and architectural elements. Proconnesian marble was used in Hagia Sophia and the Blue Mosque.",
+    "shortDesc": "Antik mermer ocakları ve heykeltıraşlık atölyeleri",
+    "shortDescEn": "Ancient marble quarries and sculpture workshops",
+    "address": "Saraylar, Marmara Adası, Balıkesir",
+    "addressEn": "Saraylar, Marmara Island, Balıkesir",
+    "visitHours": "Her gün 08:00-18:00",
+    "fee": "Ücretsiz",
+    "feeEn": "Free",
+    "categorySlug": "ancient",
+    "images": [
+      "https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=1024&q=80"
+    ],
+    "publicTransport": "Erdek veya Tekirdağ'dan Marmara Adası'na feribot (1-2 saat). Adada Saraylar'a dolmuş mevcut.",
+    "publicTransportEn": "Ferry from Erdek or Tekirdağ to Marmara Island (1-2 hours). Minibus on island to Saraylar.",
+    "isFeatured": false,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Saraylar Mermer Plajı",
+    "nameEn": "Saraylar Marble Beach",
+    "description": "Marmara Adası'nın Saraylar beldesinde yer alan, mermer taşlı yapısıyla dünyada eşsiz bir plajdır. Antik dönemden bu yana mermer çıkarılan bölgedeki beyaz mermer parçaları, deniz suyuyla birleşerek büyüleyici bir görüntü oluşturur.",
+    "descriptionEn": "A unique beach in the world located in Saraylar town of Marmara Island, distinguished by its marble stone structure. White marble pieces from the area, where marble has been quarried since ancient times, combine with seawater to create an enchanting sight.",
+    "shortDesc": "Dünyada eşsiz mermer taşlı plaj",
+    "shortDescEn": "Unique marble stone beach in the world",
+    "address": "Saraylar, Marmara Adası, Balıkesir",
+    "addressEn": "Saraylar, Marmara Island, Balikesir",
+    "categorySlug": "beach",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/2/2c/Saraylar.jpg"
+    ],
+    "isFeatured": false,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Sarıkız Heykeli (Akçay)",
+    "nameEn": "Sarikiz Statue (Akcay)",
+    "description": "Akçay Barbaros Meydanı'nda yer alan, Kazdağları'nın efsanevi figürü Sarıkız'ın heykeli. Kazdağları mitolojisinin en önemli sembollerinden biri olan Sarıkız, babasının haksız yere sürgün ettiği masum kızın hikayesini anlatır.",
+    "descriptionEn": "The statue of Sarikiz, the legendary figure of Mount Ida, located in Akcay's Barbaros Square. Sarikiz, one of the most important symbols of Mount Ida mythology, tells the story of an innocent girl unjustly exiled by her father.",
+    "shortDesc": "Akçay Meydanı'ndaki Kazdağları efsanesi heykeli",
+    "shortDescEn": "Mount Ida legend statue in Akcay Square",
+    "address": "Barbaros Meydanı, Akçay, Edremit, Balıkesir",
+    "addressEn": "Barbaros Square, Akcay, Edremit, Balikesir",
+    "categorySlug": "cultural",
+    "images": [
+      "/uploads/loc_1772843147649_c1uj92.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Sarımsaklı Plajı",
+    "nameEn": "Sarımsaklı Beach",
+    "description": "Ayvalık'ın en ünlü plajı, 7 km uzunluğunda altın kumlu sahil. Mavi Bayraklı plaj, su sporları, sahil barları ve oteller ile yaz turizminin merkezi.",
+    "descriptionEn": "Ayvalık's most famous beach, 7 km of golden sand. Blue Flag beach with water sports, beach bars, and hotels, the center of summer tourism.",
+    "shortDesc": "7 km altın kumlu Mavi Bayrak plajı",
+    "shortDescEn": "7 km golden sand Blue Flag beach",
+    "address": "Sarımsaklı, Ayvalık, Balıkesir",
+    "addressEn": "Sarımsaklı, Ayvalık, Balıkesir",
+    "visitHours": "Her gün (yaz sezonu Haziran-Eylül)",
+    "fee": "Ücretsiz (şezlong ücretli)",
+    "feeEn": "Free (sunbed paid)",
+    "categorySlug": "beach",
+    "images": [
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1024&q=80"
+    ],
+    "publicTransport": "Ayvalık merkezden Sarımsaklı'ya dolmuş sık sefer yapar (10 dk).",
+    "publicTransportEn": "Frequent minibuses from Ayvalık center to Sarımsaklı (10 min).",
+    "isFeatured": true,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Serhat Mesire Alanı (Havran)",
+    "nameEn": "Serhat Recreation Area (Havran)",
+    "description": "Havran ilçesinde Hıdrellez tepesi ve Eybek suyu alanında yer alan doğal bir mesire yeridir. Bahar aylarında Hıdrellez kutlamalarına ev sahipliği yapan bu alan, doğal su kaynakları ve yeşil alanlarıyla yıl boyu ziyaret edilmektedir.",
+    "descriptionEn": "A natural recreation area in Havran district, located at Hidrellez hill and Eybek water area. This area, which hosts Hidrellez celebrations in spring, is visited year-round with its natural water sources and green spaces.",
+    "shortDesc": "Hıdrellez tepesi ve Eybek suyu mesire alanı",
+    "shortDescEn": "Hidrellez hill and Eybek water recreation area",
+    "address": "Serhat, Havran, Balıkesir",
+    "addressEn": "Serhat, Havran, Balikesir",
+    "categorySlug": "nature",
+    "images": [
+      "/uploads/loc_1772842902197_qbgp3u.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Seyitgazi Tepesi (Erdek)",
+    "nameEn": "Seyitgazi Hill (Erdek)",
+    "description": "Erdek ilçe merkezinin güneybatısında yer alan, kale kalıntılarıyla taçlanan tarihi bir tepedir. Adak Tepesi olarak da bilinen bu nokta, Erdek ve çevresinin panoramik manzarasını sunan stratejik bir seyir noktasıdır.",
+    "descriptionEn": "A historic hilltop crowned with castle ruins, located southwest of Erdek town center. Also known as Adak Hill, this point is a strategic viewpoint offering panoramic views of Erdek and its surroundings.",
+    "shortDesc": "Kale kalıntılı tarihi seyir tepesi",
+    "shortDescEn": "Historic viewpoint hill with castle ruins",
+    "address": "Seyitgazi Tepesi, Erdek, Balıkesir",
+    "addressEn": "Seyitgazi Hill, Erdek, Balikesir",
+    "categorySlug": "historical",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Erdek.jpg/1280px-Erdek.jpg"
+    ],
+    "isFeatured": false,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Sındırgı Hisaralan Kaplıcaları",
+    "nameEn": "Sındırgı Hisaralan Hot Springs",
+    "description": "Sındırgı'nın UNESCO Küresel Jeopark adaylık sürecindeki en önemli termal alanlarından biri. 60-95°C sıcaklığındaki termal sular, doğal orman içinde konumlanmış tesislerde sunulur.",
+    "descriptionEn": "One of the most important thermal areas in Sındırgı's UNESCO Global Geopark candidacy. Thermal waters at 60-95°C are offered in facilities set within natural forest.",
+    "shortDesc": "UNESCO Jeopark adayı termal alan",
+    "shortDescEn": "UNESCO Geopark candidate thermal area",
+    "address": "Hisaralan, Sındırgı, Balıkesir",
+    "addressEn": "Hisaralan, Sındırgı, Balıkesir",
+    "visitHours": "Her gün 08:00-21:00",
+    "fee": "Giriş 60-120 TL",
+    "feeEn": "Entry 60-120 TRY",
+    "categorySlug": "thermal",
+    "images": [
+      "https://images.unsplash.com/photo-1540555700478-4be289fbec6d?w=1024&q=80"
+    ],
+    "publicTransport": "Balıkesir otogarından Sındırgı otobüsü (1.5 saat), ardından Hisaralan dolmuşu (20 dk).",
+    "publicTransportEn": "Bus from Balıkesir to Sındırgı (1.5 hours), then minibus to Hisaralan (20 min).",
+    "isFeatured": false,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Sındırgı Kışla Müze Han",
+    "nameEn": "Sındırgı Kışla Museum Inn",
+    "description": "Kesme taş mimarisiyle hayranlık uyandıran tarihi yapı. 8 odalı butik otele ve kültür kompleksine dönüştürülmüştür. Sındırgı'nın UNESCO Küresel Jeopark adaylık sürecinin kültürel vitrinlerinden biridir.",
+    "descriptionEn": "Historic building admired for its cut-stone architecture. Transformed into an 8-room boutique hotel and cultural complex, a showcase of Sındırgı's UNESCO Global Geopark candidacy.",
+    "shortDesc": "Tarihi askeri yapı, butik otel ve kültür kompleksi",
+    "shortDescEn": "Historic military building, boutique hotel & cultural complex",
+    "address": "Sındırgı Merkez, Balıkesir",
+    "addressEn": "Sındırgı Center, Balıkesir",
+    "visitHours": "Her gün 09:00-22:00",
+    "fee": "Müze ücretsiz, konaklama ücretli",
+    "feeEn": "Museum free, accommodation paid",
+    "categorySlug": "historical",
+    "images": [
+      "https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?w=1024&q=80"
+    ],
+    "publicTransport": "Balıkesir otogarından Sındırgı otobüsleri günde 8-10 sefer (1.5 saat). Merkezden yürüyerek 5 dk.",
+    "publicTransportEn": "Buses to Sındırgı 8-10 times daily (1.5 hours). 5 min walk from center.",
+    "isFeatured": false,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Soğuksu Köyü Kalıntıları (Manyas)",
+    "nameEn": "Soguksu Village Ruins (Manyas)",
+    "description": "Manyas ilçesinin Soğuksu Köyü'nde yer alan tarihi kale ve yapı kalıntılarıdır. Köy içindeki bu arkeolojik alan, bölgenin antik dönemlerden bu yana yerleşim yeri olduğunu gösteren önemli tarihi izler taşımaktadır.",
+    "descriptionEn": "Historic castle and building ruins in Soguksu Village of Manyas district. This archaeological area within the village carries important historical traces showing that the region has been a settlement since ancient times.",
+    "shortDesc": "Manyas'taki tarihi kale ve yapı kalıntıları",
+    "shortDescEn": "Historic castle and building ruins in Manyas",
+    "address": "Soğuksu Köyü, Manyas, Balıkesir",
+    "addressEn": "Soguksu Village, Manyas, Balikesir",
+    "categorySlug": "historical",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/d/d2/Manyas_%C4%B0mam_Hatip_Camii.jpg"
+    ],
+    "isFeatured": false,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Su Çıktı (Kepsut)",
+    "nameEn": "Su Cikti (Kepsut)",
+    "description": "Kepsut-Dursunbey ilçe sınırında yer alan, yeraltından güçlü bir şekilde fışkıran doğal su kaynağıdır. Adını suyun kayalardan çıkış biçiminden alan bu doğa harikası, çevresindeki piknik alanlarıyla birlikte ziyaretçileri ağırlamaktadır.",
+    "descriptionEn": "A natural water source that gushes powerfully from underground, located at the Kepsut-Dursunbey district border. Named after the way water emerges from the rocks, this natural wonder welcomes visitors with its surrounding picnic areas.",
+    "shortDesc": "Doğal kaynak suyu ve piknik alanı",
+    "shortDescEn": "Natural spring water and picnic area",
+    "address": "Kepsut-Dursunbey Sınırı, Balıkesir",
+    "addressEn": "Kepsut-Dursunbey Border, Balikesir",
+    "categorySlug": "nature",
+    "images": [
+      "/uploads/loc_1772842697659_6nbw0q.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Su Uçtu Şelalesi (Kepsut)",
+    "nameEn": "Su Uctu Waterfall (Kepsut)",
+    "description": "Kepsut ilçesinde Elma Gediği'nden sonraki vadide yer alan etkileyici bir doğal şelaledir. Yüksekten dökülen suların oluşturduğu doğal havuz ve çevresindeki yemyeşil orman dokusu, ziyaretçilere unutulmaz bir doğa deneyimi sunar.",
+    "descriptionEn": "An impressive natural waterfall located in the valley beyond Elma Gedigi in Kepsut. The natural pool formed by cascading waters and the surrounding lush forest offer visitors an unforgettable nature experience.",
+    "shortDesc": "Kepsut'taki etkileyici vadi şelalesi",
+    "shortDescEn": "Impressive valley waterfall in Kepsut",
+    "address": "Elma Gediği, Kepsut, Balıkesir",
+    "addressEn": "Elma Gedigi, Kepsut, Balikesir",
+    "categorySlug": "nature",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/8/8d/Su_u%C3%A7tu_%C5%9Felalesi.jpg"
+    ],
+    "isFeatured": false,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Suçıktı Mesire Yeri (Dursunbey)",
+    "nameEn": "Sucikti Recreation Area (Dursunbey)",
+    "description": "Dursunbey ilçesinde şelale, alabalık tesisleri ve asırlık çınar ağaçlarıyla donatılmış kapsamlı bir mesire alanıdır. Doğal su kaynakları ve ormanlık alanıyla piknik ve doğa yürüyüşü için ideal bir noktadır.",
+    "descriptionEn": "A comprehensive recreation area in Dursunbey equipped with waterfalls, trout farms, and centuries-old plane trees. An ideal spot for picnics and nature walks with its natural water sources and forested area.",
+    "shortDesc": "Şelale ve alabalık tesisli mesire alanı",
+    "shortDescEn": "Recreation area with waterfall and trout farms",
+    "address": "Suçıktı, Dursunbey, Balıkesir",
+    "addressEn": "Sucikti, Dursunbey, Balikesir",
+    "categorySlug": "nature",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/10800_Hasanlar-Dursunbey-Bal%C4%B1kesir%2C_Turkey_-_panoramio_%2813%29.jpg/1280px-10800_Hasanlar-Dursunbey-Bal%C4%B1kesir%2C_Turkey_-_panoramio_%2813%29.jpg"
+    ],
+    "isFeatured": false,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Sütüven Şelalesi",
+    "nameEn": "Sütüven Waterfall",
+    "description": "Kazdağları Milli Parkı içinde, 15 metre yükseklikten dökülen şelale. Çevresinde yürüyüş parkurları ve piknik alanları bulunur. Yaz aylarında serinlemek için ideal.",
+    "descriptionEn": "15-meter waterfall within Mount Ida National Park. Surrounded by hiking trails and picnic areas. Ideal for cooling off in summer months.",
+    "shortDesc": "Kazdağları'nın 15 metrelik şelalesi",
+    "shortDescEn": "15-meter waterfall of Mount Ida",
+    "address": "Zeytinli-Beyoba yolu üzeri, Edremit, Balıkesir",
+    "addressEn": "Zeytinli-Beyoba road, Edremit, Balıkesir",
+    "visitHours": "Her gün 08:00-19:00 (yaz)",
+    "fee": "20 TL",
+    "feeEn": "20 TRY",
+    "categorySlug": "nature",
+    "images": [
+      "https://images.unsplash.com/photo-1432405972618-c6b0cfba8b01?w=1024&q=80"
+    ],
+    "publicTransport": "Edremit'ten Zeytinli üzerinden Sütüven yönüne dolmuş veya taksi (25 dk).",
+    "publicTransportEn": "Minibus or taxi from Edremit via Zeytinli towards Sütüven (25 min).",
+    "isFeatured": false,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Şadırvan Meydanı",
+    "nameEn": "Sadirvan Square",
+    "description": "Balıkesir'in ikonik Saat Kulesi'nin hemen yakınında bulunan tarihi meydandır. Osmanlı döneminden bu yana şehrin ticari ve sosyal yaşamının merkezi olmuş, geleneksel dokusuyla ziyaretçileri geçmişe götürür.",
+    "descriptionEn": "A historic square located right next to Balikesir's iconic Clock Tower. It has been the center of the city's commercial and social life since the Ottoman era, transporting visitors back in time with its traditional character.",
+    "shortDesc": "Saat Kulesi yanındaki tarihi meydan",
+    "shortDescEn": "Historic square next to the Clock Tower",
+    "address": "Şadırvan Meydanı, Karesi, Balıkesir",
+    "addressEn": "Sadirvan Square, Karesi, Balikesir",
+    "categorySlug": "historical",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Ayasofya_%C5%9Ead%C4%B1rvan%C4%B1_genel_g%C3%B6r%C3%BCnt%C3%BC.jpg/1280px-Ayasofya_%C5%9Ead%C4%B1rvan%C4%B1_genel_g%C3%B6r%C3%BCnt%C3%BC.jpg"
+    ],
+    "isFeatured": false,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Şahinderesi Kanyonu",
+    "nameEn": "Şahinderesi Canyon",
+    "description": "Kazdağları'nın en etkileyici kanyonlarından biri. 2 km uzunluğunda, 120 metre derinliğinde. Yürüyüş parkurları ve doğa fotoğrafçılığı için popüler.",
+    "descriptionEn": "One of the most impressive canyons of Mount Ida. 2 km long, 120 meters deep. Popular for hiking trails and nature photography.",
+    "shortDesc": "2 km uzunluğunda, 120 m derinliğinde kanyon",
+    "shortDescEn": "2 km long, 120 m deep canyon",
+    "address": "Şahinderesi, Edremit, Balıkesir",
+    "addressEn": "Şahinderesi, Edremit, Balıkesir",
+    "visitHours": "Her gün gündüz saatleri",
+    "fee": "Ücretsiz",
+    "feeEn": "Free",
+    "categorySlug": "nature",
+    "images": [
+      "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1024&q=80"
+    ],
+    "publicTransport": "Edremit'ten Şahinderesi yönüne taksi (20 dk). Özel araç tavsiye edilir.",
+    "publicTransportEn": "Taxi from Edremit towards Şahinderesi (20 min). Private vehicle recommended.",
+    "isFeatured": false,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Şeytan Sofrası",
+    "nameEn": "Devil's Table",
+    "description": "Ayvalık'ın güneyinde, deniz seviyesinden 354 metre yükseklikte doğal kaya oluşumu. Gün batımı manzarası ile ünlü. Kayada dev bir ayak izi şeklinde çukur bulunur, efsaneye göre şeytanın ayak izidir.",
+    "descriptionEn": "Natural rock formation at 354 meters above sea level south of Ayvalık. Famous for sunset views. Features a giant footprint-shaped hollow in the rock, legendarily the devil's footprint.",
+    "shortDesc": "354 m'de gün batımı panoraması",
+    "shortDescEn": "Sunset panorama at 354 m elevation",
+    "address": "Küçükköy, Ayvalık, Balıkesir",
+    "addressEn": "Küçükköy, Ayvalık, Balıkesir",
+    "visitHours": "Her gün, gün batımı saatleri önerilir",
+    "fee": "Ücretsiz",
+    "feeEn": "Free",
+    "categorySlug": "nature",
+    "images": [
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1024&q=80"
+    ],
+    "publicTransport": "Ayvalık merkezden Şeytan Sofrası'na dolmuş veya taksi (15 dk).",
+    "publicTransportEn": "Minibus or taxi from Ayvalık center to Devil's Table (15 min).",
+    "isFeatured": true,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Tahtakuşlar Etnografya Müzesi",
+    "nameEn": "Tahtakuşlar Ethnography Museum",
+    "description": "Kazdağları eteklerinde, 1991'de emekli öğretmen Alibey Kudar tarafından kurulan özel müze. Tahtacı Türkmenlerinin yaşam kültürünü, geleneksel kıyafetlerini ve kilimlerini sergiler. 197 cm uzunluğunda dev deniz kaplumbağası kabuğu da koleksiyondadır.",
+    "descriptionEn": "Private museum at the foothills of Mount Ida, founded in 1991 by retired teacher Alibey Kudar. Dedicated to preserving the Tahtacı Turkmen lifestyle. Collection includes a remarkable 197 cm giant sea turtle shell.",
+    "shortDesc": "Yörük kültürü ve göçebe yaşam müzesi",
+    "shortDescEn": "Yörük culture and nomadic life museum",
+    "address": "Tahtakuşlar Köyü, Edremit, Balıkesir",
+    "addressEn": "Tahtakuşlar Village, Edremit, Balıkesir",
+    "visitHours": "Salı-Pazar 09:00-17:00",
+    "fee": "Ücretsiz",
+    "feeEn": "Free",
+    "categorySlug": "museum",
+    "images": [
+      "https://images.unsplash.com/photo-1590076215667-875c2d76b544?w=1024&q=80"
+    ],
+    "publicTransport": "Edremit'ten Tahtakuşlar köyüne dolmuş mevcut. Kaz Dağları yönüne giden minibüslerle ulaşılır.",
+    "publicTransportEn": "Minibus from Edremit to Tahtakuşlar village via Mount Ida minibuses.",
+    "isFeatured": false,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Taksiyarhis Kilisesi",
+    "nameEn": "Taksiyarhis Church",
+    "description": "Ayvalık merkezde 1844 yılında inşa edilen Rum Ortodoks kilisesi. Neoklasik üslupta tasarlanmış, iç mekanında özgün freskler ve ikonalar korunmuştur. Restorasyon sonrası kültür merkezi ve sergi mekanı olarak hizmet vermektedir.",
+    "descriptionEn": "Greek Orthodox church built in 1844 in Ayvalık center. Designed in neoclassical style with original frescoes and icons preserved inside. After restoration, serves as a cultural center and exhibition venue.",
+    "shortDesc": "1844 Rum Ortodoks kilisesi, kültür merkezi",
+    "shortDescEn": "1844 Greek Orthodox church, cultural center",
+    "address": "Ayvalık Merkez, Balıkesir",
+    "addressEn": "Ayvalık Center, Balıkesir",
+    "visitHours": "Salı-Pazar 09:00-17:00",
+    "fee": "Ücretsiz",
+    "feeEn": "Free",
+    "categorySlug": "religious",
+    "images": [
+      "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1024&q=80"
+    ],
+    "publicTransport": "Ayvalık merkez otogarından yürüyerek 10 dk.",
+    "publicTransportEn": "10 min walk from Ayvalık central bus station.",
+    "isFeatured": true,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Taşlı Manastır (Tımarhane Adası)",
+    "nameEn": "Tasli Monastery (Timarhane Island)",
+    "description": "Ayvalık'ın Çamlık Koyu'nun tam karşısındaki Tımarhane Adası üzerinde bulunan tarihi bir Rum Ortodoks manastırıdır. Taş işçiliğiyle dikkat çeken yapı, Osmanlı döneminde bir süre akıl hastanesi olarak da kullanılmıştır.",
+    "descriptionEn": "A historic Greek Orthodox monastery located on Timarhane Island, directly across from Ayvalik's Camlik Bay. The structure, notable for its stonework, was also used as a mental hospital during the Ottoman period.",
+    "shortDesc": "Tımarhane Adası'ndaki tarihi Rum manastırı",
+    "shortDescEn": "Historic Greek monastery on Timarhane Island",
+    "address": "Tımarhane Adası, Ayvalık, Balıkesir",
+    "addressEn": "Timarhane Island, Ayvalik, Balikesir",
+    "categorySlug": "religious",
+    "images": [
+      "/uploads/loc_1772843015766_80kvl3.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Taylıeli Köyü Seyir Noktası",
+    "nameEn": "Taylielli Village Viewpoint",
+    "description": "Burhaniye'nin Taylıeli Köyü'nde yer alan, Edremit Körfezi'ne hakim muhteşem bir manzara noktasıdır. Zeytinlikler arasından körfezin turkuaz sularını izleyebileceğiniz bu tepe, fotoğraf tutkunları için vazgeçilmez bir duraktır.",
+    "descriptionEn": "A magnificent viewpoint in Taylielli Village of Burhaniye, overlooking the Gulf of Edremit. This hilltop where you can watch the turquoise waters of the gulf through olive groves is an essential stop for photography enthusiasts.",
+    "shortDesc": "Körfeze hakim zeytinlik manzara noktası",
+    "shortDescEn": "Olive grove viewpoint overlooking the gulf",
+    "address": "Taylıeli Köyü, Burhaniye, Balıkesir",
+    "addressEn": "Taylielli Village, Burhaniye, Balikesir",
+    "categorySlug": "nature",
+    "isFeatured": false,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Yıldırım Camii ve Külliyesi",
+    "nameEn": "Yıldırım Bayezid Mosque & Complex",
+    "description": "1388'de Yıldırım Beyazıt tarafından yaptırılan Balıkesir'in en eski Osmanlı eseri. Dikdörtgen planlı, üç nefli, devşirme sütunlu cami. Külliye içinde medrese ve imaret kalıntıları bulunuyor.",
+    "descriptionEn": "Built in 1388 by Sultan Bayezid I, the oldest Ottoman monument in Balıkesir. Rectangular plan with three naves and spolia columns. Complex includes madrasa and soup kitchen remains.",
+    "shortDesc": "1388, Balıkesir'in en eski Osmanlı eseri",
+    "shortDescEn": "1388, oldest Ottoman monument in Balıkesir",
+    "address": "Yıldırım Mah., Gazi Bulvarı, Karesi, Balıkesir",
+    "addressEn": "Yıldırım District, Gazi Boulevard, Karesi, Balıkesir",
+    "visitHours": "Her gün 05:00-22:00",
+    "fee": "Ücretsiz",
+    "feeEn": "Free",
+    "categorySlug": "historical",
+    "images": [
+      "https://images.unsplash.com/photo-1564769625905-50e93615e769?w=1024&q=80"
+    ],
+    "publicTransport": "Merkez belediye otobüsleri ile Yıldırım durağında inin. Otogardan yürüyerek 12 dk.",
+    "publicTransportEn": "Take city buses to Yıldırım stop. 12 min walk from bus station.",
+    "isFeatured": true,
+    "isActive": true,
+    "source": "aplicationweb"
+  },
+  {
+    "name": "Zağnos Paşa Camii ve Külliyesi",
+    "nameEn": "Zagnos Pasha Mosque & Complex",
+    "description": "Zağnos Paşa Camii, 1461 yılında Fatih Sultan Mehmed'in sadrazamı ve İstanbul'un fethinde kilit rol oynayan Arnavut kökenli komutan Zağnos Paşa tarafından yaptırılmıştır. Balıkesir'in en büyük camisi olan yapı, kesme taş işçiliğiyle inşa edilmiş olup bir ana kubbe ve dört yan kubbeden oluşur. Külliye bünyesinde türbe, hamam ve şadırvanlar bulunmaktadır. 1897 depreminde hasar gören cami, 1908'de yeniden inşa edilmiştir. Mustafa Kemal Atatürk, 7 Şubat 1923'te bu camide ünlü Balıkesir Hutbesi'ni okumuştur.",
+    "descriptionEn": "Zagan Pasha Mosque was built in 1461 by Zagan Pasha, an Ottoman Grand Vizier of Albanian origin who played a crucial role in the Conquest of Constantinople under Sultan Mehmed II. The largest mosque in Balıkesir, constructed in ashlar masonry with one main dome and four side domes. The complex includes a tomb, hammam, and ornamental fountains. Damaged in the 1897 earthquake, rebuilt in 1908. Atatürk delivered his famous Balıkesir Khutbah here on February 7, 1923.",
+    "shortDesc": "1461 Erken Osmanlı başyapıtı, Balıkesir Hutbesi mekanı",
+    "shortDescEn": "1461 Early Ottoman masterpiece, site of historic Balıkesir Sermon",
+    "address": "Hisariçi Mah., Zağnos Paşa Cad., Karesi, Balıkesir",
+    "addressEn": "Hisariçi District, Zağnos Paşa St., Karesi, Balıkesir",
+    "visitHours": "Her gün 05:00-22:00",
+    "fee": "Ücretsiz",
+    "feeEn": "Free",
+    "categorySlug": "historical",
+    "images": [
+      "/uploads/loc_1772842301288_1wy04u.webp"
+    ],
+    "publicTransport": "Balıkesir şehir içi otobüsleri ile Zağnos Mahallesi durağında inin. Merkez otogardan yürüyerek 10 dk.",
+    "publicTransportEn": "Take city buses to Zağnos Mahallesi stop. 10 min walk from central bus station.",
+    "isFeatured": true,
+    "isActive": true,
+    "source": "aplicationweb"
+  }
+]
